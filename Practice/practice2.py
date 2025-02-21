@@ -1,3 +1,2 @@
-from Practice import chai
-
-chai("ginger tea")
+numbers = range(5)
+print(list(numbers))
