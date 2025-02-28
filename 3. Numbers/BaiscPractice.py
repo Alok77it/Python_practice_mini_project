@@ -24,6 +24,11 @@ else:
 #Number Conversion
     #Convert a given decimal number into binary, octal, and hexadecimal.
 
+num = 10
+print("This is binary: ",bin(num))
+print("This is hexadecimals: ",hex(num))
+print("This is octal: ",oct(num))
+
 
 #Factorial Calculation
     #Write a function to compute the factorial of a number using a loop.
