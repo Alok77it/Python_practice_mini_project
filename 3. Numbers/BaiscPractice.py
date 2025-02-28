@@ -34,9 +34,12 @@ print("This is octal: ",oct(num))
     #Write a function to compute the factorial of a number using a loop.
 
 
+
 #Round a Float
     #Take a floating-point number and round it to two decimal places.
 
+num = float(input("Enter the float number: "))
+print(round(num, 2))
 
 #Simple Interest Calculation
     #Write a program to calculate simple interest using the formula:
@@ -51,3 +54,8 @@ print("This is octal: ",oct(num))
 #Find Maximum and Minimum
     #Find the maximum and minimum of three numbers using the max() and min() functions.
 
+a = int(input("First number: "))
+b = int(input("Second number: "))
+c = int(input("Third number: "))
+print(max(a, b, c))
+print(min(a, b, c))
