@@ -33,6 +33,16 @@ print("This is octal: ",oct(num))
 #Factorial Calculation
     #Write a function to compute the factorial of a number using a loop.
 
+def factorial(n):
+    if n < 0:
+        return "Factorial is not defined for negative"
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+ 
+num = int(input("Enter a number: "))
+print(f"Factorial of {num} is {factorial(num)}")
 
 
 #Round a Float
@@ -41,12 +51,24 @@ print("This is octal: ",oct(num))
 num = float(input("Enter the float number: "))
 print(round(num, 2))
 
+
 #Simple Interest Calculation
     #Write a program to calculate simple interest using the formula:
 '''   SI = P x R x T 
      ----------------
            100
 '''        
+
+def simple_interest(principal, rate, time):
+    si = (principal * rate * time) / 100
+    return si
+
+P = float(input("Enter Principal amount: "))
+R = float(input("Enter Rate of Interest: "))
+T = float(input("Enter Time period (in years): "))
+
+SI = simple_interest(P, R, T)
+print(f"Simple Interest = {SI}")
 
 
 
