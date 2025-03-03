@@ -12,8 +12,15 @@ Welcome to **Python Practice Mini Projects**! This repository is a comprehensive
 <!-- GitHub Stats -->
 ![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=Alok77it&show_icons=true&theme=radical)
 
+## 📊 Language Distribution
+
+```
+Python: 95%  ████████████████████████████████████████
+YAML:    5%  ██
+```
+
 <!-- Most Used Languages -->
-![Your Repository's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Alok77it&theme=radical)
+![Your Repository's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Alok77it&theme=radical&langs_count=2&hide=javascript,html,css,shell)
 
 <!-- Contribution Graph -->
 ![Contribution Graph](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Alok77it&theme=radical)
