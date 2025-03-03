@@ -1,0 +1,19 @@
+name: Mirror to GitLab
+on:
+  push:
+    branches:
+      - main  # Change this if needed
+  schedule:
+    - cron: '0 * * * *'  # Runs every hour (adjust as needed)
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Push to GitLab
+        run: |
+          git remote add gitlab https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.com/Alok77it/python_practice_mini_project.git
+          git push --mirror gitlab
