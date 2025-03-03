@@ -59,6 +59,11 @@ YAML:    5%  ██
    - Lists and Tuples
    - Dictionaries
    - Sets
+   
+5. **Conditionals Statements**
+   - If-else conditions
+   - Elif conditions
+   - Nested If Statements
 
 ## 🔄 Workflow Status
 
