@@ -21,3 +21,5 @@ print(new_tuple)  # Output: ('red', 'green', 'blue', 'yellow')
 # Tuple with one element (Note the comma)
 single_element_tuple = ("hello",)
 print(type(single_element_tuple))  # Output: <class 'tuple'>
+
+print("hello")
