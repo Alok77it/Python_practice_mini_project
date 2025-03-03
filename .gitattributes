@@ -1,0 +1,14 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Explicitly declare Python files
+*.py linguist-language=Python
+*.ipynb linguist-language=Python
+
+# Exclude documentation and configuration files from language statistics
+*.md linguist-documentation
+*.txt linguist-documentation
+*.yml linguist-documentation
+*.yaml linguist-documentation
+*.json linguist-documentation
+__pycache__/* linguist-generated=true
