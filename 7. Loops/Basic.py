@@ -5,17 +5,40 @@
 # Q1: Print numbers from 1 to 10 using a for loop.
 # Write your code here
 
+num = 1
+for i in range(1, 11):
+    print(num)
+    num += 1
+
 # Q2: Print numbers from 10 to 1 using a while loop.
 # Write your code here
 
+a = 10
+while a >= 1:
+    print(a)
+    a -= 1
+
 # Q3: Print all even numbers between 1 and 20 using a loop.
 # Write your code here
+a = 1
+while a <= 20:
+    if a % 2 == 0:
+        print(a)
+    a += 1  
 
 # Q4: Print all odd numbers between 1 and 20 using a loop.
 # Write your code here
 
+a = 1 
+while a <= 20:
+    if a % 2 != 0:
+        print(a)
+    a += 1
+
 # Q5: Print each character of the string "PythonLoops" separately using a loop.
 # Write your code here
+
+
 
 # 📂 Part 2: Loop Control Statements (break, continue, pass)
 
