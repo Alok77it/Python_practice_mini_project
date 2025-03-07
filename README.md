@@ -64,6 +64,11 @@ YAML:    5%  ██
    - If-else conditions
    - Elif conditions
    - Nested If Statements
+     
+6. **Loops Statements**
+   - For conditions
+   - While conditions
+   - Nested Loops Statements
 
 ## 🔄 Workflow Status
 
