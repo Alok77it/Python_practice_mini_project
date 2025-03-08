@@ -59,37 +59,59 @@ for i in range(1, 11):
 # for i in range(1, 11):
 #     # Skip 5 and continue loop
 
+num = 1
+for i in range(1, 11):
+    if i == 5:
+        continue
+    print(i)
+
 # Q8: Use pass inside a loop (it does nothing but prevents errors).
 # for i in range(5):
 #     # Use pass statement
 
+for i in range(5):
+    pass
+
+
 # 📂 Part 3: else in Loops
 
 # Q9: Use else in a for loop to print "Loop finished" after completion.
-# for i in range(1, 6):
-#     print(i)
-# else:
-#     # Print "Loop finished" here
+
+num = 1
+for i in range(1, 6):
+    print(i)
+else:
+    print("Loop finished")
 
 # Q10: Use else in a while loop to print "Loop ended naturally" when it completes without break.
-# count = 1
-# while count <= 5:
-#     print(count)
-#     count += 1
-# else:
-#     # Print "Loop ended naturally"
+
+a = 1
+while a <= 10:
+    print(a)
+    a += 1
+else:
+    print("Loop ended naturally")
 
 # 📂 Part 4: Loops with Functions
 
 # Q11: Write a function that prints numbers from 1 to n using a loop.
-# def print_numbers(n):
-#     # Write loop here
-# print_numbers(5)  # Example: Should print 1, 2, 3, 4, 5
+
+nums = int(input("Enter a n: "))
+def print_numbers(n):
+    for i in range(1, n+1):
+        print(i)
+        
+print_numbers(nums)
 
 # Q12: Write a function that prints all even numbers from 1 to n.
-# def print_even_numbers(n):
-#     # Write loop here
-# print_even_numbers(10)  # Example: Should print 2, 4, 6, 8, 10
+
+nums = int(input("Enter a n: "))
+def print_even_numbers(n):
+    for i in range(1, n+1):
+        if i % 2 == 0:
+            print(i)
+            
+print_even_numbers(nums)
 
 # 📂 Part 5: Nested Loops
 
@@ -101,15 +123,28 @@ for i in range(1, 11):
 ****
 *****
 """
-# Write your code here
+
+for i in range(1, 6):
+    for j in range(i):
+        print("*", end="")
+    print()
 
 # Q14: Print the multiplication table of a given number n using a loop.
 # def multiplication_table(n):
 #     # Write loop here
 # multiplication_table(5)  # Example: Should print 5x1=5 ... 5x10=50
 
+def multiplication_table(n):
+    for i in range(1, 11):
+        print(f"{n} x {i} = {n*i}")
+multiplication_table(5)
+
 # Q15: Create a multiplication table from 1 to 5 using nested loops.
-# Write your code here
+
+for i in range(1, 6):
+    for j in range(1, 11):
+        print(f"{i} x {j} = {i*j}")
+    print()
 
 # 📂 Part 6: Looping with range()
 
