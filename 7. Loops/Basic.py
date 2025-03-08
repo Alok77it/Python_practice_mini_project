@@ -38,6 +38,9 @@ while a <= 20:
 # Q5: Print each character of the string "PythonLoops" separately using a loop.
 # Write your code here
 
+string = "PythonLoops"
+for i in string:
+    print(i)
 
 
 # 📂 Part 2: Loop Control Statements (break, continue, pass)
@@ -45,6 +48,12 @@ while a <= 20:
 # Q6: Use break to stop the loop when the number reaches 5.
 # for i in range(1, 11):
 #     # Stop when i is 5
+
+num = 1
+for i in range(1, 11):
+    if i == 5:
+        break
+    print(i)
 
 # Q7: Use continue to skip printing 5 but print all other numbers from 1 to 10.
 # for i in range(1, 11):
