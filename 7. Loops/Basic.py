@@ -152,9 +152,15 @@ for i in range(1, 6):
 # for i in range(10, 51, 5):
 #     # Write loop here
 
+for i in range(10, 51, 5):
+    print(i)
+
 # Q17: Print numbers from 100 to 50, decrementing by 10 each time.
 # for i in range(100, 49, -10):
 #     # Write loop here
+
+for i in range(100, 49, -10):
+    print(i)
 
 # 📂 Part 7: Loops with Lists & Tuples
 
@@ -162,13 +168,28 @@ for i in range(1, 6):
 # fruits = ["apple", "banana", "cherry"]
 # # Write loop here
 
+fruits = ["apple", "banana", "cherry"]
+for i in range(len(fruits)):
+    print(fruits[i])
+
 # Q19: Print each item from the tuple ("Python", "Java", "C++") using a loop.
 # languages = ("Python", "Java", "C++")
 # # Write loop here
 
+languages = ("Python", "Java", "C++")
+for i in range(len(languages)):
+    print(languages[i])
+
 # Q20: Use a loop to find the sum of all numbers in the list [10, 20, 30, 40, 50].
 # numbers = [10, 20, 30, 40, 50]
 # # Write loop here
+
+numbers = [10, 20, 30, 40, 50]
+sum = 0
+for i in numbers:
+    sum += i
+print(sum)
+
 
 # 📂 Part 8: Special Problems
 
@@ -176,14 +197,35 @@ for i in range(1, 6):
 # string = "loops are fun"
 # # Write loop here
 
+string = "loops are fun"
+vowels = "aeiouAEIOU"
+count = 0
+for char in string:
+    if char in vowels:
+        count += 1
+print(count)
+
 # Q22: Reverse the string "Python" using a loop.
 # word = "Python"
 # # Write loop here
+
+word = "Python"
+reverse = ""
+for i in word:
+    reverse = i + reverse
+print(reverse)
 
 # Q23: Find the factorial of a number using a loop.
 # def factorial(n):
 #     # Write loop here
 # print(factorial(5))  # Example: Output should be 120 (5! = 5x4x3x2x1)
+
+def factorial(n):
+    fact = 1
+    for i in range(1, n+1):
+        fact *= i
+    return fact
+print(factorial(5))
 
 # Q24: Check if a number is prime using a loop.
 # def is_prime(n):
@@ -191,7 +233,26 @@ for i in range(1, 6):
 # print(is_prime(7))  # Example: Should return True
 # print(is_prime(10)) # Example: Should return False
 
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+print(is_prime(7))
+print(is_prime(10))
+
 # Q25: Print numbers from 1 to 50, but for multiples of 3 print "Fizz", 
 # for multiples of 5 print "Buzz", and for multiples of both 3 and 5 print "FizzBuzz".
 # Write your code here
 
+for i in range(1, 51):
+    if i % 3 == 0 and i % 5 == 0:
+        print(f"{i} is FizzBuzz")
+    elif i % 3 == 0:
+        print(f"{i} is Fizz")
+    elif i % 5 == 0:
+        print(f"{i} is Buzz")
+    else:
+        print(f"{i} is Nothing")
