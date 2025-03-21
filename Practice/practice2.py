@@ -1,25 +1,11 @@
-# Creating a tuple
-colors = ("red", "green", "blue")
+from datetime import datetime
 
-# Accessing elements
-print(colors[1])  # Output: green
+# Get today's date
+today_date = datetime.now().strftime("%Y-%m-%d")
 
-# Tuple unpacking
-a, b, c = colors
-print(a, b, c)  # Output: red green blue
-
-# Checking for an element
-print("red" in colors)  # Output: True
-
-# Finding index
-print(colors.index("blue"))  # Output: 2
-
-# Tuple concatenation
-new_tuple = colors + ("yellow",)
-print(new_tuple)  # Output: ('red', 'green', 'blue', 'yellow')
-
-# Tuple with one element (Note the comma)
-single_element_tuple = ("hello",)
-print(type(single_element_tuple))  # Output: <class 'tuple'>
-
-print("hello")
+# Print the required information
+print("Today's date:", today_date)
+print("How you are feeling right now: Excited and motivated!")
+print("What you want to accomplish by learning to code: Become a proficient software developer.")
+print("A little message to your older, wiser, and programmer self: Keep pushing boundaries and never stop learning!")
+print("Your favorite emoji to spice things up: 🚀")
