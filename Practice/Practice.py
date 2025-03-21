@@ -1,10 +1,30 @@
 # Basic Python
 
 # Print "Hello, World!".
+print("Hello, World")
+
 # Take a user's name as input and print "Hello, [name]!".
+name = input("Enter your name: ")
+print(f"Hello, {name}!")
+
 # Take two numbers as input and print their sum, difference, product, and quotient.
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+print(f"Sum: {num1 + num2}")
+print(f"Difference: {num1 - num2}")
+print(f"Product: {num1 * num2}")
+print(f"Quotient: {num1 / num2}")
+
 # Swap the values of two variables without using a third variable.
+num1, num2 = num2, num1
+print(f"num1: {num1}, num2: {num2}")
+
 # Check if a given number is even or odd.
+num1 = int(input("Enter a number: "))
+if num1 % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
 
 # Numbers & Operators
 
