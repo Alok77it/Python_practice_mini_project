@@ -112,36 +112,3 @@ for i in range(5):
     else:
         print("*" + " " * 3 + "*")
         print()
-# 📂 Part 6: Advanced Patterns
-
-
-# 📂 Part 7: Special Patterns
-
-# Q9: Print the following pattern (Butterfly Pattern)
-"""
-*       *
-**     **
-***   ***
-**** ****
-*********
-**** ****
-***   ***
-**     **
-*       *
-"""
-# Write your code here
-
-for i in range(1, 6):
-    print("*" * i + " " * (5 - i) + "*" * i)
-for i in range(4, 0, -1):
-    print("*" * i + " " * (5 - i) + "*" * i)
-
-
-# Q10: Print the following pattern (Zig-Zag Pattern)
-"""
-  *   *   *  
- * * * * * * 
-*   *   *   *
-"""
-# Write your code here
-
