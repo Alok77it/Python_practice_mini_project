@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 📌 Pattern Practice Set (Using Loops)
 
 # 📂 Part 1: Basic Star Patterns
@@ -113,7 +112,6 @@ for i in range(5):
     else:
         print("*" + " " * 3 + "*")
         print()
-=======
 
 
 # Basic Python
@@ -223,4 +221,3 @@ else:
 # Create a dictionary where keys are numbers from 1 to 5 and values are their squares.
 # Swap keys and values in a dictionary.
 # Generate a list of numbers divisible by 3 from 1 to 100 using list comprehension.
->>>>>>> d3fb04e (Update)
