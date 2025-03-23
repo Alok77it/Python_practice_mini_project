@@ -61,25 +61,42 @@ print(filter_even([1, 2, 3, 4, 5, 6]))
 # Define a function is_palindrome(s) that returns True if the given string s is 
 # a palindrome, otherwise False.
 
+def is_palindrome(s):
+    return s == s[::-1]
+print(is_palindrome("madam"))
 
 
 # Q8: Student with Highest Marks
 # Define a function top_student(students) that takes a list of tuples containing 
 # student names and marks and returns the name of the student with the highest marks.
 
-
+def top_student(students):
+    return max(students, key=lambda x: x[1])[0]
+print(top_student([("Alice", 90), ("Bob", 85), ("Charlie", 95)]))
 
 
 # Q9: Recursive Fibonacci
 # Define a recursive function fibonacci(n) that returns the nth Fibonacci number.
 
-
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+print(fibonacci(5))
 
 
 # Q10: Lambda Function for Prime Numbers
 # Define a lambda function to filter prime numbers from a list.
 
-
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+prime_numbers = lambda numbers: list(filter(is_prime, numbers))
+print(prime_numbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
 
 
 # 4. Special Function Types
@@ -87,7 +104,9 @@ print(filter_even([1, 2, 3, 4, 5, 6]))
 # Q11: Using *args
 # Define a function sum_all(*args) that takes any number of arguments and returns their sum.
 
-
+def sum_all(*args):
+    return sum(args)
+print(sum_all(1, 2, 3, 4, 5))
 
 
 # Q12: Using **kwargs
@@ -95,25 +114,35 @@ print(filter_even([1, 2, 3, 4, 5, 6]))
 # and prints them in a formatted manner.
 
 
-
+def student_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+student_info(name="Alice", age=20, city="New York")
 
 # Q13: Using map() to Square Numbers
 # Define a function that uses map() and a lambda function to square all numbers in a list.
 
 
-
+def square_numbers(numbers):
+    return list(map(lambda x: x * x, numbers))
+print(square_numbers([1, 2, 3, 4, 5]))
 
 # Q14: Using filter() to Get Even Numbers
 # Define a function that uses filter() and a lambda function to extract even numbers from a list.
 
-
+def filter_even(numbers):
+    return list(filter(lambda x: x % 2 == 0, numbers))
+print(filter_even([1, 2, 3, 4, 5, 6]))
 
 
 # Q15: Using reduce() to Find Product of List
 # Define a function that uses reduce() to find the product of all numbers in a list.
 
 
-
+def product_of_numbers(numbers):
+    from functools import reduce
+    return reduce(lambda x, y: x * y, numbers)
+print(product_of_numbers([1, 2, 3, 4, 5]))
 
 # 5. Real-World Applications
 
