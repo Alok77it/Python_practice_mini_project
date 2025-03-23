@@ -27,25 +27,33 @@ check_number(0)
 # Q3: Reverse a String
 # Define a function reverse_string(s) that takes a string s and returns its reverse.
 
-
+def reverse_string(s):
+    return s[::-1]
+print(reverse_string("hello"))
 
 # 2. Functions with Parameters & Return Values
 
 # Q4: Find the Maximum of Three Numbers
 # Define a function find_max(a, b, c) that returns the largest of three numbers.
 
-
+def find_max(a, b, c):
+    return max(a, b, c)
+print(find_max(5, 3, 8))
 
 # Q5: Sum of Digits
 # Define a function sum_of_digits(n) that returns the sum of the digits of an integer n.
 
-
+def sum_of_digits(n):
+    return sum(int(i) for i in str(n))
+print(sum_of_digits(123))
 
 # Q6: Even Numbers from a List
 # Define a function filter_even(numbers) that takes a list of numbers and returns 
 # a new list containing only the even numbers.
 
-
+def filter_even(numbers):
+    return [num for num in numbers if num % 2 == 0]
+print(filter_even([1, 2, 3, 4, 5, 6]))
 
 # 3. Advanced Functions
 
