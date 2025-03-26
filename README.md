@@ -72,6 +72,9 @@ YAML:    5%  ██
 7. **Functions**
    - User defined Functions
    - Built-in Functions
+8. **Modules**
+   - User Defined Modules
+   - Built-In Modules
 
 ## 🔄 Workflow Status
 
