@@ -69,6 +69,9 @@ YAML:    5%  ██
    - For conditions
    - While conditions
    - Nested Loops Statements
+7. **Functions**
+   - User defined Functions
+   - Built-in Functions
 
 ## 🔄 Workflow Status
 
