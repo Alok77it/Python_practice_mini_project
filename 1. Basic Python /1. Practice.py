@@ -11,8 +11,17 @@ full_name = first_name + " " + last_name
 print(full_name)
 
 # Declare a country variable and assign a value to it
+country = "India"
+print(country)
+
 # Declare a city variable and assign a value to it
+city = "Kanpur"
+print(city)
+
 # Declare an age variable and assign a value to it
+age = 20
+print(age)
+
 # Declare a year variable and assign a value to it
 # Declare a variable is_married and assign a value to it
 # Declare a variable is_true and assign a value to it
