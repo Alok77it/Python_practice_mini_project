@@ -25,8 +25,6 @@ YAML:    5%  ██
 <!-- Contribution Graph -->
 ![Contribution Graph](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Alok77it&theme=radical)
 
-## 🔥 Streak Stats
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Alok77it&theme=radical)
 
 ## 📁 Project Structure
 
@@ -42,39 +40,8 @@ YAML:    5%  ██
 ## 🎯 Topics Covered
 
 1. **Basic Python Fundamentals**
-   - Variables and Data Types
-   - Control Flow
-   - Functions
+   - Variables and Data Type
 
-2. **String Operations**
-   - String Manipulation
-   - String Methods
-   - String Formatting
-
-3. **Number Operations**
-   - Mathematical Operations
-   - Number System Conversions
-
-4. **Data Structures**
-   - Lists and Tuples
-   - Dictionaries
-   - Sets
-   
-5. **Conditionals Statements**
-   - If-else conditions
-   - Elif conditions
-   - Nested If Statements
-     
-6. **Loops Statements**
-   - For conditions
-   - While conditions
-   - Nested Loops Statements
-7. **Functions**
-   - User defined Functions
-   - Built-in Functions
-8. **Modules**
-   - User Defined Modules
-   - Built-In Modules
 
 ## 🔄 Workflow Status
 
