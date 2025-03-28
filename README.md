@@ -42,6 +42,9 @@ YAML:    5%  ██
 1. **Basic Python Fundamentals**
    - Variables and Data Type
 
+2. **Operators**
+   - Types of Operators
+
 
 ## 🔄 Workflow Status
 
