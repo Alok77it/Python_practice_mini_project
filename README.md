@@ -44,7 +44,11 @@ YAML:    5%  ██
 
 2. **Operators**
    - Types of Operators
-
+     
+3. **Conditionals**
+   - if statement
+   - if-else statement
+   - if-elif-else statement
 
 ## 🔄 Workflow Status
 
