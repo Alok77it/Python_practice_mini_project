@@ -49,6 +49,14 @@ YAML:    5%  ██
    - if statement
    - if-else statement
    - if-elif-else statement
+     
+2. **Strings**
+   - Understanding Strings
+   - String Concatenation
+   - String Formatting
+   - String Indexing & Slicing
+   - Reversing a String
+   - Common String method
 
 ## 🔄 Workflow Status
 
