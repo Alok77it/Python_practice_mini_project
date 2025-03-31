@@ -66,64 +66,58 @@ print(str[10])  # Character at index 10
 
 # Create an acronym or an abbreviation for the name 'Python For Everyone'.
 # Create an acronym or an abbreviation for the name 'Coding For All'.
+name1 = "Python For Everyone"
+acronym1 = ''.join([word[0].upper() for word in name1.split()])
+print(f"Acronym for '{name1}': {acronym1}")
 
+name2 = "Coding For All"
+acronym2 = ''.join([word[0].upper() for word in name2.split()])
+print(f"Acronym for '{name2}': {acronym2}")
 
 # Use index to determine the position of the first occurrence of 'C' in "Coding For All".
 # Use index to determine the position of the first occurrence of 'F' in "Coding For All".
 # Use rfind to determine the position of the last occurrence of 'l' in "Coding For All People".
-
+name1 = 'Coding For All'
+print(f"Index of 'C': {name1.index('C')}")
+print(f"Index of 'F': {name1.index('F')}")
+print(f"Index of 'l': {name1.rfind('l')}")
 
 # Use index or find to find the position of the first occurrence of the word 'because' in the sentence:
-# 'You cannot end a sentence with because because because is a conjunction'
-
+name1 = 'You cannot end a sentence with because because because is a conjunction'
+print(f"Index of 'because': {name1.index('because')}")
 
 # Use rindex to find the position of the last occurrence of the word 'because' in the same sentence.
-
-
-# Slice out the phrase 'because because because' in the sentence:
-# 'You cannot end a sentence with because because because is a conjunction'
-
-
-# Find the position of the first occurrence of the word 'because' in the sentence:
-# 'You cannot end a sentence with because because because is a conjunction'
-
+print(f"Index of 'because': {name1.rindex('because')}")
 
 # Slice out the phrase 'because because because' in the sentence:
-# 'You cannot end a sentence with because because because is a conjunction'
-
+print(f"Slice: {name1[30:55]}")
 
 # Does "Coding For All" start with a substring "Coding"?
 # Does "Coding For All" end with a substring "coding"?
-
+print(f"Does 'Coding For All' start with 'Coding'? {'Coding For All'.startswith('Coding')}")
+print(f"Does 'Coding For All' end with 'coding'? {'Coding For All'.endswith('coding')}")
 
 # Remove the left and right trailing spaces in the given string: '   Coding For All      '.
-
-
-# Which one of the following variables return True when we use the method isidentifier():
-# 30DaysOfPython
-# thirty_days_of_python
-
+name = '   Coding For All      '
+print(f"Original string: '{name}'")
+print(f"String with spaces removed: '{name.strip()}'")
 
 # The following list contains the names of some python libraries:
 # ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']. 
 # Join the list with a hash with space string.
-
+sting1 = ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+print(f"Joining names with a hash: {'# '.join(sting1)}")
 
 # Use the new line escape sequence to separate the following sentences:
-# I am enjoying this challenge.
-# I just wonder what is next.
-
+string = "I am enjoying this challenge.\nI just wonder what is next."
+print(string)
 
 # Use a tab escape sequence to write the following lines:
 # Name      Age     Country   City
 # Asabeneh  250     Finland   Helsinki
-
-
-# Use the string formatting method to display the following:
-# radius = 10
-# area = 3.14 * radius ** 2
-# The area of a circle with radius 10 is 314 meters square.
-
+# Using tab escape sequence to format the table
+print("Name\t\tAge\tCountry\t\tCity")
+print("Asabeneh\t250\tFinland\t\tHelsinki")
 
 # Make the following using string formatting methods:
 # 8 + 6 = 14
@@ -134,3 +128,15 @@ print(str[10])  # Character at index 10
 # 8 // 6 = 1
 # 8 ** 6 = 262144
 
+# Define the numbers
+a = 8
+b = 6
+
+# Perform calculations and format the output
+print(f"{a} + {b} = {a + b}")
+print(f"{a} - {b} = {a - b}")
+print(f"{a} * {b} = {a * b}")
+print(f"{a} / {b} = {a / b:.2f}")  # Format division result to 2 decimal places
+print(f"{a} % {b} = {a % b}")
+print(f"{a} // {b} = {a // b}")
+print(f"{a} ** {b} = {a ** b}")
