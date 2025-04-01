@@ -130,23 +130,65 @@ print(full_stack)
 
 # 1. The following is a list of 10 students' ages:
 #    ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
 
 # 2. Sort the list and find the min and max age
+ages.sort()
+print(ages)
+min_age = min(ages)
+max_age = max(ages)
+print(f'Min age: {min_age}')
+print(f'Max age: {max_age}')
 
 # 3. Add the min age and the max age again to the list
+min_age = min(min_age, max_age)
+ages.append(min_age)
+max_age = max(min_age, max_age)
+ages.append(max_age)
+print(ages) 
 
 # 4. Find the median age (one middle item or two middle items divided by two)
+ages.sort()
+if len(ages) % 2 == 0:
+    mid1 = len(ages) // 2
+    mid2 = mid1 - 1
+    median_age = (ages[mid1] + ages[mid2]) / 2
+else:
+    mid = len(ages) // 2
+    median_age = ages[mid]
+print(f'Median age: {median_age}')
 
 # 5. Find the average age (sum of all items divided by their number)
+average_age = sum(ages) / len(ages)
+print(f'Average age: {average_age}')
 
 # 6. Find the range of the ages (max minus min)
+min_age = max(ages) - min(ages)
+print(f'Range of ages: {min_age}')
 
 # 7. Compare the value of (min - average) and (max - average), use abs() method
+min_age = min(ages)
+max_age = max(ages)
+average_age = sum(ages) / len(ages)
+diff_min = abs(min_age - average_age)
+diff_max = abs(max_age - average_age)
+print(f'Difference between min and average: {diff_min}')
+print(f'Difference between max and average: {diff_max}')
 
 # 8. Find the middle country(ies) in the countries list
+countries = ["india", "USA", "China", "Russia", "Finland", "Sweden", "Norway", "Denmark"]
+print(countries[len(countries)//2])
 
 # 9. Divide the countries list into two equal lists if it is even, if not, 
 #    one more country for the first half.
+if len(countries) % 2 == 0:
+    first_half = countries[:len(countries)//2]
+    second_half = countries[len(countries)//2:]
+else:
+    first_half = countries[:len(countries)//2 + 1]
+    second_half = countries[len(countries)//2 + 1:]
+print(f'First half: {first_half}')
+print(f'Second half: {second_half}')
 
 # 10. Unpack the first three countries and the rest as scandic countries:
 #     ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']
