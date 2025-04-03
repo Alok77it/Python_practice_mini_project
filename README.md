@@ -50,13 +50,22 @@ YAML:    5%  ██
    - if-else statement
    - if-elif-else statement
      
-2. **Strings**
+4. **Strings**
    - Understanding Strings
    - String Concatenation
    - String Formatting
    - String Indexing & Slicing
    - Reversing a String
    - Common String method
+
+5. **Lists**
+   - Understanding Lists
+
+6. **Tuples**
+   - Understanding Tuples
+
+7. **Sets**
+   - Understanding Sets
 
 ## 🔄 Workflow Status
 
