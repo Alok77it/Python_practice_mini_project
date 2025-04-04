@@ -48,6 +48,8 @@ print(food_stuff_lt[:3])
 print(food_stuff_lt[-3:])
 
 # 6. Delete the food_stuff_tp tuple completely
+food_stuff_tp.clear()
+print(food_stuff_tp)
 
 # 7. Check if 'Estonia' is a Nordic country
 nordic_countries = ('Denmark', 'Finland', 'Iceland', 'Norway', 'Sweden')

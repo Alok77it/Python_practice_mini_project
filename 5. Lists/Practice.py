@@ -190,5 +190,3 @@ else:
 print(f'First half: {first_half}')
 print(f'Second half: {second_half}')
 
-# 10. Unpack the first three countries and the rest as scandic countries:
-#     ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']
