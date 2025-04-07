@@ -117,7 +117,7 @@ print(remove_item(food_staff, 'Mango'))
 #     print(sum_of_numbers(5))   # 15
 #     print(sum_of_numbers(10))  # 55
 #     print(sum_of_numbers(100)) # 5050
-
+print(5)   # 15
 
 # 14. Declare a function named sum_of_odds. It takes a number parameter and it adds all the odd numbers in that range.
 
