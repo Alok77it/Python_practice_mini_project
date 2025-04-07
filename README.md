@@ -67,6 +67,20 @@ YAML:    5%  ██
 7. **Sets**
    - Understanding Sets
 
+8. **Dictionary**
+   - Understanding Dictionary
+
+9. **Loops**
+   - For Loops
+   - While Loops
+   - Nested Loops
+
+10. **Function**
+   - Built-in Function
+   - User-defined Function
+   - External Function
+
+
 ## 🔄 Workflow Status
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Alok77it/Python_practice_mini_project/python-app.yml?style=for-the-badge)
