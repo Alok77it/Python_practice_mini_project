@@ -105,8 +105,6 @@ for fruit in fruits:
     reversed_fruits.insert(0, fruit)
 print(reversed_fruits)
 
-# 3. Go to the data folder and use the countries_data.py file.
-
 
 # 4. What are the total number of languages in the data?
 
