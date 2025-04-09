@@ -104,13 +104,3 @@ reversed_fruits = []
 for fruit in fruits:
     reversed_fruits.insert(0, fruit)
 print(reversed_fruits)
-
-
-# 4. What are the total number of languages in the data?
-
-
-# 5. Find the ten most spoken languages from the data.
-
-
-# 6. Find the 10 most populated countries in the world.
-
