@@ -117,16 +117,24 @@ print(remove_item(food_staff, 'Mango'))
 #     print(sum_of_numbers(5))   # 15
 #     print(sum_of_numbers(10))  # 55
 #     print(sum_of_numbers(100)) # 5050
-print(5)   # 15
+def sum_of_numbers(n):
+    return sum(range(n + 1))
+print(sum_of_numbers(5))   
+print(sum_of_numbers(10))  
+print(sum_of_numbers(100)) 
 
 # 14. Declare a function named sum_of_odds. It takes a number parameter and it adds all the odd numbers in that range.
-
+def sum_of_odds(n):
+    return sum(i for i in range(n + 1) if i % 2 != 0)
+print(sum_of_odds(5))  
 
 # 15. Declare a function named sum_of_even. It takes a number parameter and it adds all the even numbers in that range.
-
+def sum_of_evens(n):
+    return sum(i for i in range(n + 1) if i % 2 == 0)
+print(sum_of_evens(5))
 
 # Exercises: Level 2
-
+                                                                                    
 # 1. Declare a function named evens_and_odds. It takes a positive integer as parameter and it counts number of evens and odds in the number.
 #    print(evens_and_odds(100))
 #    # The number of odds are 50.
