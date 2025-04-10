@@ -139,12 +139,46 @@ print(sum_of_evens(5))
 #    print(evens_and_odds(100))
 #    # The number of odds are 50.
 #    # The number of evens are 51.
+n = int(input("Enter a positive integer: "))
 
+def even_and_odds(n):
+    if n < 0:
+        return "Please enter a positive integer."
+    else:
+        odds = n // 2
+        evens = (n + 1) // 2
+        return f"The number of odds are {odds}. The number of evens are {evens}."
+print(even_and_odds(n))
+    
 
 # 2. Call your function factorial. It takes a whole number as a parameter and it returns the factorial of the number.
+# Function to calculate factorial
+def factorial(n):
+    if n < 0:
+        return "Factorial is not defined for negative numbers."
+    elif n == 0 or n == 1:
+        return 1
+    else:
+        result = 1
+        for i in range(2, n + 1):
+            result *= i
+        return result
+
+# Example usage
+number = int(input("Enter a whole number: "))
+print(f"The factorial of {number} is: {factorial(number)}")
 
 
 # 3. Call your function is_empty. It takes a parameter and it checks if it is empty or not.
+# Function to check if a parameter is empty
+def is_empty(param):
+    return not bool(param)
+
+# Example usage
+print(is_empty([]))  # True
+print(is_empty([1, 2, 3]))  # False
+print(is_empty(""))  # True
+print(is_empty("Hello"))  # False
 
 
 # 4. Write different functions which take lists. They should:
@@ -155,27 +189,9 @@ print(sum_of_evens(5))
 #    - calculate_variance
 #    - calculate_std (standard deviation)
 
+def calculate_mean(lst):
+    return sum(lst) / len(lst) if lst else 0
 
-# Exercises: Level 3
+# Example usage
+print(calculate_mean([1, 2, 3, 4, 5]))  # 3.0
 
-# 1. Write a function called is_prime, which checks if a number is prime.
-
-
-# 2. Write a function which checks if all items are unique in the list.
-
-
-# 3. Write a function which checks if all the items of the list are of the same data type.
-
-
-# 4. Write a function which checks if the provided variable is a valid Python variable.
-
-
-# 5. Go to the data folder and access the countries-data.py file.
-
-
-# 6. Create a function called the_most_spoken_languages in the world. 
-#    It should return 10 or 20 most spoken languages in the world in descending order.
-
-
-# 7. Create a function called the_most_populated_countries. 
-#    It should return 10 or 20 most populated countries in descending order.
