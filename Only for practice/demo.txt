@@ -1,0 +1,2 @@
+This is new message.
+new append line
