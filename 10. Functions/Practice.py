@@ -7,13 +7,29 @@ def greet():
 greet()
 
 # 2. Write a function that takes two numbers and returns their sum.
+def sum(a, b):
+    return a + b
 
+sum(10, 12)
 
 # 3. Write a function that takes a name and age, and prints a greeting using both (multiple parameters).
+def greeting(name, age):
+    return f"Hello {name}, you are {age} years old."
+
+data = greeting("John", 30)
+
+print(data)
 
 
 # 4. Demonstrate a function that returns multiple values (like name and age as a tuple).
+def multiple():
+    name = "Alok"
+    age = 22
+    return name, age
 
+status = multiple()
+print(status)
+print(type(status))
 
 # 5. Write a function using *args to calculate the sum of any number of numbers.
 
