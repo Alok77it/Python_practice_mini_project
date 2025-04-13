@@ -1,3 +1,8 @@
-is_even = lambda x: "Even"  if x % 2 == 0 else "Odd"
-print(is_even(4))  # Output: Even
-print(is_even(5))  # Output: Odd 
+a = input("enter the number: ")
+print(f"multiplication table of {a} is: ")
+
+try:
+    for i in range(1, 11):
+        print(f"{int(a) * i }")
+except:
+    print("invalid Input")

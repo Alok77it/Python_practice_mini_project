@@ -106,18 +106,73 @@ def sum(n):
 print(sum(10))    
 
 # 15. Create a generator function that yields numbers from 1 to 5.
-
+def generator():
+    for i in range(1, 6):
+        yield i
+        
+for value in generator():
+    print(value)
+    
 
 # 16. Create a generator function that yields squares of numbers up to n.
+def generator(n):
+    for i in range(n):
+        yield i * i
 
+for value in generator(10):
+    print(value)
 
 # 17. Use `next()` to get values one by one from a generator.
+def generator(n):
+    for i in range(n):
+        yield i
+        
+gen = generator(5)
 
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
 
-# 18. Write a function that receives a filename and uses a generator to read the file line by line.
+# 18. Write a function that receives a filename and uses a generator to read the file line by line.ex
+def read_file_line(filename):
+    try:
+        with open(filename, "r") as file:
+            for line in file:
+                yield line.strip()
+    except FileNotFoundError:
+        print(f"The file '{filename}' does not exist")
 
+filename = "example.txt"
+for line in read_file_line(filename):
+    print(line)
 
 # 19. Compare `return` vs `yield` by writing two similar functions: one returns a list, and the other yields values one by one.
+def return_function(n):
+    result = []
+    for i in range(1, n + 1):
+        result.append(i)
+    return result
+
+print(return_function(5))
+
+def yield_function(n):
+    for i in range(1, n + 1):
+        yield i
+    
+for value in yield_function(5):
+    print(value)
 
 
 # 20. ✅ BONUS: Try combining recursion, *args, and **kwargs in one program!
+
+def recursive_function(n, *args, **kwargs):
+    if n == 0:
+        print("Args: ", args)
+        print("kwargs: ", kwargs)
+        return
+    print(f"Current value of n: {n}")
+    recursive_function(n - 1, *args, **kwargs)
+
+recursive_function(3, 1, 2, 3, name="Alice", age=23, city="New York")
