@@ -72,34 +72,52 @@ print(double)
 
 
 # 11. Write a function that demonstrates polymorphism by accepting two different types of arguments (e.g., string and list) and printing their lengths.
+def multiply(a, b):
+    return a * b 
 
+print(multiply(5, 10))
+print(multiply([1], 3))
 
 # 12. Write a recursive function to calculate factorial of a number.
-
+def factorial(a):
+    if a == 1:
+        return 1
+    else:
+        return a * factorial(a - 1)
+    
+print(factorial(10))
 
 # 13. Write a recursive function to print numbers from n to 1.
-
+def print_numbers(n):
+    if n == 0:
+        return
+    print(n)
+    print_numbers(n - 1)
+    
+print_numbers(5)
 
 # 14. Write a recursive function to calculate the sum of first n natural numbers.
+def sum(n):
+    if n == 0:
+        return 0
+    else:
+        return n + sum(n - 1)
+        
+print(sum(10))    
+
+# 15. Create a generator function that yields numbers from 1 to 5.
 
 
-# 15. Write a recursive function to generate the nth Fibonacci number.
+# 16. Create a generator function that yields squares of numbers up to n.
 
 
-# 16. Create a generator function that yields numbers from 1 to 5.
+# 17. Use `next()` to get values one by one from a generator.
 
 
-# 17. Create a generator function that yields squares of numbers up to n.
+# 18. Write a function that receives a filename and uses a generator to read the file line by line.
 
 
-# 18. Use `next()` to get values one by one from a generator.
+# 19. Compare `return` vs `yield` by writing two similar functions: one returns a list, and the other yields values one by one.
 
 
-# 19. Write a function that receives a filename and uses a generator to read the file line by line.
-
-
-# 20. Compare `return` vs `yield` by writing two similar functions: one returns a list, and the other yields values one by one.
-
-
-# ✅ BONUS: Try combining recursion, *args, and **kwargs in one program!
-
+# 20. ✅ BONUS: Try combining recursion, *args, and **kwargs in one program!
