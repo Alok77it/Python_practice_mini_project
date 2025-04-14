@@ -3,51 +3,48 @@
 # 🔹 Part 1: List Comprehensions (1–10)
 
 # 1. Create a list of squares for numbers from 1 to 10 using list comprehension.
+squares = [x ** 2 for x in range(10)]
+print(squares)
 
 # 2. Create a list of even numbers from 0 to 20 using list comprehension.
+even =[x for x in range(21) if x % 2 == 0]
+print(even)
 
 # 3. Convert a list of lowercase strings to uppercase using list comprehension.
+lowercase = ["apple", "banana", "cherry", "date"]
+uppercase = [word.upper() for word in lowercase]
+print(uppercase)
 
 # 4. Extract numbers greater than 50 from a list using list comprehension.
+greater = [23, 45, 67, 89, 75, 66, 707]
+num = [x for x in greater if x > 50]
+print(num)
 
 # 5. Generate a list of strings like "Item 1", "Item 2", ..., "Item 10" using list comprehension.
+items = [f"Item {i}" for i in range(1, 11)]
+print(items)
 
 # 6. Flatten a 2D list like [[1,2], [3,4]] into [1, 2, 3, 4] using list comprehension.
+nested_list = [[1,2],[3, 4]]
+flattened_list = [item for sublist in nested_list for item in sublist]
+print(flattened_list)
 
 # 7. From a list of strings, create a list of string lengths using list comprehension.
+string = ["apple", "banana", "cherry", "date"]
+length = [len(word) for word in string]
+print(length)
 
 # 8. Use list comprehension to replace negative numbers in a list with 0.
+numbers = [10, -5, 20, -15, 30, -25]
+replaced = [x if x >= 0 else 0 for x in numbers]
+print(replaced)
 
 # 9. Extract vowels from a given string using list comprehension.
+text = "Hello, World!"
+vowels = [char for char in text if char.lower() in "aeiou"]
+print(vowels)
 
 # 10. Given a sentence, make a list of words that start with a capital letter using list comprehension.
-
-# 🔹 Part 2: Dictionary Comprehensions (11–16)
-
-# 11. Create a dictionary of numbers and their cubes from 1 to 5 using dict comprehension.
-
-# 12. Invert a dictionary (keys become values and values become keys) using dict comprehension.
-
-# 13. From a dictionary of students and scores, filter out only those who passed (score >= 60).
-
-# 14. Create a dictionary of characters and their ASCII codes from a given string.
-
-# 15. Count the frequency of each word in a list using dict comprehension.
-
-# 16. Merge two lists into a dictionary using dict comprehension (one list for keys, one for values).
-
-# 🔹 Part 3: Generator Comprehensions (17–20)
-
-# 17. Create a generator that yields square of each number from 0 to 9.
-
-# 18. Use a generator comprehension to find the sum of all numbers divisible by 3 under 50.
-
-# 19. Write a generator comprehension that yields only unique characters from a string.
-
-# 20. Create a generator to yield all prime numbers between 2 and 50 using comprehension and filtering logic.
-
-# 💡 Bonus Challenge:
-# Combine all three types of comprehensions in a single script that:
-# - Reads words from a list.
-# - Creates a dictionary of word lengths for words > 4 characters.
-# - Uses a generator to count only those lengths that are even numbers.
+sentence = "Python is Fun and Easy to Learn."
+capital_words = [word for word in sentence.split() if word[0].isupper()]
+print(capital_words)
