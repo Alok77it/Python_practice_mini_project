@@ -2,15 +2,64 @@
 # 1. Basic Python (10 Questions)
 # ========================
 # 1. Print "Welcome to Python on Linux!".
+print("Welcome To Python on Linux!")
+
 # 2. Take two numbers as input and print their sum, difference, and product.
+a = int(input("Enter the first number: "))
+b = int(input("Enter the second number: "))
+sum = a + b
+diff = a - b
+prod = a * b
+print(f"Sum: {sum}, Difference: {diff}, Product: {prod}")
+
+
 # 3. Print the data type of 5 different variables.
+a = 5
+b = 3.14
+c = "Hello"
+d = True
+e = [1, 2, 3]
+print(type(a), type(b), type(c), type(d), type(e))
+
+
 # 4. Swap two numbers (without using a third variable).
+a = 5
+b = 10
+a, b = b, a
+print(f"After swapping: a = {a}, b = {b}")
+
 # 5. Accept a user name and print it with a greeting.   
+user = input("Enter your name: ")
+print(f"Hello, {user}!")
+
 # 6. Convert meters to kilometers.
+meters = float(input("Enter meters: "))
+kilometers = meters / 1000
+print(f"{meters} meters is equal to {kilometers} kilometers.")
+
+
 # 7. Take an age input and print the year user turns 100.
+age = int(input("Enter your age: "))
+year_turn_100 = 2023 + (100 - age)
+print(f"You will turn 100 years old in the year {year_turn_100}.")
+
+
 # 8. Calculate the area of a rectangle.
+length = float(input("Enter the length of the rectangle: "))
+width = float(input("Enter the width of the rectangle: "))
+area = length * width
+print(f"The area of the rectangle is {area} square units.")
+
 # 9. Take float input and convert to integer.
+float_number = float(input("Enter a float number: "))
+integer_number = int(float_number)
+print(f"The integer value is {integer_number}.")
+
+
 # 10. Take name and age as input and display them using f-string.
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+print(f"Name: {name}, Age: {age}.")
 
 # ========================
 # 2. Operators (10 Questions)
