@@ -65,15 +65,64 @@ print(f"Name: {name}, Age: {age}.")
 # 2. Operators (10 Questions)
 # ========================
 # 1. Demonstrate use of all arithmetic operators.
+a = 10
+b = 5
+print(f"Addition: {a + b}")
+print(f"Subtraction: {a - b}")
+print(f"Multiplication: {a * b}")
+print(f"Division: {a / b}")
+print(f"Modulus: {a % b}")
+print(f"Exponentiation: {a ** b}")
+print(f"Floor Division: {a // b}")
+
 # 2. Find the cube of a number using exponent operator.
+side = 5
+cube = side ** 3
+print(f"The cube of {side} is {cube}.")
+
 # 3. Use floor division and modulo to split minutes into hours and minutes.
+mintues = 140
+hours = mintues // 60
+minutes = mintues % 60
+print(f"{mintues} minutes is equal to {hours} hours and {minutes} minutes.")
+
 # 4. Increment a variable by 5 using +=.
+a = 10
+a += 5
+print(a)
+
 # 5. Use relational operators to compare two numbers.
+
+a = 10
+b = 20
+print(f"a > b: {a > b}")
+print(f"a < b: {a < b}")
+print(f"a == b: {a == b}")
+print(f"a != b: {a != b}")
+print(f"a >= b: {a >= b}")
+print(f"a <= b: {a <= b}")
+
 # 6. Use logical operators to check if number is between 10 and 50.
+num = 30
+print(f"Is {num} between 10 and 50? {'Yes' if 10 < num < 50 else 'No'}")
+
 # 7. Use bitwise AND, OR, XOR on two integers.
+a = 10
+b = 4
+print(f"Bitwise AND: {a & b}")
+print(f"Bitwise OR: {a | b}")
+print(f"Bitwise XOR: {a ^ b}")
+
 # 8. Check if two strings are not equal using !=.
+a = "Alok"
+b = "alok"
+print(f"Are '{a}' and '{b}' not equal? {a != b}")
+
 # 9. Use is and is not with None.
+
+
 # 10. Use compound assignment operators to update a score.
+
 
 # ========================
 # 3. Conditionals (10 Questions)
