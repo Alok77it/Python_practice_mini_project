@@ -119,24 +119,121 @@ b = "alok"
 print(f"Are '{a}' and '{b}' not equal? {a != b}")
 
 # 9. Use is and is not with None.
+value = None
+print(f"Is value None? {value is None}")
+print(f"Is value not None? {value is not None}")
 
 
 # 10. Use compound assignment operators to update a score.
 
+score = 10
+score += 5
+print(f"Updated score: {score}")
 
 # ========================
 # 3. Conditionals (10 Questions)
 # ========================
 # 1. Check if a number is positive, negative, or zero.
+n = int(input("Enter a number: "))
+if n > 0:
+    print("Positive")
+elif n < 0:
+    print("Negative")
+else:
+    print("Zero")
+
 # 2. Check if number is even or odd.
+n = int(input("Enter a number: "))
+if n % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
 # 3. Take age and check if eligible to vote.
+age = int(input("Enter your age: "))
+if age >= 18:
+    print("Eligible to vote")
+else:
+    print("Not eligible to vote")
+
 # 4. Find largest among three numbers.
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+if a >= b and a >= c:
+    print(f"Largest number is {a}")
+elif b >= a and b >= c:
+    print(f"Largest number is {b}")
+else:
+    print(f"Largest number is {c}")
+
 # 5. Check if a character is vowel or consonant.
+char = input("Enter a character: ").lower()
+if char in 'aeiou':
+    print(f"{char} is a vowel")
+else:
+    print(f"{char} is a consonant")
+
 # 6. Simple calculator using if, elif, else.
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+operation = input("Enter operation (+, -, *, /): ")
+if operation == '+':
+    print(f"{a} + {b} = {a + b}")
+elif operation == '-':
+    print(f"{a} - {b} = {a - b}")
+elif operation == '*':
+    print(f"{a} * {b} = {a * b}")
+elif operation == '/':
+    if b != 0:
+        print(f"{a} / {b} = {a / b}")
+    else:
+        print("Cannot divide by zero")
+else:
+    print("Invalid operation")
+
 # 7. Check if a year is leap year.
+year = int(input("Enter a year: "))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(f"{year} is a leap year")
+else:
+    print(f"{year} is not a leap year")
+
 # 8. Check if a person is senior citizen (>60).
+age = int(input("Enter your age: "))
+if age > 60:
+    print("Senior Citizen")
+else:
+    print("Not a Senior Citizen")
+
 # 9. Take marks and print grade (A, B, C, etc.).
+marks = int(input("Enter marks: "))
+if marks >= 90:
+    print("Grade A")
+elif marks >= 80:
+    print("Grade B")
+elif marks >= 70:
+    print("Grade C")
+elif marks >= 60:
+    print("Grade D")
+elif marks >= 50:
+    print("Grade E")
+elif marks >= 40:
+    print("Grade F")
+else:
+    print("Grade F")
+
 # 10. Use nested if to categorize age groups (child, teen, adult).
+age = int(input("Enter your age: "))
+if age < 13:
+    print("Child")
+elif age < 20:
+    print("Teen")
+elif age < 60:
+    print("Adult")
+else:
+    print("Senior")
+
 
 # ========================
 # 4. Strings (10 Questions)
