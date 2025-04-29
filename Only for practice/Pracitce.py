@@ -239,15 +239,60 @@ else:
 # 4. Strings (10 Questions)
 # ========================
 # 1. Count number of vowels in a string.
+string = "I am alok trivedi. Learning Devops"
+vowels = "aeiouAEIOU"
+vowel_count = sum(1 for char in string if char in vowels)
+print(f"Number of vowels: {vowel_count}")
+
 # 2. Reverse a string manually.
+string = "Hello World"
+reversed_string = "".join(reversed(string))
+print(f"Reversed string: {reversed_string}")
+
 # 3. Check if a string is a palindrome.
+string = "madam"
+is_palindrome = string == string[::-1]
+print(f"Is the string '{string}' a palindrome? {'Yes' if is_palindrome else 'No'}")
+
 # 4. Count frequency of a character in string.
+string = "hello world"
+char_to_count = "l"
+frequency = string.count(char_to_count)
+print(f"Frequency of '{char_to_count}' in '{string}': {frequency}")
+
 # 5. Convert string to uppercase and lowercase.
+string = "Python Programming"
+uppercase = string.upper()
+lowercase = string.lower()
+print(f"Uppercase: {uppercase}, Lowercase: {lowercase}")
+
 # 6. Remove all spaces from a string.
+string = "Remove all spaces"
+no_spaces = string.replace(" ", "")
+print(f"String without spaces: {no_spaces}")
+
 # 7. Replace a word in a string.
+string = "I love Python"
+replaced_string = string.replace("Python", "Programming")
+print(f"Replaced string: {replaced_string}")
+
 # 8. Find the index of a substring.
+string = "Find the index of substring"
+substring = "index"
+index = string.find(substring)
+print(f"Index of '{substring}' in '{string}': {index}")
+
 # 9. Slice and print first 3 and last 3 characters.
+string = "SlicingExample"
+first_three = string[:3]
+last_three = string[-3:]
+print(f"First 3 characters: {first_three}, Last 3 characters: {last_three}")
+
 # 10. Join a list of strings using a delimiter.
+string_list = ["Python", "is", "fun"]
+delimiter = "-"
+joined_string = delimiter.join(string_list)
+print(f"Joined string: {joined_string}")
 
 # ========================
 # 5. Lists (10 Questions)
