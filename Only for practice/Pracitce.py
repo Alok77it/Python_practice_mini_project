@@ -298,15 +298,78 @@ print(f"Joined string: {joined_string}")
 # 5. Lists (10 Questions)
 # ========================
 # 1. Create a list of 5 items and print them.
+lst = ["alok, 2, True, 3.14, 'hello'"]
+print("List items:", lst)
+
 # 2. Add and remove elements from a list.
+lst = [1, 2, 3, 4, 5]
+lst.append(6)
+print("After adding an element:", lst)
+lst.remove(3)
+print("After removing an element:", lst)
+
 # 3. Sort list without using sort().
+lst = [5, 2, 9, 1, 5, 6]
+sorted_lst = []
+while lst:
+    minimum = lst[0]  # Assume the first element is the smallest
+    for x in lst:
+        if x < minimum:
+            minimum = x
+    sorted_lst.append(minimum)
+    lst.remove(minimum)
+print("Sorted list:", sorted_lst)
+
 # 4. Find max and min from a list.
+lst = [10, 20, 4, 45, 99]
+maximum = lst[0]
+minimum = lst[0]
+for num in lst:
+    if num > maximum:
+        maximum = num
+    if num < minimum:
+        minimum = num
+print("Maximum:", maximum, "Minimum:", minimum)
+
 # 5. Remove duplicates using loop.
+lst = [1, 2, 2, 3, 4, 4, 5]
+unique_lst = []
+for item in lst:
+    if item not in unique_lst:
+        unique_lst.append(item)
+print("List after removing duplicates:", unique_lst)
+
 # 6. Merge two lists into one.
+lst1 = [1, 2, 3]
+lst2 = [4, 5, 6]
+merged_lst = lst1 + lst2
+print("Merged list:", merged_lst)
+
 # 7. Print even numbers from a list.
+lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even_numbers = [num for num in lst if num % 2 == 0]
+print("Even numbers:", even_numbers)
+
 # 8. Replace an item at a given index.
+lst = [10, 20, 30, 40, 50]
+index = 2
+new_value = 99
+lst[index] = new_value
+print("List after replacement:", lst)
+
 # 9. Use pop() and insert() in a list.
+lst = [1, 2, 3, 4, 5]
+popped_item = lst.pop(2)
+print("Popped item:", popped_item)
+lst.insert(2, 99)
+print("List after insertion:", lst)
+
 # 10. Reverse a list without using reverse().
+lst = [1, 2, 3, 4, 5]
+reversed_lst = []
+for i in range(len(lst) - 1, -1, -1):
+    reversed_lst.append(lst[i])
+print("Reversed list:", reversed_lst)
 
 # ========================
 # 6. Tuples (10 Questions)
