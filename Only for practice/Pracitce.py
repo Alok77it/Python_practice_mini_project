@@ -375,15 +375,49 @@ print("Reversed list:", reversed_lst)
 # 6. Tuples (10 Questions)
 # ========================
 # 1. Create a tuple of 5 elements and access them using index.
+tuple_example = (10, 20, 30, 40, 50)
+print("Accessing elements by index:")
+print(f"First element: {tuple_example[0]}")
+print(f"Last element: {tuple_example[-1]}")
+
 # 2. Convert a list to a tuple.
+list_example = [1, 2, 3, 4, 5]
+converted_tuple = tuple(list_example)
+print(f"Converted tuple: {converted_tuple}")
+
 # 3. Find the length of a tuple.
+print(f"Length of tuple: {len(tuple_example)}")
+
 # 4. Count occurrences of an item.
+item_to_count = 20
+print(f"Occurrences of {item_to_count}: {tuple_example.count(item_to_count)}")
+
 # 5. Find index of an item.
+item_to_find = 30
+print(f"Index of {item_to_find}: {tuple_example.index(item_to_find)}")
+
 # 6. Slice a tuple.
+sliced_tuple = tuple_example[1:4]
+print(f"Sliced tuple (index 1 to 3): {sliced_tuple}")
+
 # 7. Check if an item exists in a tuple.
+item_to_check = 40
+print(f"Does {item_to_check} exist in tuple? {'Yes' if item_to_check in tuple_example else 'No'}")
+
 # 8. Concatenate two tuples.
+tuple1 = (1, 2, 3)
+tuple2 = (4, 5, 6)
+concatenated_tuple = tuple1 + tuple2
+print(f"Concatenated tuple: {concatenated_tuple}")
+
 # 9. Unpack a tuple into variables.
+a, b, c, d, e = tuple_example
+print(f"Unpacked values: a={a}, b={b}, c={c}, d={d}, e={e}")
+
 # 10. Use tuple as a key in a dictionary.
+tuple_key = (1, 2, 3)
+dictionary_with_tuple_key = {tuple_key: "Tuple as key example"}
+print(f"Dictionary with tuple key: {dictionary_with_tuple_key}")
 
 # ========================
 # 7. Sets (10 Questions)
