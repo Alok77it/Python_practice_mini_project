@@ -423,15 +423,51 @@ print(f"Dictionary with tuple key: {dictionary_with_tuple_key}")
 # 7. Sets (10 Questions)
 # ========================
 # 1. Create a set and add 5 elements.
+my_set = set()
+my_set.update([1, 2, 3, 4, 5])
+print("Set after adding 5 elements:", my_set)
+
 # 2. Perform union, intersection, difference.
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+print("Union:", set1 | set2)
+print("Intersection:", set1 & set2)
+print("Difference:", set1 - set2)
+
 # 3. Remove an element safely using discard().
+my_set.discard(3)
+print("Set after discarding 3:", my_set)
+
 # 4. Check if two sets are disjoint.
+set3 = {6, 7, 8}
+print("Are set1 and set3 disjoint?", set1.isdisjoint(set3))
+
 # 5. Convert list to set to remove duplicates.
+my_list = [1, 2, 2, 3, 4, 4, 5]
+unique_set = set(my_list)
+print("Set after removing duplicates:", unique_set)
+
 # 6. Add multiple elements to a set.
+my_set.update([6, 7, 8])
+print("Set after adding multiple elements:", my_set)
+
 # 7. Check membership of an item in set.
+print("Is 5 in my_set?", 5 in my_set)
+
 # 8. Find symmetric difference.
+print("Symmetric difference between set1 and set2:", set1 ^ set2)
+
 # 9. Use set comprehension to store squares.
+squares = {x**2 for x in range(1, 6)}
+print("Set of squares:", squares)
+
 # 10. Create a frozen set and try modifying it.
+frozen = frozenset([1, 2, 3])
+print("Frozen set:", frozen)
+try:
+    frozen.add(4)
+except AttributeError as e:
+    print("Error:", e)
 
 # ========================
 # 8. Dictionaries (10 Questions)
