@@ -473,15 +473,58 @@ except AttributeError as e:
 # 8. Dictionaries (10 Questions)
 # ========================
 # 1. Create a dictionary of names and marks.
+names_and_marks = {"Alice": 85, "Bob": 90, "Charlie": 78}
+print("Initial dictionary:", names_and_marks)
+
 # 2. Add a new key-value pair.
+names_and_marks["David"] = 88
+print("After adding a new key-value pair:", names_and_marks)
+
 # 3. Update an existing key.
+names_and_marks["Alice"] = 95
+print("After updating an existing key:", names_and_marks)
+
 # 4. Delete a key-value pair.
+del names_and_marks["Charlie"]
+print("After deleting a key-value pair:", names_and_marks)
+
 # 5. Loop through dictionary and print key-value.
+print("Looping through dictionary:")
+for name, mark in names_and_marks.items():
+    print(f"{name}: {mark}")
+
 # 6. Check if key exists in dictionary.
+key_to_check = "Bob"
+if key_to_check in names_and_marks:
+    print(f"{key_to_check} exists in the dictionary.")
+else:
+    print(f"{key_to_check} does not exist in the dictionary.")
+
 # 7. Merge two dictionaries.
+additional_marks = {"Eve": 92, "Frank": 80}
+names_and_marks.update(additional_marks)
+print("After merging two dictionaries:", names_and_marks)
+
 # 8. Create a nested dictionary and access value.
+nested_dict = {
+    "Student1": {"Name": "Alice", "Marks": 85},
+    "Student2": {"Name": "Bob", "Marks": 90}
+}
+print("Nested dictionary:", nested_dict)
+print("Accessing value:", nested_dict["Student1"]["Marks"])
+
 # 9. Count word frequency in a string.
+text = "hello world hello everyone"
+word_frequency = {}
+for word in text.split():
+    word_frequency[word] = word_frequency.get(word, 0) + 1
+print("Word frequency:", word_frequency)
+
 # 10. Convert 2 lists into a dictionary using zip().
+keys = ["Name", "Age", "City"]
+values = ["Alice", 25, "New York"]
+combined_dict = dict(zip(keys, values))
+print("Dictionary from two lists:", combined_dict)
 
 # ========================
 # 9. Loops (10 Questions)
