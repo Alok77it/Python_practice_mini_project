@@ -530,15 +530,63 @@ print("Dictionary from two lists:", combined_dict)
 # 9. Loops (10 Questions)
 # ========================
 # 1. Print numbers 1 to 10 using for loop.
+for i in range(1, 11):
+    print(i)
+
 # 2. Print even numbers between 1 to 50.
+for i in range(2, 51, 2):
+    print(i)
+
 # 3. Print Fibonacci series up to n terms.
+n = int(input("Enter the number of terms: "))
+a, b = 0, 1
+print("Fibonacci series:")
+for _ in range(n):
+    print(a, end=" ")
+    a, b = b, a + b
+print()
+
 # 4. Print multiplication table of a number.
+num = int(input("Enter a number: "))
+print(f"Multiplication table of {num}:")
+for i in range(1, 11):
+    print(f"{num} x {i} = {num * i}")
+
 # 5. Calculate factorial using loop.
+num = int(input("Enter a number to calculate factorial: "))
+factorial = 1
+for i in range(1, num + 1):
+    factorial *= i
+print(f"Factorial of {num} is {factorial}")
+
 # 6. Use break when number divisible by 7 is found.
+for i in range(1, 101):
+    if i % 7 == 0:
+        print(f"First number divisible by 7 is {i}")
+        break
+
 # 7. Use continue to skip a number.
+for i in range(1, 11):
+    if i == 5:
+        continue
+    print(i)
+
 # 8. Iterate through a list using for.
+my_list = ["apple", "banana", "cherry"]
+for item in my_list:
+    print(item)
+
 # 9. Loop through dictionary and print values.
+my_dict = {"name": "Alice", "age": 25, "city": "New York"}
+for key, value in my_dict.items():
+    print(f"{key}: {value}")
+
 # 10. Use while loop to print digits of a number.
+num = int(input("Enter a number: "))
+print("Digits of the number:")
+while num > 0:
+    print(num % 10)
+    num //= 10
 
 # ========================
 # 10. Functions (10 Questions)
