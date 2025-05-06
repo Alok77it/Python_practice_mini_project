@@ -592,15 +592,52 @@ while num > 0:
 # 10. Functions (10 Questions)
 # ========================
 # 1. Function to add two numbers.
+def add_numbers(a, b):
+    return a + b
+
 # 2. Function to find square and cube.
+def square_and_cube(n):
+    return n**2, n**3
+
 # 3. Function to return max of three numbers.
+def max_of_three(a, b, c):
+    return max(a, b, c)
+
 # 4. Function to check if number is prime.
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
 # 5. Function with default arguments.
+def greet(name="Guest"):
+    return f"Hello, {name}!"
+
 # 6. Use *args to pass variable arguments.
+def sum_args(*args):
+    return sum(args)
+
 # 7. Use **kwargs to pass keyword arguments.
+def print_kwargs(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
 # 8. Return multiple values (sum, product).
+def sum_and_product(a, b):
+    return a + b, a * b
+
 # 9. Recursive function for factorial.
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+
 # 10. Function to check if a string is palindrome.
+def is_palindrome(s):
+    return s == s[::-1]
 
 # ========================
 # 11. Comprehensions (10 Questions)
