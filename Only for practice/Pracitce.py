@@ -643,15 +643,52 @@ def is_palindrome(s):
 # 11. Comprehensions (10 Questions)
 # ========================
 # 1. List of squares using list comprehension.
+squares = [x**2 for x in range(1, 11)]
+print("List of squares:", squares)
+
 # 2. Filter even numbers from list using list comp.
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even_numbers = [x for x in numbers if x % 2 == 0]
+print("Even numbers:", even_numbers)
+
 # 3. Dict comp: keys as numbers, values as squares.
+squares_dict = {x: x**2 for x in range(1, 6)}
+print("Dictionary of squares:", squares_dict)
+
 # 4. Set comp: unique chars in a string.
+string = "hello world"
+unique_chars = {char for char in string if char != ' '}
+print("Unique characters:", unique_chars)
+
 # 5. List comp to convert string list to uppercase.
+string_list = ["python", "is", "fun"]
+uppercase_list = [word.upper() for word in string_list]
+print("Uppercase list:", uppercase_list)
+
 # 6. Dict comp: count frequency of words in list.
+words = ["apple", "banana", "apple", "orange", "banana", "apple"]
+word_count = {word: words.count(word) for word in set(words)}
+print("Word frequency:", word_count)
+
 # 7. Nested list comp: 2D matrix of 0s.
+rows, cols = 3, 3
+matrix = [[0 for _ in range(cols)] for _ in range(rows)]
+print("2D matrix of 0s:", matrix)
+
 # 8. Flatten a 2D list using list comp.
+two_d_list = [[1, 2], [3, 4], [5, 6]]
+flattened_list = [item for sublist in two_d_list for item in sublist]
+print("Flattened list:", flattened_list)
+
 # 9. Reverse each word in a sentence using list comp.
+sentence = "Hello world"
+reversed_words = " ".join([word[::-1] for word in sentence.split()])
+print("Reversed words:", reversed_words)
+
 # 10. Use list comp with condition inside expression.
+numbers = range(1, 11)
+conditional_list = [x**2 if x % 2 == 0 else x**3 for x in numbers]
+print("Conditional list:", conditional_list)
 
 # ========================
 # 12. Exception Handling (10 Questions)
