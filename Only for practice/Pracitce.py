@@ -1,719 +1,412 @@
-# ========================
-# 1. Basic Python (10 Questions)
-# ========================
-# 1. Print "Welcome to Python on Linux!".
-print("Welcome To Python on Linux!")
-
-# 2. Take two numbers as input and print their sum, difference, and product.
-a = int(input("Enter the first number: "))
-b = int(input("Enter the second number: "))
-sum = a + b
-diff = a - b
-prod = a * b
-print(f"Sum: {sum}, Difference: {diff}, Product: {prod}")
-
-
-# 3. Print the data type of 5 different variables.
-a = 5
-b = 3.14
-c = "Hello"
-d = True
-e = [1, 2, 3]
-print(type(a), type(b), type(c), type(d), type(e))
-
-
-# 4. Swap two numbers (without using a third variable).
+# ===========================
+# 1. Variables and Data Types
+# ===========================
+# 1. Swap two variables without using a third variable.
 a = 5
 b = 10
 a, b = b, a
-print(f"After swapping: a = {a}, b = {b}")
-
-# 5. Accept a user name and print it with a greeting.   
-user = input("Enter your name: ")
-print(f"Hello, {user}!")
-
-# 6. Convert meters to kilometers.
-meters = float(input("Enter meters: "))
-kilometers = meters / 1000
-print(f"{meters} meters is equal to {kilometers} kilometers.")
-
-
-# 7. Take an age input and print the year user turns 100.
-age = int(input("Enter your age: "))
-year_turn_100 = 2023 + (100 - age)
-print(f"You will turn 100 years old in the year {year_turn_100}.")
-
-
-# 8. Calculate the area of a rectangle.
-length = float(input("Enter the length of the rectangle: "))
-width = float(input("Enter the width of the rectangle: "))
-area = length * width
-print(f"The area of the rectangle is {area} square units.")
-
-# 9. Take float input and convert to integer.
-float_number = float(input("Enter a float number: "))
-integer_number = int(float_number)
-print(f"The integer value is {integer_number}.")
-
-
-# 10. Take name and age as input and display them using f-string.
-name = input("Enter your name: ")
-age = int(input("Enter your age: "))
-print(f"Name: {name}, Age: {age}.")
-
-# ========================
-# 2. Operators (10 Questions)
-# ========================
-# 1. Demonstrate use of all arithmetic operators.
-a = 10
-b = 5
-print(f"Addition: {a + b}")
-print(f"Subtraction: {a - b}")
-print(f"Multiplication: {a * b}")
-print(f"Division: {a / b}")
-print(f"Modulus: {a % b}")
-print(f"Exponentiation: {a ** b}")
-print(f"Floor Division: {a // b}")
-
-# 2. Find the cube of a number using exponent operator.
-side = 5
-cube = side ** 3
-print(f"The cube of {side} is {cube}.")
-
-# 3. Use floor division and modulo to split minutes into hours and minutes.
-mintues = 140
-hours = mintues // 60
-minutes = mintues % 60
-print(f"{mintues} minutes is equal to {hours} hours and {minutes} minutes.")
-
-# 4. Increment a variable by 5 using +=.
-a = 10
-a += 5
-print(a)
-
-# 5. Use relational operators to compare two numbers.
-
-a = 10
-b = 20
-print(f"a > b: {a > b}")
-print(f"a < b: {a < b}")
-print(f"a == b: {a == b}")
-print(f"a != b: {a != b}")
-print(f"a >= b: {a >= b}")
-print(f"a <= b: {a <= b}")
-
-# 6. Use logical operators to check if number is between 10 and 50.
-num = 30
-print(f"Is {num} between 10 and 50? {'Yes' if 10 < num < 50 else 'No'}")
-
-# 7. Use bitwise AND, OR, XOR on two integers.
-a = 10
-b = 4
-print(f"Bitwise AND: {a & b}")
-print(f"Bitwise OR: {a | b}")
-print(f"Bitwise XOR: {a ^ b}")
-
-# 8. Check if two strings are not equal using !=.
-a = "Alok"
-b = "alok"
-print(f"Are '{a}' and '{b}' not equal? {a != b}")
-
-# 9. Use is and is not with None.
-value = None
-print(f"Is value None? {value is None}")
-print(f"Is value not None? {value is not None}")
-
-
-# 10. Use compound assignment operators to update a score.
-
-score = 10
-score += 5
-print(f"Updated score: {score}")
-
-# ========================
-# 3. Conditionals (10 Questions)
-# ========================
-# 1. Check if a number is positive, negative, or zero.
-n = int(input("Enter a number: "))
-if n > 0:
-    print("Positive")
-elif n < 0:
-    print("Negative")
-else:
-    print("Zero")
-
-# 2. Check if number is even or odd.
-n = int(input("Enter a number: "))
-if n % 2 == 0:
-    print("Even")
-else:
-    print("Odd")
-
-# 3. Take age and check if eligible to vote.
-age = int(input("Enter your age: "))
-if age >= 18:
-    print("Eligible to vote")
-else:
-    print("Not eligible to vote")
-
-# 4. Find largest among three numbers.
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
-c = int(input("Enter third number: "))
-if a >= b and a >= c:
-    print(f"Largest number is {a}")
-elif b >= a and b >= c:
-    print(f"Largest number is {b}")
-else:
-    print(f"Largest number is {c}")
-
-# 5. Check if a character is vowel or consonant.
-char = input("Enter a character: ").lower()
-if char in 'aeiou':
-    print(f"{char} is a vowel")
-else:
-    print(f"{char} is a consonant")
-
-# 6. Simple calculator using if, elif, else.
-a = float(input("Enter first number: "))
-b = float(input("Enter second number: "))
-operation = input("Enter operation (+, -, *, /): ")
-if operation == '+':
-    print(f"{a} + {b} = {a + b}")
-elif operation == '-':
-    print(f"{a} - {b} = {a - b}")
-elif operation == '*':
-    print(f"{a} * {b} = {a * b}")
-elif operation == '/':
-    if b != 0:
-        print(f"{a} / {b} = {a / b}")
-    else:
-        print("Cannot divide by zero")
-else:
-    print("Invalid operation")
-
-# 7. Check if a year is leap year.
-year = int(input("Enter a year: "))
-if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
-    print(f"{year} is a leap year")
-else:
-    print(f"{year} is not a leap year")
-
-# 8. Check if a person is senior citizen (>60).
-age = int(input("Enter your age: "))
-if age > 60:
-    print("Senior Citizen")
-else:
-    print("Not a Senior Citizen")
-
-# 9. Take marks and print grade (A, B, C, etc.).
-marks = int(input("Enter marks: "))
-if marks >= 90:
-    print("Grade A")
-elif marks >= 80:
-    print("Grade B")
-elif marks >= 70:
-    print("Grade C")
-elif marks >= 60:
-    print("Grade D")
-elif marks >= 50:
-    print("Grade E")
-elif marks >= 40:
-    print("Grade F")
-else:
-    print("Grade F")
-
-# 10. Use nested if to categorize age groups (child, teen, adult).
-age = int(input("Enter your age: "))
-if age < 13:
-    print("Child")
-elif age < 20:
-    print("Teen")
-elif age < 60:
-    print("Adult")
-else:
-    print("Senior")
-
-
-# ========================
-# 4. Strings (10 Questions)
-# ========================
-# 1. Count number of vowels in a string.
-string = "I am alok trivedi. Learning Devops"
-vowels = "aeiouAEIOU"
-vowel_count = sum(1 for char in string if char in vowels)
-print(f"Number of vowels: {vowel_count}")
-
-# 2. Reverse a string manually.
-string = "Hello World"
-reversed_string = "".join(reversed(string))
-print(f"Reversed string: {reversed_string}")
-
-# 3. Check if a string is a palindrome.
-string = "madam"
-is_palindrome = string == string[::-1]
-print(f"Is the string '{string}' a palindrome? {'Yes' if is_palindrome else 'No'}")
-
-# 4. Count frequency of a character in string.
-string = "hello world"
-char_to_count = "l"
-frequency = string.count(char_to_count)
-print(f"Frequency of '{char_to_count}' in '{string}': {frequency}")
-
-# 5. Convert string to uppercase and lowercase.
-string = "Python Programming"
-uppercase = string.upper()
-lowercase = string.lower()
-print(f"Uppercase: {uppercase}, Lowercase: {lowercase}")
-
-# 6. Remove all spaces from a string.
-string = "Remove all spaces"
-no_spaces = string.replace(" ", "")
-print(f"String without spaces: {no_spaces}")
-
-# 7. Replace a word in a string.
-string = "I love Python"
-replaced_string = string.replace("Python", "Programming")
-print(f"Replaced string: {replaced_string}")
-
-# 8. Find the index of a substring.
-string = "Find the index of substring"
-substring = "index"
-index = string.find(substring)
-print(f"Index of '{substring}' in '{string}': {index}")
-
-# 9. Slice and print first 3 and last 3 characters.
-string = "SlicingExample"
-first_three = string[:3]
-last_three = string[-3:]
-print(f"First 3 characters: {first_three}, Last 3 characters: {last_three}")
-
-# 10. Join a list of strings using a delimiter.
-string_list = ["Python", "is", "fun"]
-delimiter = "-"
-joined_string = delimiter.join(string_list)
-print(f"Joined string: {joined_string}")
-
-# ========================
-# 5. Lists (10 Questions)
-# ========================
-# 1. Create a list of 5 items and print them.
-lst = ["alok, 2, True, 3.14, 'hello'"]
-print("List items:", lst)
-
-# 2. Add and remove elements from a list.
-lst = [1, 2, 3, 4, 5]
-lst.append(6)
-print("After adding an element:", lst)
-lst.remove(3)
-print("After removing an element:", lst)
-
-# 3. Sort list without using sort().
-lst = [5, 2, 9, 1, 5, 6]
-sorted_lst = []
-while lst:
-    minimum = lst[0]  # Assume the first element is the smallest
-    for x in lst:
-        if x < minimum:
-            minimum = x
-    sorted_lst.append(minimum)
-    lst.remove(minimum)
-print("Sorted list:", sorted_lst)
-
-# 4. Find max and min from a list.
-lst = [10, 20, 4, 45, 99]
-maximum = lst[0]
-minimum = lst[0]
-for num in lst:
-    if num > maximum:
-        maximum = num
-    if num < minimum:
-        minimum = num
-print("Maximum:", maximum, "Minimum:", minimum)
-
-# 5. Remove duplicates using loop.
-lst = [1, 2, 2, 3, 4, 4, 5]
-unique_lst = []
-for item in lst:
-    if item not in unique_lst:
-        unique_lst.append(item)
-print("List after removing duplicates:", unique_lst)
-
-# 6. Merge two lists into one.
-lst1 = [1, 2, 3]
-lst2 = [4, 5, 6]
-merged_lst = lst1 + lst2
-print("Merged list:", merged_lst)
-
-# 7. Print even numbers from a list.
-lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-even_numbers = [num for num in lst if num % 2 == 0]
-print("Even numbers:", even_numbers)
-
-# 8. Replace an item at a given index.
-lst = [10, 20, 30, 40, 50]
-index = 2
-new_value = 99
-lst[index] = new_value
-print("List after replacement:", lst)
-
-# 9. Use pop() and insert() in a list.
-lst = [1, 2, 3, 4, 5]
-popped_item = lst.pop(2)
-print("Popped item:", popped_item)
-lst.insert(2, 99)
-print("List after insertion:", lst)
-
-# 10. Reverse a list without using reverse().
-lst = [1, 2, 3, 4, 5]
-reversed_lst = []
-for i in range(len(lst) - 1, -1, -1):
-    reversed_lst.append(lst[i])
-print("Reversed list:", reversed_lst)
-
-# ========================
-# 6. Tuples (10 Questions)
-# ========================
-# 1. Create a tuple of 5 elements and access them using index.
-tuple_example = (10, 20, 30, 40, 50)
-print("Accessing elements by index:")
-print(f"First element: {tuple_example[0]}")
-print(f"Last element: {tuple_example[-1]}")
-
-# 2. Convert a list to a tuple.
-list_example = [1, 2, 3, 4, 5]
-converted_tuple = tuple(list_example)
-print(f"Converted tuple: {converted_tuple}")
-
-# 3. Find the length of a tuple.
-print(f"Length of tuple: {len(tuple_example)}")
-
-# 4. Count occurrences of an item.
-item_to_count = 20
-print(f"Occurrences of {item_to_count}: {tuple_example.count(item_to_count)}")
-
-# 5. Find index of an item.
-item_to_find = 30
-print(f"Index of {item_to_find}: {tuple_example.index(item_to_find)}")
-
-# 6. Slice a tuple.
-sliced_tuple = tuple_example[1:4]
-print(f"Sliced tuple (index 1 to 3): {sliced_tuple}")
-
-# 7. Check if an item exists in a tuple.
-item_to_check = 40
-print(f"Does {item_to_check} exist in tuple? {'Yes' if item_to_check in tuple_example else 'No'}")
-
-# 8. Concatenate two tuples.
-tuple1 = (1, 2, 3)
-tuple2 = (4, 5, 6)
-concatenated_tuple = tuple1 + tuple2
-print(f"Concatenated tuple: {concatenated_tuple}")
-
-# 9. Unpack a tuple into variables.
-a, b, c, d, e = tuple_example
-print(f"Unpacked values: a={a}, b={b}, c={c}, d={d}, e={e}")
-
-# 10. Use tuple as a key in a dictionary.
-tuple_key = (1, 2, 3)
-dictionary_with_tuple_key = {tuple_key: "Tuple as key example"}
-print(f"Dictionary with tuple key: {dictionary_with_tuple_key}")
-
-# ========================
-# 7. Sets (10 Questions)
-# ========================
-# 1. Create a set and add 5 elements.
-my_set = set()
-my_set.update([1, 2, 3, 4, 5])
-print("Set after adding 5 elements:", my_set)
-
-# 2. Perform union, intersection, difference.
-set1 = {1, 2, 3}
-set2 = {3, 4, 5}
-print("Union:", set1 | set2)
-print("Intersection:", set1 & set2)
-print("Difference:", set1 - set2)
-
-# 3. Remove an element safely using discard().
-my_set.discard(3)
-print("Set after discarding 3:", my_set)
-
-# 4. Check if two sets are disjoint.
-set3 = {6, 7, 8}
-print("Are set1 and set3 disjoint?", set1.isdisjoint(set3))
-
-# 5. Convert list to set to remove duplicates.
-my_list = [1, 2, 2, 3, 4, 4, 5]
-unique_set = set(my_list)
-print("Set after removing duplicates:", unique_set)
-
-# 6. Add multiple elements to a set.
-my_set.update([6, 7, 8])
-print("Set after adding multiple elements:", my_set)
-
-# 7. Check membership of an item in set.
-print("Is 5 in my_set?", 5 in my_set)
-
-# 8. Find symmetric difference.
-print("Symmetric difference between set1 and set2:", set1 ^ set2)
-
-# 9. Use set comprehension to store squares.
-squares = {x**2 for x in range(1, 6)}
-print("Set of squares:", squares)
-
-# 10. Create a frozen set and try modifying it.
-frozen = frozenset([1, 2, 3])
-print("Frozen set:", frozen)
-try:
-    frozen.add(4)
-except AttributeError as e:
-    print("Error:", e)
-
-# ========================
-# 8. Dictionaries (10 Questions)
-# ========================
-# 1. Create a dictionary of names and marks.
-names_and_marks = {"Alice": 85, "Bob": 90, "Charlie": 78}
-print("Initial dictionary:", names_and_marks)
-
-# 2. Add a new key-value pair.
-names_and_marks["David"] = 88
-print("After adding a new key-value pair:", names_and_marks)
-
-# 3. Update an existing key.
-names_and_marks["Alice"] = 95
-print("After updating an existing key:", names_and_marks)
-
-# 4. Delete a key-value pair.
-del names_and_marks["Charlie"]
-print("After deleting a key-value pair:", names_and_marks)
-
-# 5. Loop through dictionary and print key-value.
-print("Looping through dictionary:")
-for name, mark in names_and_marks.items():
-    print(f"{name}: {mark}")
-
-# 6. Check if key exists in dictionary.
-key_to_check = "Bob"
-if key_to_check in names_and_marks:
-    print(f"{key_to_check} exists in the dictionary.")
-else:
-    print(f"{key_to_check} does not exist in the dictionary.")
-
-# 7. Merge two dictionaries.
-additional_marks = {"Eve": 92, "Frank": 80}
-names_and_marks.update(additional_marks)
-print("After merging two dictionaries:", names_and_marks)
-
-# 8. Create a nested dictionary and access value.
-nested_dict = {
-    "Student1": {"Name": "Alice", "Marks": 85},
-    "Student2": {"Name": "Bob", "Marks": 90}
-}
-print("Nested dictionary:", nested_dict)
-print("Accessing value:", nested_dict["Student1"]["Marks"])
-
-# 9. Count word frequency in a string.
-text = "hello world hello everyone"
-word_frequency = {}
-for word in text.split():
-    word_frequency[word] = word_frequency.get(word, 0) + 1
-print("Word frequency:", word_frequency)
-
-# 10. Convert 2 lists into a dictionary using zip().
-keys = ["Name", "Age", "City"]
-values = ["Alice", 25, "New York"]
-combined_dict = dict(zip(keys, values))
-print("Dictionary from two lists:", combined_dict)
-
-# ========================
-# 9. Loops (10 Questions)
-# ========================
-# 1. Print numbers 1 to 10 using for loop.
-for i in range(1, 11):
-    print(i)
-
-# 2. Print even numbers between 1 to 50.
-for i in range(2, 51, 2):
-    print(i)
-
-# 3. Print Fibonacci series up to n terms.
-n = int(input("Enter the number of terms: "))
-a, b = 0, 1
-print("Fibonacci series:")
-for _ in range(n):
-    print(a, end=" ")
-    a, b = b, a + b
-print()
-
-# 4. Print multiplication table of a number.
-num = int(input("Enter a number: "))
-print(f"Multiplication table of {num}:")
-for i in range(1, 11):
-    print(f"{num} x {i} = {num * i}")
-
-# 5. Calculate factorial using loop.
-num = int(input("Enter a number to calculate factorial: "))
-factorial = 1
-for i in range(1, num + 1):
-    factorial *= i
-print(f"Factorial of {num} is {factorial}")
-
-# 6. Use break when number divisible by 7 is found.
-for i in range(1, 101):
-    if i % 7 == 0:
-        print(f"First number divisible by 7 is {i}")
-        break
-
-# 7. Use continue to skip a number.
-for i in range(1, 11):
-    if i == 5:
-        continue
-    print(i)
-
-# 8. Iterate through a list using for.
-my_list = ["apple", "banana", "cherry"]
-for item in my_list:
-    print(item)
-
-# 9. Loop through dictionary and print values.
-my_dict = {"name": "Alice", "age": 25, "city": "New York"}
-for key, value in my_dict.items():
-    print(f"{key}: {value}")
-
-# 10. Use while loop to print digits of a number.
-num = int(input("Enter a number: "))
-print("Digits of the number:")
-while num > 0:
-    print(num % 10)
-    num //= 10
-
-# ========================
-# 10. Functions (10 Questions)
-# ========================
-# 1. Function to add two numbers.
-def add_numbers(a, b):
-    return a + b
-
-# 2. Function to find square and cube.
-def square_and_cube(n):
-    return n**2, n**3
-
-# 3. Function to return max of three numbers.
-def max_of_three(a, b, c):
-    return max(a, b, c)
-
-# 4. Function to check if number is prime.
-def is_prime(n):
-    if n <= 1:
-        return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
-
-# 5. Function with default arguments.
-def greet(name="Guest"):
-    return f"Hello, {name}!"
-
-# 6. Use *args to pass variable arguments.
-def sum_args(*args):
-    return sum(args)
-
-# 7. Use **kwargs to pass keyword arguments.
-def print_kwargs(**kwargs):
-    for key, value in kwargs.items():
-        print(f"{key}: {value}")
-
-# 8. Return multiple values (sum, product).
-def sum_and_product(a, b):
-    return a + b, a * b
-
-# 9. Recursive function for factorial.
-def factorial(n):
-    if n == 0 or n == 1:
-        return 1
-    return n * factorial(n - 1)
-
-# 10. Function to check if a string is palindrome.
-def is_palindrome(s):
-    return s == s[::-1]
-
-# ========================
-# 11. Comprehensions (10 Questions)
-# ========================
-# 1. List of squares using list comprehension.
-squares = [x**2 for x in range(1, 11)]
-print("List of squares:", squares)
-
-# 2. Filter even numbers from list using list comp.
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-even_numbers = [x for x in numbers if x % 2 == 0]
-print("Even numbers:", even_numbers)
-
-# 3. Dict comp: keys as numbers, values as squares.
-squares_dict = {x: x**2 for x in range(1, 6)}
-print("Dictionary of squares:", squares_dict)
-
-# 4. Set comp: unique chars in a string.
-string = "hello world"
-unique_chars = {char for char in string if char != ' '}
-print("Unique characters:", unique_chars)
-
-# 5. List comp to convert string list to uppercase.
-string_list = ["python", "is", "fun"]
-uppercase_list = [word.upper() for word in string_list]
-print("Uppercase list:", uppercase_list)
-
-# 6. Dict comp: count frequency of words in list.
-words = ["apple", "banana", "apple", "orange", "banana", "apple"]
-word_count = {word: words.count(word) for word in set(words)}
-print("Word frequency:", word_count)
-
-# 7. Nested list comp: 2D matrix of 0s.
-rows, cols = 3, 3
-matrix = [[0 for _ in range(cols)] for _ in range(rows)]
-print("2D matrix of 0s:", matrix)
-
-# 8. Flatten a 2D list using list comp.
-two_d_list = [[1, 2], [3, 4], [5, 6]]
-flattened_list = [item for sublist in two_d_list for item in sublist]
-print("Flattened list:", flattened_list)
-
-# 9. Reverse each word in a sentence using list comp.
-sentence = "Hello world"
-reversed_words = " ".join([word[::-1] for word in sentence.split()])
-print("Reversed words:", reversed_words)
-
-# 10. Use list comp with condition inside expression.
-numbers = range(1, 11)
-conditional_list = [x**2 if x % 2 == 0 else x**3 for x in numbers]
-print("Conditional list:", conditional_list)
-
-# ========================
-# 12. Exception Handling (10 Questions)
-# ========================
-# 1. Handle division by zero.
+print(f"Swapped values: a = {a}, b = {b}")
+
+# 2. Check if a variable is of type int.
+print(type(a))
+
+# 3. Convert a float to an integer.
+float_num = 2.82
+int_num = int(float_num)
+print(int_num)
+
+# 4. Convert an integer to binary and back.
+binary = bin(int_num)
+print(binary)
+
+back_to_int = int(binary, 2)
+print(back_to_int)
+
+# 5. Create a variable of each data type.
+var1 = 42  # int
+var2 = 3.14  # float
+var3 = "Hello"  # str
+var4 = True  # bool
+var5 = [1, 2, 3]  # list
+var6 = (1, 2, 3)  # tuple
+var7 = {1, 2, 3}  # set
+var8 = {'key': 'value'}  # dict
+print(type(var1), type(var2), type(var3), type(var4), type(var5), type(var6), type(var7), type(var8))
+
+# 6. Get the memory size of a variable.
+# 7. Create constants using naming convention.
+# 8. Convert a string to a float and check type.
+# 9. Round a float to 2 decimal places.
+# 10. Assign multiple variables in one line.
+# 11. Use type hints for variable annotations.
+# 12. Convert boolean to int and vice versa.
+# 13. Create a hexadecimal number and print it.
+# 14. Use the `id()` function to compare variable identities.
+# 15. Perform complex number arithmetic.
+# 16. Cast int to string using `str()` and f-string.
+# 17. Demonstrate dynamic typing with reassignments.
+# 18. Create and display a large integer (e.g., factorial of 100).
+# 19. Print a variable’s type in a formatted string.
+# 20. Check if two variables point to the same memory location.
+
+# ===========================
+# 2. Operators
+# ===========================
+# 1. Use all arithmetic operators in one expression.
+# 2. Use comparison operators to compare strings.
+# 3. Use logical operators in an if condition.
+# 4. Use `is` and `is not` to compare object identities.
+# 5. Use bitwise AND and OR on two integers.
+# 6. Write a compound assignment using `+=`, `*=`, etc.
+# 7. Demonstrate operator precedence.
+# 8. Use the ternary operator for min/max.
+# 9. Use `in` and `not in` operators for lists.
+# 10. Shift bits left and right.
+# 11. Use modulo to check if a number is odd.
+# 12. Compare the ASCII values of characters.
+# 13. Use `not` in a logical expression.
+# 14. Use bitwise XOR to swap two numbers.
+# 15. Use `//` for integer division.
+# 16. Use identity and equality together in conditions.
+# 17. Demonstrate short-circuiting using `and/or`.
+# 18. Write a custom function that uses relational operators.
+# 19. Use `+=` to build a string character by character.
+# 20. Chain multiple comparison operators in one line.
+
+# ===========================
+# 3. Strings
+# ===========================
+# 1. Reverse a string using slicing.
+# 2. Check if a string is a palindrome.
+# 3. Count vowels in a string.
+# 4. Capitalize the first letter of each word.
+# 5. Find the longest word in a sentence.
+# 6. Replace spaces with hyphens.
+# 7. Find the frequency of each character.
+# 8. Remove all punctuations from a string.
+# 9. Find all duplicate characters.
+# 10. Convert a string to title case.
+# 11. Format a string using f-string and `format()`.
+# 12. Check if two strings are anagrams.
+# 13. Split a sentence into words without using `split()`.
+# 14. Convert string to list and back.
+# 15. Replace all digits with asterisks.
+# 16. Get ASCII value of characters.
+# 17. Encode and decode a string using base64.
+# 18. Remove consecutive duplicate characters.
+# 19. Extract domain from email.
+# 20. Convert camelCase to snake_case.
+
+# ===========================
+# 4. Lists
+# ===========================
+# 1. Reverse a list without using reverse().
+# 2. Find max and min in a list.
+# 3. Remove all duplicates.
+# 4. Sort a list of strings by length.
+# 5. Merge two sorted lists.
+# 6. Find common elements in two lists.
+# 7. Flatten a nested list.
+# 8. Rotate a list by n positions.
+# 9. Separate even and odd numbers.
+# 10. Find the second largest number.
+# 11. Replace every nth element.
+# 12. Count occurrences of an element.
+# 13. Remove all empty strings.
+# 14. Find the intersection without using set.
+# 15. Zip and unzip lists.
+# 16. Check if a list is sorted.
+# 17. Shuffle a list.
+# 18. Multiply all elements in a list.
+# 19. Slice a list in chunks of n.
+# 20. Find sublists with sum equal to target.
+
+# ===========================
+# 5. Tuples
+# ===========================
+# 1. Create a tuple with one element.
+# 2. Convert list to tuple and vice versa.
+# 3. Find an element’s index in tuple.
+# 4. Unpack multiple values from a tuple.
+# 5. Swap two tuples.
+# 6. Concatenate two tuples.
+# 7. Repeat a tuple n times.
+# 8. Check if item exists in tuple.
+# 9. Find the length of the longest tuple.
+# 10. Create a nested tuple.
+# 11. Slice a tuple.
+# 12. Count occurrences of element.
+# 13. Find max and min of a tuple.
+# 14. Reverse a tuple.
+# 15. Merge multiple tuples.
+# 16. Use tuple in a set or dict key.
+# 17. Remove item by converting to list.
+# 18. Sort a tuple of numbers.
+# 19. Zip lists into tuple list.
+# 20. Check for tuple immutability (TypeError).
+
+
+# ===========================
+# 6. Sets
+# ===========================
+# 1. Create a set with unique elements.
+# 2. Remove duplicates from a list using set.
+# 3. Find union of two sets.
+# 4. Find intersection of two sets.
+# 5. Find difference of two sets.
+# 6. Check if one set is subset of another.
+# 7. Add elements to a set.
+# 8. Remove items using discard and remove.
+# 9. Pop an element from a set.
+# 10. Find symmetric difference.
+# 11. Convert string to set of characters.
+# 12. Check if two sets are disjoint.
+# 13. Create an immutable set (frozenset).
+# 14. Count elements in a set.
+# 15. Copy a set.
+# 16. Clear all elements from set.
+# 17. Compare two sets for equality.
+# 18. Use set comprehension to filter numbers.
+# 19. Iterate through a set.
+# 20. Find duplicates using sets.
+
+# ===========================
+# 7. Dictionaries
+# ===========================
+# 1. Create a dictionary with key-value pairs.
+# 2. Access a value by key.
+# 3. Iterate through keys and values.
+# 4. Sort dictionary by keys.
+# 5. Sort dictionary by values.
+# 6. Merge two dictionaries.
+# 7. Find key with max value.
+# 8. Remove a key from dictionary.
+# 9. Check if key exists.
+# 10. Count word frequency in a string.
+# 11. Use dictionary comprehension.
+# 12. Convert two lists into dictionary.
+# 13. Create nested dictionary.
+# 14. Update dictionary with new keys.
+# 15. Get all keys/values/items.
+# 16. Use `get()` with default value.
+# 17. Invert keys and values.
+# 18. Use dictionary as function arguments.
+# 19. Delete all items.
+# 20. Group values by keys in list of tuples.
+
+# ===========================
+# 8. If-Else and Loops
+# ===========================
+# 1. Check if a number is positive, negative or zero.
+# 2. Find the greatest of three numbers.
+# 3. Check if a year is leap year.
+# 4. Print multiplication table using loop.
+# 5. Sum all numbers in a list.
+# 6. Print even numbers from 1 to 100.
+# 7. Print prime numbers up to n.
+# 8. Reverse a number using loop.
+# 9. Count number of digits.
+# 10. Find factorial of a number.
+# 11. Use `for-else` construct.
+# 12. Use `while` to generate Fibonacci.
+# 13. Check if string is palindrome using loop.
+# 14. Use `break` and `continue` in a loop.
+# 15. Use nested loops to print pattern.
+# 16. Print pyramid of stars.
+# 17. Calculate power using loop.
+# 18. Sum of digits of a number.
+# 19. Generate all even numbers using while.
+# 20. Print a triangle pattern with numbers.
+
+# ===========================
+# 9. Functions
+# ===========================
+# 1. Write a function to calculate area of circle.
+# 2. Write a recursive factorial function.
+# 3. Use default and keyword arguments.
+# 4. Return multiple values from function.
+# 5. Write a lambda function for square.
+# 6. Use `*args` and `**kwargs`.
+# 7. Write a function to reverse a string.
+# 8. Write function to filter odd numbers.
+# 9. Write a higher-order function.
+# 10. Use map() to double list items.
+# 11. Use reduce() to multiply list.
+# 12. Use filter() for non-empty strings.
+# 13. Use zip() in a function.
+# 14. Calculate GCD using recursion.
+# 15. Count vowels using lambda and filter.
+# 16. Create closure that remembers a value.
+# 17. Create decorator to measure time.
+# 18. Write recursive Fibonacci.
+# 19. Use function annotations.
+# 20. Create a generator function.
+
+# ===========================
+# 10. File Handling
+# ===========================
+# 1. Read contents from a text file.
+# 2. Write text to a new file.
+# 3. Append text to an existing file.
+# 4. Count number of lines in a file.
+# 5. Copy contents from one file to another.
+# 6. Read file line by line.
+# 7. Write a list to a file.
+# 8. Read all words in a file.
+# 9. Find the most frequent word in a file.
+# 10. Count number of words in a file.
+# 11. Read a file and strip newline characters.
+# 12. Create a log file with timestamps.
+# 13. Search for a word in a file.
+# 14. Replace a word in a file.
+# 15. Check if file exists before reading.
+# 16. Use `with` statement for file operations.
+# 17. Read a CSV file line by line.
+# 18. Write a dictionary to a CSV file.
+# 19. Delete a file safely.
+# 20. Use try-except while reading files.
+
+# ===========================
+# 11. Regex (Regular Expressions)
+# ===========================
+# 1. Validate an email address.
+# 2. Check if a string is a valid phone number.
+# 3. Extract all digits from a string.
+# 4. Split a string by multiple delimiters.
+# 5. Replace all non-alphanumeric characters.
+# 6. Extract domain name from a URL.
+# 7. Find all dates in a string.
+# 8. Validate a strong password.
+# 9. Find all capitalized words.
+# 10. Match a pattern at the beginning of string.
+# 11. Check if a string is a valid time (HH:MM).
+# 12. Extract hashtags from a tweet.
+# 13. Replace duplicate spaces with single space.
+# 14. Validate IP address.
+# 15. Remove HTML tags from string.
+# 16. Find all words starting with a vowel.
+# 17. Count number of words using regex.
+# 18. Find repeated words.
+# 19. Match only whole words, not substrings.
+# 20. Escape special characters in a string.
+
+# ===========================
+# 12. Datetime
+# ===========================
+# 1. Get today’s date and time.
+# 2. Convert string to datetime.
+# 3. Calculate difference between two dates.
+# 4. Add days to current date.
+# 5. Subtract days from current date.
+# 6. Format datetime into string.
+# 7. Parse a custom date format.
+# 8. Get the current time in UTC.
+# 9. Compare two datetime objects.
+# 10. Get day of the week from date.
+# 11. Get the first and last day of the month.
+# 12. Get number of days in a given month.
+# 13. Check if a date is in the future.
+# 14. Convert timestamp to datetime.
+# 15. Convert datetime to timestamp.
+# 16. Get time difference in seconds.
+# 17. Create a countdown timer.
+# 18. Display current time in different timezones.
+# 19. Get week number of year.
+# 20. Create datetime range (daily intervals).
+
+# ===========================
+# 13. Unit Testing
+# ===========================
+# 1. Write a unit test for a sum function.
+# 2. Test a function that reverses a list.
+# 3. Use `setUp()` method in test class.
+# 4. Use `tearDown()` method.
+# 5. Test for exceptions using `assertRaises`.
+# 6. Use `unittest.mock` to mock an API call.
+# 7. Group multiple tests in a test case.
+# 8. Use `assertEqual`, `assertNotEqual`, `assertIn`.
+# 9. Use test discovery with `unittest`.
+# 10. Run tests from command line.
+# 11. Measure code coverage.
+# 12. Test edge cases like empty input.
+# 13. Test return type of function.
+# 14. Write parameterized tests.
+# 15. Mock file read/write operations.
+# 16. Assert object identity.
+# 17. Skip a test conditionally.
+# 18. Write test for recursive function.
+# 19. Test a function with random output using seeds.
+# 20. Create custom assertion method.
+
+# ===========================
+# 14. Basic Algorithms
+# ===========================
+# 1. Implement binary search.
+# 2. Implement bubble sort.
+# 3. Implement insertion sort.
+# 4. Implement selection sort.
+# 5. Find the GCD of two numbers.
+# 6. Find LCM of two numbers.
+# 7. Check if a number is prime.
+# 8. Generate Fibonacci series.
+# 9. Find factorial using loop.
+# 10. Reverse an integer.
+# 11. Find missing number in list 1 to n.
+# 12. Check if two strings are permutations.
+# 13. Move all zeroes to end of list.
+# 14. Check if a number is a power of two.
+# 15. Count frequency of elements in a list.
+# 16. Find peak element in an array.
+# 17. Implement a palindrome checker.
+# 18. Rotate a matrix 90 degrees.
+# 19. Find duplicate in a list.
+# 20. Merge overlapping intervals.
+
+# ===========================
+# 15. OOP (Object-Oriented Programming)
+# ===========================
+# 1. Create a class with constructor and attributes.
+# 2. Add instance method to return formatted string.
+# 3. Add class method and static method.
+# 4. Implement inheritance with multiple classes.
+# 5. Override a method in child class.
+# 6. Use `super()` to call parent constructor.
+# 7. Create private and protected variables.
+# 8. Use `__str__` and `__repr__` methods.
+# 9. Track object count using class variable.
+# 10. Create abstract class with abstractmethod.
+# 11. Implement a simple bank account class.
+# 12. Implement polymorphism via duck typing.
+# 13. Use property decorators for getter/setter.
+# 14. Raise custom exceptions in class.
+# 15. Use operator overloading (`__add__`, etc.).
+# 16. Implement method chaining.
+# 17. Use mixins for reusable functionality.
+# 18. Use composition instead of inheritance.
+# 19. Create singleton class.
+# 20. Serialize and deserialize object using `pickle`.
+
+# ===========================
+# 16. Exception Handling
+# ===========================
+# 1. Catch divide by zero error.
 # 2. Handle file not found error.
-# 3. Use try, except, else, finally.
-# 4. Raise a custom exception if input is negative.
-# 5. Handle multiple exceptions.
-# 6. Read a number from user and catch invalid input.
-# 7. Catch index out of range in list.
-# 8. Handle key error in dictionary.
-# 9. Write to a file and handle permission error.
-# 10. Use assert to validate input.
-
-# ========================
-# 13. Arrays (10 Questions)
-# ========================
-# 1. Create an integer array and print it.
-# 2. Append elements to an array.
-# 3. Access elements using indexing and slicing.
-# 4. Reverse array using loop.
-# 5. Find sum and average of array.
-# 6. Insert an element at index.
-# 7. Remove an element from array.
-# 8. Search for an element in array.
-# 9. Copy one array to another.
-# 10. Convert list to array and back to list.
+# 3. Use `finally` block.
+# 4. Raise custom exception.
+# 5. Use multiple `except` blocks.
+# 6. Use `else` with try-except.
+# 7. Catch multiple exceptions in one block.
+# 8. Create your own exception class.
+# 9. Log exceptions using logging module.
+# 10. Retry operation using exception handling.
+# 11. Handle type errors.
+# 12. Gracefully exit on exception.
+# 13. Wrap exception in another error.
+# 14. Catch exceptions in a loop.
+# 15. Handle exceptions in recursion.
+# 16. Handle exception with default return value.
+# 17. Capture traceback details.
+# 18. Raise error when value is not valid.
+# 19. Use context manager with error-prone code.
+# 20. Validate function input with error raising.
+# ===========================
