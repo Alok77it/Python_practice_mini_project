@@ -34,20 +34,82 @@ var8 = {'key': 'value'}  # dict
 print(type(var1), type(var2), type(var3), type(var4), type(var5), type(var6), type(var7), type(var8))
 
 # 6. Get the memory size of a variable.
+import sys
+example_var = "Hello"
+memory_size = sys.getsizeof(example_var)
+print(f"Memory size of '{example_var}': {memory_size} bytes")
+
 # 7. Create constants using naming convention.
+CONSTANT_NAME = 42
+print(f"Constant value: {CONSTANT_NAME}")
+
 # 8. Convert a string to a float and check type.
+string_num = "3.14"
+float_num = float(string_num)
+print(f"Converted float: {float_num}, Type: {type(float_num)}")
+
 # 9. Round a float to 2 decimal places.
+float_num = 2.819
+rounded_num = round(float_num, 2)
+print(f"Rounded number: {rounded_num}")
+
 # 10. Assign multiple variables in one line.
+a, b = 1, 2
+print(f"Assigned values: a = {a}, b = {b}")
+
 # 11. Use type hints for variable annotations.
+name: str = "Alice"
+age: int = 30
+height: float = 5.5
+
+print(f"Name: {name}, Age: {age}, Height: {height}")
+print(f"Type of name: {type(name)}, Type of age: {type(age)}, Type of height: {type(height)}")
+
 # 12. Convert boolean to int and vice versa.
+bool_value = True
+int_value = int(bool_value)
+print(f"Boolean to int: {int_value}")
+int_value = 0
+bool_value = bool(int_value)
+print(f"Int to boolean: {bool_value}")
+
 # 13. Create a hexadecimal number and print it.
+int_num = 10
+hex_num = hex(int_num)
+print(f"Hexadecimal representation: {hex_num}")
+
 # 14. Use the `id()` function to compare variable identities.
+a = 10
+b = 10
+c = 20
+print(f"ID of a: {id(a)}, ID of b: {id(b)}, ID of c: {id(c)}")
+print(f"a and b point to the same object: {id(a) == id(b)}")
+print(f"a and c point to the same object: {id(a) == id(c)}")
+
+
 # 15. Perform complex number arithmetic.
+complex_num1 = 1 + 2j
+complex_num2 = 3 + 4j
+complex_sum = complex_num1 + complex_num2
+complex_product = complex_num1 * complex_num2
+print(f"Complex Sum: {complex_sum}, Complex Product: {complex_product}")
+
 # 16. Cast int to string using `str()` and f-string.
+int_num = 42
+str_num = str(int_num)
+print(f"String representation of {int_num}: {str_num}")
+
 # 17. Demonstrate dynamic typing with reassignments.
+
+
 # 18. Create and display a large integer (e.g., factorial of 100).
+
+
 # 19. Print a variable’s type in a formatted string.
+
+
 # 20. Check if two variables point to the same memory location.
+
 
 # ===========================
 # 2. Operators
