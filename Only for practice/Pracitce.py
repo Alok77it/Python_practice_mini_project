@@ -100,24 +100,47 @@ str_num = str(int_num)
 print(f"String representation of {int_num}: {str_num}")
 
 # 17. Demonstrate dynamic typing with reassignments.
+variable = 42
+print(f"Initial type: {type(variable)}")
+
+variable = "Hello"
+print(f"Reassigned type: {type(variable)}")
 
 
 # 18. Create and display a large integer (e.g., factorial of 100).
-
+import math
+factorial_100 = math.factorial(100)
+print(f"Factorial of 100: {factorial_100}")
 
 # 19. Print a variable’s type in a formatted string.
-
+variable = "Hello, World!"
+print(f"The value of the variable is '{variable}', and its type is {type(variable)}.")
 
 # 20. Check if two variables point to the same memory location.
-
+a  = 1
+b = 1
+print(f"Are a and b pointing to the same memory location? {a is b}")
 
 # ===========================
 # 2. Operators
 # ===========================
 # 1. Use all arithmetic operators in one expression.
+a = 5
+b = 10
+print(f"Arithmetic operations: {a + b}, {a - b}, {a * b}, {a / b}, {a % b}, {a ** b}, {a // b}")
+
 # 2. Use comparison operators to compare strings.
+a = "apple"
+b = "banana"
+print(f"String comparison: {a < b}, {a > b}, {a == b}, {a != b}")
+
 # 3. Use logical operators in an if condition.
+if a < b and b != "cherry":
+    print(f"{a} is less than {b} and {b} is not 'cherry'.")
+
 # 4. Use `is` and `is not` to compare object identities.
+
+
 # 5. Use bitwise AND and OR on two integers.
 # 6. Write a compound assignment using `+=`, `*=`, etc.
 # 7. Demonstrate operator precedence.
