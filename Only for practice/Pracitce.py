@@ -139,9 +139,17 @@ if a < b and b != "cherry":
     print(f"{a} is less than {b} and {b} is not 'cherry'.")
 
 # 4. Use `is` and `is not` to compare object identities.
+a = [1, 2, 3]
+b = a
+print(f"Are a and b the same object? {a is b}")
+print(f"Are a and b not the same object? {a is not b}")
 
 
 # 5. Use bitwise AND and OR on two integers.
+a = 5  # 0101 in binary
+b = 3  # 0011 in binary
+print(f"Bitwise AND: {a & b}, Bitwise OR: {a | b}")
+
 # 6. Write a compound assignment using `+=`, `*=`, etc.
 # 7. Demonstrate operator precedence.
 # 8. Use the ternary operator for min/max.
