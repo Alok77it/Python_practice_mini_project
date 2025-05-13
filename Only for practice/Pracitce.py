@@ -151,11 +151,35 @@ b = 3  # 0011 in binary
 print(f"Bitwise AND: {a & b}, Bitwise OR: {a | b}")
 
 # 6. Write a compound assignment using `+=`, `*=`, etc.
+a = 10
+b = 12
+a += b
+print(f"Compound assignment: {a}")
+a *= 2
+print(f"After multiplication: {a}")
+
 # 7. Demonstrate operator precedence.
+result = 10 + 5 * 2 ** 2 - 8 / 4
+print(f"Operator precedence result: {result}")
+
 # 8. Use the ternary operator for min/max.
+min_value = a if a < b else b
+print(f"Minimum value: {min_value}")
+
 # 9. Use `in` and `not in` operators for lists.
+my_list = [1, 2, 3, 4, 5]
+print(f"Is 3 in the list? {3 in my_list}")
+print(f"Is 6 not in the list? {6 not in my_list}")
+
 # 10. Shift bits left and right.
+shifted_left = a << 1
+shifted_right = a >> 1
+print(f"Shifted left: {shifted_left}, Shifted right: {shifted_right}")
+
 # 11. Use modulo to check if a number is odd.
+is_odd = a % 2 != 0
+print(f"Is {a} odd? {is_odd}")
+
 # 12. Compare the ASCII values of characters.
 # 13. Use `not` in a logical expression.
 # 14. Use bitwise XOR to swap two numbers.
