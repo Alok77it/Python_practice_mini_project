@@ -181,7 +181,40 @@ is_odd = a % 2 != 0
 print(f"Is {a} odd? {is_odd}")
 
 # 12. Compare the ASCII values of characters.
+char1 = 'A'
+char2 = 'a'
+
+ascii1 = ord(char1)
+ascii2 = ord(char2)
+
+print(f"ASCII of '{char1}': {ascii1}")
+print(f"ASCII of '{char2}': {ascii2}")
+
+# Compare
+if ascii1 < ascii2:
+    print(f"'{char1}' has a lower ASCII value than '{char2}'")
+elif ascii1 > ascii2:
+    print(f"'{char1}' has a higher ASCII value than '{char2}'")
+else:
+    print(f"'{char1}' and '{char2}' have the same ASCII value")
+
+
 # 13. Use `not` in a logical expression.
+is_sunny = True
+is_weekend = False
+
+# Using `not`
+if not is_sunny:
+    print("It's not sunny today.")
+else:
+    print("It's sunny today.")
+
+if not is_weekend:
+    print("It's a weekday.")
+else:
+    print("It's the weekend!")
+
+
 # 14. Use bitwise XOR to swap two numbers.
 # 15. Use `//` for integer division.
 # 16. Use identity and equality together in conditions.
