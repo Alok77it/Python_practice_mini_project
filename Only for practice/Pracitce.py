@@ -216,7 +216,31 @@ else:
 
 
 # 14. Use bitwise XOR to swap two numbers.
+# Swap two numbers using bitwise XOR
+a = 10
+b = 20
+
+# Before swapping
+print("Before swapping: a =", a, ", b =", b)
+
+# Swapping using XOR
+a = a ^ b
+b = a ^ b
+a = a ^ b
+
+# After swapping
+print("After swapping: a =", a, ", b =", b)
+
+
 # 15. Use `//` for integer division.
+# Integer division using //
+num1 = 25
+num2 = 4
+
+result = num1 // num2
+print("Integer division result:", result)
+
+
 # 16. Use identity and equality together in conditions.
 # 17. Demonstrate short-circuiting using `and/or`.
 # 18. Write a custom function that uses relational operators.
