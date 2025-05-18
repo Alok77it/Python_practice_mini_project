@@ -242,7 +242,41 @@ print("Integer division result:", result)
 
 
 # 16. Use identity and equality together in conditions.
+# Define two lists with the same values but different memory locations
+list1 = [1, 2, 3]
+list2 = [1, 2, 3]
+
+# Define another variable pointing to the same list as list1
+list3 = list1
+
+# Checking identity and equality
+if list1 == list2 and list1 is not list2:
+    print("list1 and list2 have the same values but are different objects.")
+
+if list1 == list3 and list1 is list3:
+    print("list1 and list3 have the same values and are the same object.")
+
+
 # 17. Demonstrate short-circuiting using `and/or`.
+def check_a():
+    print("Checking A")
+    return False
+
+def check_b():
+    print("Checking B")
+    return True
+
+# Using `and` - short-circuits at `check_a()`
+result = check_a() and check_b()
+print("Result of and:", result)
+
+print("\n")
+
+# Using `or` - short-circuits at `check_b()`
+result = check_b() or check_a()
+print("Result of or:", result)
+
+
 # 18. Write a custom function that uses relational operators.
 # 19. Use `+=` to build a string character by character.
 # 20. Chain multiple comparison operators in one line.
