@@ -278,7 +278,31 @@ print("Result of or:", result)
 
 
 # 18. Write a custom function that uses relational operators.
+def compare_numbers(a, b):
+    if a > b:
+        return f"{a} is greater than {b}"
+    elif a < b:
+        return f"{a} is less than {b}"
+    else:
+        return f"{a} is equal to {b}"
+
+# Example usage
+result = compare_numbers(10, 20)
+print(result)  # Output: 10 is less than 20
+
+
 # 19. Use `+=` to build a string character by character.
+def build_string(word):
+    result = ""
+    for char in word:
+        result += char  # Adding one character at a time
+    return result
+
+# Example usage
+output = build_string("hello")
+print(output)  # Output: hello
+
+
 # 20. Chain multiple comparison operators in one line.
 
 # ===========================
