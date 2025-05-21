@@ -304,6 +304,12 @@ print(output)  # Output: hello
 
 
 # 20. Chain multiple comparison operators in one line.
+# This works fine
+print(2 < 3 < 4)  # True
+
+# This is also valid but may be confusing
+print(2 < 3 > 1)  # True (because 2 < 3 AND 3 > 1)
+
 
 # ===========================
 # 3. Strings
