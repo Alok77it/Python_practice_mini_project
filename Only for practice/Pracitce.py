@@ -315,7 +315,23 @@ print(2 < 3 > 1)  # True (because 2 < 3 AND 3 > 1)
 # 3. Strings
 # ===========================
 # 1. Reverse a string using slicing.
+text = "hello"
+reversed_text = text[::-1]
+print(reversed_text)  # Output: 'olleh'
+
+
 # 2. Check if a string is a palindrome.
+def is_palindrome(s):
+    return s == s[::-1]
+
+# Example usage:
+word = "anusha"
+if is_palindrome(word):
+    print(f"'{word}' is a palindrome.")
+else:
+    print(f"'{word}' is not a palindrome.")
+
+
 # 3. Count vowels in a string.
 # 4. Capitalize the first letter of each word.
 # 5. Find the longest word in a sentence.
