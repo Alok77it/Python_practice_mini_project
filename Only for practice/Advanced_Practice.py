@@ -2,14 +2,43 @@
 #    - Initialize them using a constructor.
 #    - Create an object and print the details using a custom __str__() method.
 
-# Your code here
+class Book:
+    def __init__(self, title, author, pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+
+    def __str__(self):
+        return f"Title: {self.title}, Author: {self.author}, Total pages: {self.pages}"
+
+b = Book("Welcome", "Alok", 22)
+print(b)
 
 
 # 2. Create a class `Rectangle` with attributes: length and width.
 #    - Add a method to calculate the area.
 #    - Create two objects and compare which one has a larger area.
 
-# Your code here
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+    
+    def area(self):
+        return self.length * self.width
+    
+    def __ge__(self, other):
+        return self.area() >= self.area()
+        
+obj1 = Rectangle(22, 23)
+obj2 = Rectangle(45, 23)
+
+
+if obj1 >= obj2:
+    print("Obj1 have larger area than obj2")
+else:
+    print("Obj2 have larger area")
+    
 
 
 # 3. Create a class `Employee` with name and salary.
