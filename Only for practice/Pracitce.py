@@ -16,10 +16,37 @@ else:
     print(f"{num} is not a prime number")
 
 # 2. Implement a function to find the factorial of a number.
+def factorial(num):
+    if num < 0:
+        return "Factorial is not defined for negative number"
+    result = 1
+    for i in range(2, num + 1):
+        result *= i
+    return result
 
+print(factorial(5))
 
 # 3. Check if a given year is a leap year.
+def leap_year(year):
+    if year % 400 == 0:
+        return True
+    elif year % 100 == 0:
+        return False
+    elif year % 4 == 0:
+        return True
+    else:
+        return False
+
+year = int(input("enter the year: "))
+if leap_year(year):
+    print(f"{year} is leap year")
+else:
+    print(f'{year} is not leap year ')
+     
+
 # 4. Find the greatest common divisor (GCD) of two numbers.
+
+
 # 5. Reverse the digits of an integer without converting to string.
 # 6. Calculate the sum of digits of a number.
 # 7. Given two numbers, swap their values without using a temporary variable.
