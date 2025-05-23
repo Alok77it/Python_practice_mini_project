@@ -21,12 +21,18 @@ class GitAutoPushHandler(FileSystemEventHandler):
 
             # Commit with a timestamp
             commit_message = f"Auto commit at {time.strftime('%Y-%m-%d %H:%M:%S')}"
-            subprocess.run(["git", "commit", "-m", commit_message], cwd=REPO_PATH, check=True)
+            commit_result = subprocess.run(
+                ["git", "commit", "-m", commit_message],
+                cwd=REPO_PATH
+            )
 
-            # Push to the remote repo
-            subprocess.run(["git", "push"], cwd=REPO_PATH, check=True)
+            if commit_result.returncode == 0:
+                # Push to the remote repo
+                subprocess.run(["git", "push"], cwd=REPO_PATH, check=True)
+                print(f"✅ Changes pushed: {commit_message}")
+            else:
+                print("⚠️ No changes to commit.")
 
-            print(f"✅ Changes pushed: {commit_message}")
         except subprocess.CalledProcessError as e:
             print(f"❌ Git error: {e}")
 
