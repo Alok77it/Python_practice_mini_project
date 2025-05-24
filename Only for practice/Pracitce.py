@@ -45,14 +45,47 @@ else:
      
 
 # 4. Find the greatest common divisor (GCD) of two numbers.
+import math
 
+a = 10
+b = 20
+
+gcd = math.gcd(a, b)
+
+print(f"GCD of a: {a} and b: {b} is {gcd}")
 
 # 5. Reverse the digits of an integer without converting to string.
+def reverse(number):
+    reversed_num = 0
+    sign = 1 if number > 0 else -1
+    number = abs(number)
+    
+    while number > 0:
+        digit = number % 10
+        reversed_num = reversed_num * 10 + digit
+        number = number // 10
+    
+    return reversed_num * sign
+
+print(reverse(1234))    # Output: 4321
+print(reverse(-9876))   # Output: -6789
+
+
 # 6. Calculate the sum of digits of a number.
+
+
 # 7. Given two numbers, swap their values without using a temporary variable.
+
+
 # 8. Write a program to check if a number is a palindrome.
+
+
 # 9. Find the nth Fibonacci number using iteration.
+
+
 # 10. Check if a string contains only digits.
+
+
 # 11. Convert Celsius to Fahrenheit.
 # 12. Calculate the area of a circle given the radius.
 # 13. Print all even numbers from 1 to N.

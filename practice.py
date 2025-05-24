@@ -1,111 +1,44 @@
-rows = 4
-cols = 4
-for i in range(rows):
-    for j in range(1, cols+1):
-        print(j, end = " ")
-    print()
-    
-rows = 4
-cols = 4
-for i in range(rows):
-    for j in range(cols):
-        print("*", end = " ")
-    print()
-    
-n = 4
-for i in range(n):
-    for j in range(65, 65 + n):
-        print(chr(j), end = " ")
-    print()
-    
-n =4
-for i in range(1, n + 1):
-    for j in range(i):
-        print("*", end= " ")
-    print()
+def decimal_to_binary(n):
+    if n == 0:
+        return '0'
+    binary = ''
+    while n > 0:
+        binary = str(n % 2) + binary
+        n //= 2
+    return binary
 
-n = 4
-for i in range(1, n + 1):
-    for j in range(1, i + 1):
-        print(j, end=" ")
-    print()
-    
-n = 4
-for i in range(1, n + 1):
-    for j in range(i):
-        print(i, end=" ")
-    print()
-    
-n = 4
-for i in range(1, n + 1):
-    for j in range(i, 0, -1):
-        print(j, end=" ")
-    print()
-    
-rows = 4
-nums = 1
-for i in range(1, rows + 1):
-    for j in range(i):
-        print(nums, end=" ")
-        nums += 1
-    print()
-    
-rows = 4
-for i in range(1, rows + 1):
-    print(" " * (i - 1), end="")
-    for j in range(rows - i + 1):
-        print(i, end="")
-    print()
-    
-rows = 4
-for i in range(1, rows + 1):
-    print(" " * (rows - i), end=" ")
-    
-    for j in range(1, i + 1):
-        print(j, end="")
-    
-    for j in range(i - 1, 0, -1 ):
-        print(j, end="")
-    print()
-    
-n = 5
+# Example
+print("Decimal 13 to Binary:", decimal_to_binary(13))  # Output: 1101
 
-# Upper half
-for i in range(1, n + 1):
-    # Print leading spaces
-    print(" " * (n - i), end="")
 
-    # Print stars and spaces
-    for j in range(1, 2 * i):
-        if j == 1 or j == 2 * i - 1:
-            print("*", end="")
-        else:
-            print(" ", end="")
-    print()
+def binary_to_decimal(b):
+    decimal = 0
+    b = b[::-1]  # reverse string
+    for i in range(len(b)):
+        decimal += int(b[i]) * (2 ** i)
+    return decimal
 
-# Lower half
-for i in range(n - 1, 0, -1):
-    # Print leading spaces
-    print(" " * (n - i), end="")
+# Example
+print("Binary 1010 to Decimal:", binary_to_decimal("1010"))  # Output: 10
 
-    # Print stars and spaces
-    for j in range(1, 2 * i):
-        if j == 1 or j == 2 * i - 1:
-            print("*", end="")
-        else:
-            print(" ", end="")
-    print()
+def hex_to_binary(hex_str):
+    binary = ''
+    for digit in hex_str.upper():
+        binary += format(int(digit, 16), '04b')  # 4-bit binary
+    return binary
 
-n = 5
+# Example
+print("Hexadecimal 2F to Binary:", hex_to_binary("2F"))  # Output: 00101111
 
-# Upper half
-for i in range(1, n + 1):
-    print("*" * i, end="")            # Left wing stars
-    print(" " * (2 * (n - i)), end="") # Spaces between wings
-    print("*" * i)                    # Right wing stars
+def binary_to_hex(b):
+    # Pad with 0s on the left to make length multiple of 4
+    b = b.zfill((len(b) + 3) // 4 * 4)
+    hex_str = ''
+    for i in range(0, len(b), 4):
+        group = b[i:i+4]
+        hex_digit = format(int(group, 2), 'X')
+        hex_str += hex_digit
+    return hex_str
 
-# Lower half
-for i in range(n, 0, -1):
-    print("*" * i, end="")            # Left wing stars
-    print(" " * (2 * (n - i)), end="") # Spaces between wings
-    print("*" * i)                    # Right wing stars
+# Example
+print("Binary 10110110 to Hex:", binary_to_hex("10110110"))  # Output: B6

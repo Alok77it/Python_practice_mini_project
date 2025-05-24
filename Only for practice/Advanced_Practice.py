@@ -58,24 +58,85 @@ obj.display_details()
 
 
 # 4. Create a class `ComplexNumber` with real and imaginary parts.
-#    - Implement magic methods: __add__, __sub__, __mul__, and __str__ to operate on two complex numbers.
+#    - Implement magic methods: __add__, __sub__and __str__ to operate on two complex numbers.
 
-# Your code here
+class ComplexNumber:
+    def __init__(self,real,imag):
+        self.real = real
+        self.imag = imag
+    
+    def __add__(self, other):
+        return ComplexNumber(self.real + other.real, self.imag + other.imag)
+    
+    def __sub__(self, other):
+        return ComplexNumber(self.real - other.real, self.imag - other.imag)
+    
+    def __str__(self):
+        sign = '+' if self.imag >= 0 else '-'
+        return f"{self.real} {sign} {abs(self.imag)}i"
+
+c1 = ComplexNumber(3, 4)
+c2 = ComplexNumber(1, -2)
+
+
+print("c1 + c2 =", c1 + c2)
+print("c1 - c2 =", c1 - c2)
 
 
 # 5. Create a class `Student` with default age = 18.
-#    - Accept name and optional age from the user (via constructor).
+#    - Accept name and age from the user (via constructor).
 #    - Print name and age using a method.
+name = input("Enter the name: ")
+age = int(input("Enter the age: "))
+if age > 18:
+    class Student:
+        def __init__(self,name,age):
+            self.name = name
+            self.age = age
+        
+        def printDetails(self):
+            print(f"Name: {self.name}, Age: {self.age}")
+    
+    s1 = Student(name, age)
+    s2 = Student(name, age)
 
-# Your code here
-
+else:
+    print("Invalid age")
+        
+        
 
 # 6. Create a class `BankAccount` with private variable `__balance`.
 #    - Add deposit and withdraw methods with validation.
 #    - Print balance using a method.
 
-# Your code here
+class BankAccount:
+    def __init__(self,initial_balance=0):
+        self.__balance = initial_balance
+        
+    def deposit(self, amount):
+        if amount >= 0:
+            self.__balance += amount
+        else:
+            print("Enter the amount more than zero")
+    
+    def withdraw(self, amount):
+        if amount <= 0:
+            print("Enter the amount more than zero")
+        elif amount > self.__balance:
+            print("Insufficient balance")
+        else:
+            self.__balance -= amount
+            
+    def print_balance(self):
+        print(f"Current Balance: ₹{self.__balance}")
 
+account = BankAccount(1000)
+account.deposit(500)         # Deposit ₹500
+account.withdraw(300)        # Withdraw ₹300
+account.print_balance()
+
+           # Accessing private (not recommended, just to show it exists):
+print(account._BankAccount__balance)  # Output: 1200
 
 # 7. Create a class `Laptop` with brand and price.
 #    - Add a discount method that applies a discount percent (method overloading using default argument).
