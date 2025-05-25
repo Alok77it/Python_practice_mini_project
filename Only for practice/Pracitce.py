@@ -144,6 +144,8 @@ print(f"{temp_c}C : {temp_f}F")
 
 # === OPERATORS ===
 # 1. Implement a calculator supporting +, -, *, / using functions.
+
+
 # 2. Given two integers, determine if their bitwise AND is zero.
 # 3. Swap two numbers using XOR operator.
 # 4. Check if a number is even or odd using bitwise operators.
