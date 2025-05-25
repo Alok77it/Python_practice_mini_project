@@ -137,17 +137,47 @@ account.print_balance()
 
            # Accessing private (not recommended, just to show it exists):
 print(account._BankAccount__balance)  # Output: 1200
-
+    
 # 7. Create a class `Laptop` with brand and price.
 #    - Add a discount method that applies a discount percent (method overloading using default argument).
 
-# Your code here
+class Laptop:
+    def __init__(self,brand,price):
+        self.brand = brand
+        self.price = price
+    
+    def discount_percent(self,discount = 10):
+        discount_price = self.price - (self.price * discount / 100)
+        print(f"Price after {discount}% discount: {discount_price}")
+        
+item = Laptop("Dell", 50000)
+item.discount_percent()
+item.discount_percent(20)
 
 
 # 8. Create a class `Point` to represent coordinates x and y.
 #    - Implement __str__ and __truediv__ to divide coordinates of one point by another (with validation for zero).
 
-# Your code here
+class Point:
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+        
+    def __str__(self):
+        return f"({self.x}, {self.y})"
+    
+    def __truediv__(self,other):
+        if other.x == 0 or other.y == 0:
+            raise ZeroDivisionError("Cannot divide by zero in coordinates.")
+        new_x = self.x / other.x
+        new_y = self.y / other.y
+        return Point(new_x,new_y)
+    
+p1 = Point(10, 20)
+p2 = Point(2, 4)
+result = p1 / p2
+print("Result:", result) 
+
 
 
 # 9. Create a base class `Vehicle` with method start_engine().

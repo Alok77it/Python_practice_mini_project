@@ -72,22 +72,67 @@ print(reverse(-9876))   # Output: -6789
 
 
 # 6. Calculate the sum of digits of a number.
+def sum_of_digits(a,b):
+    return a + b
+
+a = int(input("Enter the 1st number: "))  
+b = int(input("Enter the 2nd number: "))
+sum = sum_of_digits(a, b)
+print(sum)
 
 
 # 7. Given two numbers, swap their values without using a temporary variable.
-
+num1 = 10
+num2 = 12
+num1, num2 = num2, num1
+print(num1)
+print(num2)
 
 # 8. Write a program to check if a number is a palindrome.
+def is_palindrome(number):
+    return str(number) == str(number)[::-1]
+
+# Example usage:
+num = 12321
+if is_palindrome(num):
+    print(f"{num} is a palindrome.")
+else:
+    print(f"{num} is not a palindrome.")
 
 
 # 9. Find the nth Fibonacci number using iteration.
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
 
+    a, b = 0, 1
+    for _ in range(2, n + 1):
+        a, b = b, a + b
+    return b
+
+n = 7
+print(f"The {n}th Fibonacci number is: {fibonacci(n)}")
 
 # 10. Check if a string contains only digits.
-
+s = "123123"
+if s.isdigit():
+    print("Strings contains only digits")
+else:
+    print("Strings not contains only digits")
 
 # 11. Convert Celsius to Fahrenheit.
+def cel_to_fah(celsius):
+    return (celsius * 9 / 5) + 32
+
+temp_c = 23
+temp_f = cel_to_fah(temp_c)
+print(f"{temp_c}C : {temp_f}F")
+
 # 12. Calculate the area of a circle given the radius.
+
+    
 # 13. Print all even numbers from 1 to N.
 # 14. Find the minimum and maximum from three numbers.
 # 15. Check if a number is Armstrong number.
