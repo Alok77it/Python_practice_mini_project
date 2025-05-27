@@ -184,8 +184,19 @@ print("Result:", result)
 #    - Create a derived class `Car` that overrides start_engine() to show car-specific behavior.
 #    - Demonstrate both methods using objects.
 
-# Your code here
+class Vehicle:
+    def start_engine(self):
+        print("Engine Started")
+        
+class Car(Vehicle):
+    def start_engine(self):
+        print("Car engine started")
 
+v1 = Vehicle()
+v1.start_engine()
+
+c1 = Car()
+c1.start_engine()
 
 # 10. Create a class `Matrix` with a 2D list as data.
 #     - Implement __add__ and __str__ to support addition and printing of matrix.
