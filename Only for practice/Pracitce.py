@@ -131,16 +131,54 @@ temp_f = cel_to_fah(temp_c)
 print(f"{temp_c}C : {temp_f}F")
 
 # 12. Calculate the area of a circle given the radius.
+import math
 
+def area_of_circle(radius):
+    return math.pi * radius ** 2
+
+r = 4
+print(f"The area of circle: {r} = {area_of_circle(r)}")
     
 # 13. Print all even numbers from 1 to N.
+n = int(input("Enter the limit: "))
+for num in range(1, n +1):
+    if num % 2 == 0:
+        print(num)
+
 # 14. Find the minimum and maximum from three numbers.
+import math
+a = [1,5,10]
+max_num = max(a)
+print(f"Maximum number: {max_num}")
+min_num = min(a)
+print(f"Minimum number: {min_num}")
+
 # 15. Check if a number is Armstrong number.
+num = int(input("Enter a number: "))
+digits = [int(d) for d in str(num)]
+power = len(digits)
+total = sum(d ** power for d in digits)
+
+if num == total:
+    print(f"{num} is an Armstrong number.")
+else:
+    print(f"{num} is NOT an Armstrong number.")
+
+
 # 16. Write a program to calculate the compound interest.
+
+
 # 17. Convert a decimal number to binary.
+
+
 # 18. Calculate the sum of all natural numbers below N that are multiples of 3 or 5.
+
+
 # 19. Implement integer division without using the division operator.
+
+
 # 20. Write a function to check if a character is a vowel or consonant.
+
 
 # === OPERATORS ===
 # 1. Implement a calculator supporting +, -, *, / using functions.
