@@ -198,154 +198,274 @@ v1.start_engine()
 c1 = Car()
 c1.start_engine()
 
-# 10. Create a class `Matrix` with a 2D list as data.
-#     - Implement __add__ and __str__ to support addition and printing of matrix.
-#     - Ensure both matrices are same size for addition.
 
+# ===============================
+# 📘 OOPs Intermediate Questions (35 Questions)
+# ===============================
 
+# 1. Create a class `BankAccount` with deposit and withdraw methods. Add balance validation.
 
 
+# 2. Implement a class `Library` with methods to add and issue books.
 
-#### Intermediate Level #####
-# 1. Create a class `Point2D` that can store x and y coordinates.
-#    Add a method to display the point as (x, y).
 
-# 2. Add a method to `Point2D` to calculate the distance from the point to the origin (0,0).
+# 3. Create a `Car` class with instance variables for model, year, and brand.
 
-# 3. Add a method to `Point2D` that takes another `Point2D` object and returns the distance between the two points.
 
-# 4. Create a class `Rectangle` initialized with two `Point2D` objects representing opposite corners.
-#    Add methods to calculate the area and perimeter.
+# 4. Build a `Student` class with default and parameterized constructors.
 
-# 5. Create a class `Circle` with a center (Point2D) and radius.
-#    Add methods to calculate the circumference and area.
 
-# 6. Implement a `Vector2D` class with vector addition, subtraction, and scalar multiplication methods.
+# 5. Add a class variable to count number of active instances of a class.
 
-# 7. Create a `Polygon` class that takes a list of `Point2D` vertices.
-#    Add a method to calculate the polygon's perimeter.
 
-# 8. Create a `Line` class defined by two `Point2D` points.
-#    Add methods to calculate the slope and check if another line is parallel.
+# 6. Use `@staticmethod` to define a utility method in a class.
 
-# 9. Implement a `Triangle` class with three vertices (Point2D).
-#    Add methods to calculate the area using Heron's formula.
 
-# 10. Extend the `Point2D` class to support vector dot product and cross product with another point.
+# 7. Use `@classmethod` to create objects in alternative ways (e.g., from a string).
 
-# 11. Create a `Matrix2x2` class with methods to perform matrix addition, multiplication, and determinant calculation.
 
-# 12. Implement a `ComplexNumber` class with real and imaginary parts.
-#     Add methods for addition, multiplication, and magnitude calculation.
+# 8. Create a class `Shape` and subclass `Circle`, `Rectangle` with area methods.
 
-# 13. Create a `Polygon` class that can check if it is convex or concave based on its vertices.
 
-# 14. Implement a `Circle` class with a method that checks whether a given `Point2D` lies inside the circle.
+# 9. Demonstrate method overriding using a base and derived class.
 
-# 15. Create a `Point3D` class extending `Point2D` by adding a z-coordinate.
-#     Add distance methods between two 3D points and from origin.
 
-# 16. Design a `Shape` base class and have `Circle`, `Rectangle`, and `Triangle` inherit from it.
-#     Each subclass should implement methods `area()` and `perimeter()`.
+# 10. Demonstrate multiple inheritance with proper constructor calls.
 
-# 17. Create a class `LineSegment` with two endpoints (Point2D).
-#     Add a method to check if two line segments intersect.
 
-# 18. Implement a class `Polygon` with a method to determine if a given point is inside the polygon (point-in-polygon test).
+# 11. Use `super()` in child class to call parent constructor.
 
-# 19. Implement a `BezierCurve` class defined by control points (list of Point2D).
-#     Add a method to compute the point on the curve at a parameter t (0 <= t <= 1).
 
-# 20. LeetCode-style: Implement a `RectangleArea` class which takes multiple rectangles as input.
-#     Add a method to calculate the total area covered by these rectangles (handle overlaps).
+# 12. Build a `Logger` class with a singleton pattern.
 
-# Additional patterns and ideas for advanced practice:
 
-# 21. Implement operator overloading in `Point2D` for +, -, and ==.
+# 13. Use dunder methods like `__str__`, `__eq__`, and `__repr__` for a `Product` class.
 
-# 22. Implement a method in `Polygon` to compute the centroid of the polygon.
 
-# 23. Implement a `Circle` class method to find the intersection points of two circles.
+# 14. Write a class that implements custom sorting using `__lt__`.
 
-# 24. Implement a `ShapeCollection` class that can hold multiple shapes and calculate the total area.
 
-# 25. Design a `Graph` class to store points as nodes and distances as edges.
-#     Implement a method to find the shortest path between two points using Dijkstra's algorithm.
+# 15. Create a class with private variables and methods.
 
-# 26. LeetCode-style: Implement a `MovingAverage` class that calculates the moving average of points coordinates' distances from origin over the last N points.
 
-# 27. Implement a `Path` class that holds a list of points and methods to calculate total path length and add smoothing.
+# 16. Define a `Calculator` class and implement chaining of operations.
 
-# 28. Create a `Transform` class to apply translation, rotation, and scaling transformations to points.
 
-# 29. Design a `Quadtree` spatial data structure to efficiently query points within a region.
+# 17. Create a class `Timer` with start, stop, and elapsed time functionality.
 
-# 30. LeetCode-style: Given a list of points, implement a method to find the k closest points to the origin.
 
-# 31. Implement a class `BezierSpline` composed of multiple `BezierCurve` segments with a method to get the spline length.
+# 18. Implement a class `User` with validation for email format using regex.
 
-# 32. Implement `__str__` and `__repr__` methods for all your shape classes for better debugging.
 
-# 33. Add serialization and deserialization methods (to/from JSON) for your geometric objects.
+# 19. Create a class `Matrix` and overload `+`, `-`, and `*` operators (no 2D list).
 
-# 34. Create a `BoundingBox` class to find the minimal rectangle that contains a list of points.
 
-# 35. Implement a class method to generate a regular polygon given the number of sides and radius.
+# 20. Build a class `NotificationManager` to handle sending emails/SMS.
 
 
+# 21. Implement a `MusicPlayer` class with a playlist (no nested lists).
 
-###Pattern Based###
 
-# 1. Implement a Singleton class in Python to ensure only one instance is created.
+# 22. Define a `FileManager` class that reads/writes from a file.
 
-# 2. Create a Factory class that returns different types of shapes (Circle, Rectangle, Triangle) based on input.
 
-# 3. Design a Decorator pattern for a Shape class to add border or fill color functionality dynamically.
+# 23. Create a class with context manager support using `__enter__` and `__exit__`.
 
-# 4. Implement a Strategy pattern for sorting a list of Point2D objects by distance from origin or by x-coordinate.
 
-# 5. Create an Observer pattern where multiple listeners get notified when a Point2D moves.
+# 24. Write a class with class-level cache/memoization.
 
-# 6. Implement a Command pattern that records and executes operations on a Shape object (e.g., move, resize).
 
-# 7. Design a Builder pattern for constructing complex polygons step-by-step.
+# 25. Design a `QueueManager` class using OOP principles.
 
-# 8. Create a Prototype pattern that allows cloning of complex shape objects.
 
-# 9. Implement the Adapter pattern to allow legacy code using tuples (x, y) to work with your Point2D class.
+# 26. Create a base class `Employee` and subclasses `Developer`, `Manager`.
 
-# 10. Create a Composite pattern to handle groups of shapes as a single shape (e.g., group of Circles and Rectangles).
 
-# 11. Implement a Flyweight pattern to reduce memory usage when creating many identical Point2D objects.
+# 27. Implement an abstract class `Device` with abstract methods.
 
-# 12. Design a Mediator class to manage interactions between multiple shapes on a canvas.
 
-# 13. Implement a State pattern where a Shape object can be in different states (e.g., Selected, Hidden, Visible) with different behavior.
+# 28. Demonstrate polymorphism using a method `start()` in various classes.
 
-# 14. Create a Chain of Responsibility pattern for processing geometric transformations (e.g., scale, rotate, translate).
 
-# 15. Design a Template Method pattern where the base Shape class defines the algorithm structure for drawing,
-#     and subclasses implement specific drawing steps.
+# 29. Define a `Game` class and use encapsulated score tracking.
 
-# 16. Implement a Visitor pattern to add new operations to shape classes without modifying them (e.g., export to SVG).
 
-# 17. Create an Iterator pattern for traversing points in a Polygon or vertices in a ShapeCollection.
+# 30. Implement a plugin system using inheritance.
 
-# 18. Implement a Proxy pattern to delay expensive computation of a shape’s area until needed.
 
-# 19. Design a Null Object pattern for a Shape class that does nothing but avoids null checks.
+# 31. Build a `PasswordManager` with encapsulation and file-based persistence.
 
-# 20. Implement a Multiton pattern for managing a limited set of named Color objects used by shapes.
 
-# Bonus Pattern Challenge (LeetCode style):
+# 32. Create a `SearchEngine` class that indexes and searches strings.
 
-# 21. Implement a Command Queue using Command pattern to support undo and redo operations on a drawing canvas.
 
-# 22. Design a Shape Factory with caching (Flyweight + Factory) to return existing shapes when possible.
+# 33. Build a class `Logger` that writes logs with timestamps.
 
-# 23. Create a Shape Decorator that logs each method call and its parameters (Decorator + Proxy).
 
-# 24. Implement a dynamic plugin system (Strategy + Factory) to add new shape types at runtime.
+# 34. Implement a simple observer pattern using OOP.
 
-# 25. Design a Shape Repository (Singleton + Mediator) to store and manage all shape objects in an application.
+
+# 35. Design a `PaymentGateway` class supporting different payment modes.
+
+
+# ===============================
+# 🔐 Encapsulation Practice Questions (20 Questions)
+# ===============================
+
+# 1. Create a class with private variables and provide getter and setter methods.
+
+
+# 2. Build a `UserProfile` class with encapsulated data and validation on setters.
+
+
+# 3. Implement a `SecureVault` class that denies access without authentication.
+
+
+# 4. Create an `Account` class with private balance and deposit/withdraw with limits.
+
+
+# 5. Design a `Settings` class where some fields cannot be accessed externally.
+
+
+# 6. Use name mangling to prevent access to critical fields.
+
+
+# 7. Write a class `Mobile` with private model number and price with validation.
+
+
+# 8. Implement encapsulation in a `Flight` class to manage seat booking.
+
+
+# 9. Create a class `EmailService` with private configuration settings.
+
+
+# 10. Design a class that encrypts stored values using encapsulation.
+
+
+# 11. Implement encapsulation in a class managing employee salaries.
+
+
+# 12. Build a `ShoppingCart` class with encapsulated cart and methods to update it.
+
+
+# 13. Create a `Loan` class with private interest rate and calculation logic.
+
+
+# 14. Build a `PatientRecord` class where sensitive info is private.
+
+
+# 15. Encapsulate a class that tracks API usage and rate limits.
+
+
+# 16. Make a `SecureNote` class with methods to unlock and view notes.
+
+
+# 17. Build a `TaskManager` class where task details are private.
+
+
+# 18. Encapsulate a `Sensor` class with private readings and public interface.
+
+
+# 19. Create a class `BankLocker` which uses OTP-based private access.
+
+
+# 20. Write a class `Transaction` with private sender, receiver, and amount details.
+
+
+# ===============================
+# 🧩 Aggregation Practice Questions (10–15 Questions)
+# ===============================
+
+# 1. Create a `Department` class that aggregates multiple `Employee` objects.
+
+
+# 2. Build a `Library` class that contains multiple `Book` instances.
+
+
+# 3. Make a `Team` class that holds a list of `Player` objects (use list, not 2D).
+
+
+# 4. Create a `School` class that aggregates `Student`, `Teacher`, and `Classroom`.
+
+
+# 5. Design a `University` class with colleges and each college has departments.
+
+
+# 6. Build a `Computer` class with `CPU`, `RAM`, and `Storage` as components.
+
+
+# 7. Create a `Restaurant` class with menu items aggregated as objects.
+
+
+# 8. Write a `Project` class that includes multiple `Task` objects.
+
+
+# 9. Build a `CarRental` class that contains multiple `Car` instances.
+
+
+# 10. Make a `Company` class that aggregates `HR`, `Finance`, and `Tech` departments.
+
+
+# 11. Design a `Course` class that aggregates multiple `Lesson` objects.
+
+
+# 12. Create a `Schedule` class that aggregates `Meeting` objects with time slots.
+
+
+# 13. Implement a `Blog` class that aggregates `Post`, `Comment`, and `Author` objects.
+
+
+# 14. Build a `Marketplace` with `Seller`, `Buyer`, and `Product` aggregation.
+
+
+# 15. Design a `Building` class with aggregated `Floor`, `Room`, and `Person` classes.
+
+
+# ===============================
+# 🔄 Combination Practice: Encapsulation + Aggregation (10–15 Questions)
+# ===============================
+
+# 1. Create a `Bank` class with multiple `Customer` objects (encapsulated info).
+
+
+# 2. Build a `Hospital` class where `Patient` data is private and managed through classes.
+
+
+# 3. Make a `Company` class that includes `Employee` with salary as private data.
+
+
+# 4. Design an `ECommerce` system with `User`, `Order`, and `Cart` (all encapsulated).
+
+
+# 5. Write a `LearningPlatform` class that contains `Course` objects with private ratings.
+
+
+# 6. Create a `SmartHome` class managing encapsulated devices like `Light`, `Thermostat`.
+
+
+# 7. Build a `MovieTheater` system with `Movie`, `Seat`, and private booking info.
+
+
+# 8. Make a `Warehouse` class with private `Inventory` data and multiple `Product` entries.
+
+
+# 9. Create a `BankingSystem` where accounts are private and transactions are aggregated.
+
+
+# 10. Implement a `Conference` class aggregating `Session` objects with private schedule.
+
+
+# 11. Create a `VehicleServiceCenter` with `Customer`, `Vehicle`, and service details.
+
+
+# 12. Build a `Hotel` class that has `Room` and `Guest` classes with private booking status.
+
+
+# 13. Make an `EventManager` class where events aggregate `Attendee` with private access.
+
+
+# 14. Develop a `Clinic` that aggregates `Doctor` and `Patient` classes with private data.
+
+
+# 15. Write a `CourseManagement` system with encapsulated `Instructor` and `Student` objects.
 
