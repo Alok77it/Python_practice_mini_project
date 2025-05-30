@@ -166,6 +166,9 @@ else:
 
 
 # 16. Write a program to calculate the compound interest.
+p = int(input("Enter the principal: "))
+r = int(input("Enter the rate interest: "))
+t = int(input("time: "))
 
 
 # 17. Convert a decimal number to binary.
