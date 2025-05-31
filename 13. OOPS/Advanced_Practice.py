@@ -204,16 +204,100 @@ c1.start_engine()
 # ===============================
 
 # 1. Create a class `BankAccount` with deposit and withdraw methods. Add balance validation.
+class BankAccount:
+    def __init__(self, initial_balance=0):
+        self.balance = initial_balance
+            
+    def deposite(self, amount):
+        if amount <= 0:
+            print("Invalid amount")
+        else:
+            self.balance += amount
+            print("Deposite successful")
+    
+    def withdraw(self,amount):
+        if amount <= 0:
+            print("Invalid amount")
+        elif amount > self.balance:
+            print("Insufficient balance.")
+        else:
+            self.balance -= amount
+            print("Withdrawal successful")
+            
+    def get_balance(self):
+        print(self.balance)
 
+obj = BankAccount(1000)
+obj.deposite(100)
+obj.withdraw(1000)
+obj.get_balance()
 
 # 2. Implement a class `Library` with methods to add and issue books.
+class Library:
+    def __init__(self):
+        self.book = {}
+    
+    def add_book(self, book_name, quantity=1):
+        if book_name in self.book:
+            self.book[book_name] += quantity
+        else:
+            self.book[book_name] = quantity
+            print(f'Book "{book_name}" added successfully. Total copies: {self.book[book_name]}')
+
+    def issue_book(self,book_name):
+        if book_name not in self.book:
+            print("Book are not available")
+        elif self.book[book_name] == 0:
+            print(f'Book "{book_name}" is out of stock.')
+        else:
+            self.book[book_name] -= 1
+            print(f'Book "{book_name}" issued successfully. Remaining copies: {self.book[book_name]}')
+            
+library = Library()
+
+library.add_book("Harry Potter", 3)
+library.add_book("Python Programming", 2)
+
+library.issue_book("Harry Potter")
+library.issue_book("Python Programming")
+library.issue_book("The Alchemist")  # Not in library
+
+library.issue_book("Python Programming")
+library.issue_book("Python Programming")  # Out of stock now
 
 
+            
 # 3. Create a `Car` class with instance variables for model, year, and brand.
+class Car:
+    def __init__(self, model, year, brand):
+        self.model = model
+        self.year = year
+        self.brand = brand
+        
+    def __str__(self):
+        return f"Car model is {self.model}, year {self.year} and brand is {self.brand}"
 
+obj1 = Car("M4", 2002, "honda")
+print(obj1)
 
 # 4. Build a `Student` class with default and parameterized constructors.
+class Student:
+    def __init__(self, name="unknown", age=12):
+        self.name = name
+        self.age = age
+    
+    def display(self):
+        print(f"Name: {self.name}")
+        print(f"Age: {self.age}")
+    
+student1 = Student()
+student1.display()
 
+print("---------")
+
+student2 = Student("alok",21)
+student2.display()
+        
 
 # 5. Add a class variable to count number of active instances of a class.
 
@@ -469,3 +553,98 @@ c1.start_engine()
 
 # 15. Write a `CourseManagement` system with encapsulated `Instructor` and `Student` objects.
 
+
+
+# 🐍 Inheritance basic 
+
+# 1. Write a program to check whether a number is even or odd.
+
+# 2. Write a program to find the largest of three numbers.
+
+# 3. Write a program to count the number of vowels in a given string.
+
+# 4. Write a program to reverse a string without using built-in functions.
+
+# 5. Write a function that returns the factorial of a number using recursion.
+
+# 6. Write a program to check if a given string is a palindrome.
+
+# 7. Write a program to print the Fibonacci sequence up to n terms.
+
+# 8. Write a program to find all the prime numbers between 1 and 100.
+
+# 9. Write a function that takes a list and returns the second largest element.
+
+# 10. Write a program to remove all duplicates from a list.
+
+# 11. Write a program to count the frequency of each word in a sentence.
+
+# 12. Write a program to check if a number is an Armstrong number.
+
+# 13. Write a program to sort a list without using the built-in sort() function.
+
+# 14. Write a function that accepts a string and returns a dictionary with characters as keys and their counts as values.
+
+# 15. Write a program to find the sum of digits of a number using a loop.
+
+
+# 🐍 Getter-setter basic 
+
+# Q1: Create a class `Person` with a private variable `_age`.
+# Write a getter method `get_age()` and setter method `set_age()`.
+# Ensure that age cannot be negative (add validation in setter).
+
+# Q2: Create a class `BankAccount` with private variable `_balance`.
+# Add getter and setter methods.
+# Make sure balance cannot be set to a non-numeric value or negative number.
+
+# Q3: Create a class `Student` with private variables `_name` and `_grade`.
+# Write appropriate getter and setter methods.
+# Ensure grade is between 0 and 100 in setter.
+
+# Q4: Create a class `Product` with private variables `_name`, `_price`.
+# Add getter/setter methods and ensure price is a float and non-negative.
+
+# Q5: Create a class `Car` with private variables `_speed`, `_engine_status`.
+# Write getter and setter for both.
+# Prevent setting speed above 300, and engine_status must be either "on" or "off".
+
+# Q6: Create a class `Temperature` with a private variable `_celsius`.
+# Write getter and setter for Celsius.
+# Add a getter `get_fahrenheit()` that returns converted value in Fahrenheit.
+
+# Q7: Create a class `Rectangle` with private `_length` and `_width`.
+# Add setters with validation (must be > 0).
+# Add a getter method to return area.
+
+# Q8: Create a class `Employee` with `_name`, `_salary`.
+# Ensure salary cannot be below 10000.
+# Add getter and setter methods for both attributes.
+
+# Q9: Create a class `Laptop` with private variables `_brand`, `_ram`.
+# Add getter and setter methods.
+# Ensure RAM is an integer and must be one of [4, 8, 16, 32].
+
+# Q10: Create a class `Movie` with private `_title`, `_rating`.
+# Add getter/setter methods.
+# Make sure rating is between 1.0 and 10.0.
+
+# Q11: Create a class `User` with `_username`, `_password`.
+# Write getter and setter.
+# Ensure password is at least 8 characters long.
+
+# Q12: Create a class `Circle` with private `_radius`.
+# Add setter with validation (radius > 0).
+# Add getter for radius and method to calculate circumference and area.
+
+# Q13: Create a class `Book` with `_title`, `_author`, and `_pages`.
+# Ensure pages is an integer > 0.
+# Add appropriate getter and setter methods.
+
+# Q14: Create a class `Mobile` with `_model`, `_price`.
+# Ensure price is a number > 0.
+# Use `@property` and `@price.setter` decorators instead of traditional methods.
+
+# Q15: Create a class `Account` with `_account_number`, `_balance`.
+# Balance can be set only if account number is valid (must be 10 digits).
+# Add validation logic in setters.

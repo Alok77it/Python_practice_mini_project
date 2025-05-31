@@ -154,34 +154,49 @@ min_num = min(a)
 print(f"Minimum number: {min_num}")
 
 # 15. Check if a number is Armstrong number.
-num = int(input("Enter a number: "))
-digits = [int(d) for d in str(num)]
-power = len(digits)
-total = sum(d ** power for d in digits)
-
-if num == total:
-    print(f"{num} is an Armstrong number.")
-else:
-    print(f"{num} is NOT an Armstrong number.")
 
 
 # 16. Write a program to calculate the compound interest.
 p = int(input("Enter the principal: "))
 r = int(input("Enter the rate interest: "))
 t = int(input("time: "))
-
+amount = p * (1 + r / 100)*t
+compound = amount - p
+print(compound)
 
 # 17. Convert a decimal number to binary.
-
+dec = 10.23
+inte = int(dec)
+binary = bin(inte)
+print(binary)
 
 # 18. Calculate the sum of all natural numbers below N that are multiples of 3 or 5.
+n = int(input("Enter the value of n:"))
+total = 0
+for i in range(1, n):
+    if i % 3 == 0 or i % 5 == 0:
+        total += i
+    
+print(f"The sum of all natural number is: {total}")
 
 
 # 19. Implement integer division without using the division operator.
 
 
 # 20. Write a function to check if a character is a vowel or consonant.
+def check_vowels(char):
+    if not char.isalpha() or len(char) != 1:
+        return "Invalid input. Please enter a single alphabetic character."
+    
+    vowels = "aeiou"
+    if char.lower() in vowels:
+        return "Vowels"
+    else:
+        return "consonant"
 
+ch = input("Enter the characters: ")
+result = check_vowels(ch)
+print(result)
 
 # === OPERATORS ===
 # 1. Implement a calculator supporting +, -, *, / using functions.
