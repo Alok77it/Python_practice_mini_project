@@ -178,7 +178,7 @@ for i in range(1, n):
         total += i
     
 print(f"The sum of all natural number is: {total}")
-
+su
 
 # 19. Implement integer division without using the division operator.
 
@@ -200,27 +200,78 @@ print(result)
 
 # === OPERATORS ===
 # 1. Implement a calculator supporting +, -, *, / using functions.
+def add(a,b):
+    return a + b
+def substract(a,b):
+    return a + b
+def multiply(a,b):
+    return a * b
+def division(a,b):
+    if b == 0:
+        return "Error: Division by zero!"
+    return a / b
+
+print("Kindly select the operation: + - * /")
+
 
 
 # 2. Given two integers, determine if their bitwise AND is zero.
+
+
 # 3. Swap two numbers using XOR operator.
+
+
 # 4. Check if a number is even or odd using bitwise operators.
+
+
 # 5. Write a program to count the number of set bits in an integer.
+
+
 # 6. Calculate the result of (a^b) % m efficiently (modular exponentiation).
+
+
 # 7. Check if two integers have opposite signs using bitwise operators.
+
+
 # 8. Clear the lowest set bit of a number.
+
+
 # 9. Determine if a number is a power of two using bitwise operations.
+
+
 # 10. Implement addition of two numbers without using '+' operator.
+
+
 # 11. Find the maximum of two numbers without using comparison operators.
+
+
 # 12. Implement a function to toggle the ith bit of a number.
+
+
 # 13. Given an integer, set its rightmost zero bit.
+
+
 # 14. Check if a number is divisible by 4 using bitwise operators.
+
+
 # 15. Reverse the bits of a 32-bit unsigned integer.
+
+
 # 16. Calculate XOR of all numbers in an array where every element appears twice except one.
+
+
 # 17. Given a number, count how many bits need to be flipped to convert it to another number.
+
+
 # 18. Check if a number is divisible by 3 using bitwise operators.
+
+
 # 19. Write a program to find two numbers that appear only once in an array where every other number appears twice.
+
+
 # 20. Implement right rotate and left rotate on bits of an integer.
+
+
 
 # === CONDITIONS ===
 # 1. Given three sides, check if they form a valid triangle.
