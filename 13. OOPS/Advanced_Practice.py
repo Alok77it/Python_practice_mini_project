@@ -300,16 +300,78 @@ student2.display()
         
 
 # 5. Add a class variable to count number of active instances of a class.
+class Myclass:
+  count = 0
+  def __init__(self):
+    Myclass.count += 1
+  
+  def __del__(self):
+    Myclass.count -= 1
+
+  @classmethod  
+  def get_active_count(cls):
+    return cls.count
+
+
+obj1 = Myclass()
+obj2   = Myclass()
+
+print("MyClass.get_active_count()")
+
+# Delete an object
+del obj1
+
+import gc
+gc.collect()
+
+#Print active count again
+print(Myclass.get_active_count())
 
 
 # 6. Use `@staticmethod` to define a utility method in a class.
+class mathUtils:
 
+  @staticmethod
+  def add(x,y):
+    return x + y
+  
+  @staticmethod
+  def is_even(n):
+    return n % 2 == 0
 
-# 7. Use `@classmethod` to create objects in alternative ways (e.g., from a string).
+#Usage without creating an object
+print("Sum:", mathUtils.add(10,5))
+print("IsEven:", mathUtils.is_even(3))
 
 
 # 8. Create a class `Shape` and subclass `Circle`, `Rectangle` with area methods.
+import math
 
+class Shape:
+    def area(self):
+        raise NotImplementedError("Subclasses must implement this method")
+class Circle(Shape):
+  def __init__(self,radius):
+    self.radius = radius
+
+  def area(self):
+    return math.pi * self.radius ** 2
+class Rectangle(Shape):
+  def __init__(self,length,width):
+    self.length = length
+    self.width = width
+  
+  def area(self):
+    return self.length * self.width
+  
+circle = Circle(5)
+rectangle = Rectangle(3,5)
+
+print(f"Circle area: {circle.area():.2f}")
+print(f"Rectangle area: {rectangle.area()}")
+
+
+        
 
 # 9. Demonstrate method overriding using a base and derived class.
 
@@ -648,3 +710,85 @@ student2.display()
 # Q15: Create a class `Account` with `_account_number`, `_balance`.
 # Balance can be set only if account number is valid (must be 10 digits).
 # Add validation logic in setters.
+
+
+#🐍 Types of inheritance
+
+# 1. Create a base class Animal and derived classes Dog and Cat using single inheritance.
+# 2. Implement multilevel inheritance: Grandparent -> Parent -> Child classes.
+# 3. Create two parent classes (A, B) and a child class C inheriting from both (multiple inheritance).
+# 4. Show hierarchical inheritance: one parent class and multiple child classes.
+# 5. Demonstrate hybrid inheritance by combining multiple and multilevel inheritance.
+# 6. Implement polymorphism using method overriding in Animal class and Dog, Cat subclasses.
+# 7. Use polymorphism by defining a method in base class and overriding it in multiple derived classes.
+# 8. Write a function that takes an object of any class with a 'speak' method and calls it.
+# 9. Demonstrate polymorphism using a list of different class objects calling a common method.
+# 10. Create an abstract base class with abstract methods and implement them in derived classes.
+# 11. Show polymorphism by operator overloading (e.g., '+' for two different classes).
+# 12. Create a class hierarchy for geometric shapes and use polymorphism for area calculation.
+# 13. Write a program to demonstrate polymorphism with method overloading (simulate it in Python).
+# 14. Illustrate polymorphism with duck typing (different classes with the same method name).
+# 15. Demonstrate runtime polymorphism by dynamically changing the class type of an instance.
+
+
+# ===========================
+# Method Overloading Practice Questions
+# ===========================
+
+# 1. Write a class Calculator with a method add() that works for 2 or 3 numbers using default arguments.
+# 2. Simulate method overloading by checking argument types inside a single method.
+# 3. Create a class Printer with a print_message() method overloaded for string or list input.
+# 4. Implement method overloading in Python using *args and **kwargs.
+# 5. Create a method multiply() that multiplies 2 or 3 numbers depending on arguments.
+# 6. Write a class Shape with a method area() that calculates area differently based on parameters.
+# 7. Implement method overloading for a greet() method that can accept a name or no argument.
+# 8. Simulate method overloading by method name mangling with decorators.
+# 9. Write a class with method display() overloaded to print different types: int, str, list.
+# 10. Implement method overloading for a method set_value() that accepts int, str, or list.
+# 11. Create a class with overloaded constructor (__init__) that can accept different numbers of arguments.
+# 12. Demonstrate method overloading using functools.singledispatch decorator.
+# 13. Implement method overloading by checking the number of arguments passed to a method.
+# 14. Create a class BankAccount with deposit() method overloaded to accept amount or amount+currency.
+# 15. Write a method process() overloaded to handle string data and numeric data differently.
+
+
+# ===========================
+# Method Overriding Practice Questions
+# ===========================
+
+# 1. Create a base class Vehicle with a method start(), override it in a derived class Car.
+# 2. Write classes Parent and Child, override a method in Child that exists in Parent.
+# 3. Demonstrate method overriding with super() to call the parent method inside the child.
+# 4. Override a method in multiple derived classes from the same base class.
+# 5. Create a base class Shape with a method area(), override it in Circle and Rectangle classes.
+# 6. Implement a base class Employee with a method get_salary(), override it in Manager and Developer classes.
+# 7. Write a base class Printer with a method print_document(), override it in subclasses LaserPrinter and InkjetPrinter.
+# 8. Show method overriding where the child method has different parameters than the parent.
+# 9. Override a method in a derived class and call the parent class method using super().
+# 10. Override a method and change its return type (compatible in Python).
+# 11. Create an Animal class with method sound(), override in Dog and Cat classes with specific sounds.
+# 12. Demonstrate method overriding where the child method adds extra functionality to the parent method.
+# 13. Override a method and demonstrate polymorphic behavior by calling the method from a parent class reference.
+# 14. Show method overriding with an abstract base class and concrete derived classes.
+# 15. Write code to override a method and access the parent class method with class name explicitly.
+
+
+# ===========================
+# Operator Overloading Practice Questions
+# ===========================
+
+# 1. Create a class Vector with __add__ method to add two vectors.
+# 2. Implement __str__ and __repr__ methods for a class Person.
+# 3. Overload the * operator to multiply a vector by a scalar in a Vector class.
+# 4. Implement __eq__ method to compare two objects of a class.
+# 5. Overload the - operator to subtract one Vector from another.
+# 6. Create a class for complex numbers and overload +, -, and * operators.
+# 7. Overload the > and < operators for a class Student based on marks.
+# 8. Implement __len__ method in a custom class representing a collection.
+# 9. Overload the [] operator (__getitem__) to access elements in a custom list class.
+# 10. Create a class Box and overload the + operator to combine two boxes.
+# 11. Overload the // operator in a class to perform floor division on custom data.
+# 12. Implement __call__ method to make an object callable.
+# 13. Overload the unary - operator (__neg__) to negate vector components.
+# 14. Overload __bool__ to define truth value for a custom class.
+# 15. Create a class Time with overloaded operators for addition and subtraction of time objects.

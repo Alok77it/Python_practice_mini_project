@@ -178,7 +178,6 @@ for i in range(1, n):
         total += i
     
 print(f"The sum of all natural number is: {total}")
-su
 
 # 19. Implement integer division without using the division operator.
 
@@ -212,19 +211,69 @@ def division(a,b):
     return a / b
 
 print("Kindly select the operation: + - * /")
+operator = input("Enter the operation: ")
 
+a = float(input("Enther the first number: "))
+b = float(input("Enter the second number: "))
 
+if operator == '+':
+    print("Result: ", add(a,b))
+
+elif operator == '-':
+    print("Result: ", add(a,b))
+       
+
+elif operator == '*':
+    print("Result: ", add(a,b))
+    
+
+elif operator == '/':
+    print("Result: ", add(a,b))
+    
+else:
+    print("Invalid parameter")
 
 # 2. Given two integers, determine if their bitwise AND is zero.
+a = int(input("Enter the first integer: "))
+b = int(input("Enter the second integer: "))
 
+result = a and b
+if result == True:
+    print("Bitwise and is zero")
+else:
+    print("Not Bitwise and is not zero")
 
 # 3. Swap two numbers using XOR operator.
+def swap(a,b):
+    print(f"Before swapping a = {a}, b ={b}")
+    
+    a = a ^ b
+    b = a ^ b
+    a = a ^ b
+    
+    print(f"After swapping a = {a}, b = {b}")
 
+x = 10
+y = 12
+swap(x,y)
 
 # 4. Check if a number is even or odd using bitwise operators.
-
+def check_even_odd(num):
+    if num & 1 == 0:
+        print(f"{num} is even")
+    else:
+        print(f"{num} is odd")
 
 # 5. Write a program to count the number of set bits in an integer.
+def count_set_bits_kernighan(n):
+    count = 0
+    while n:
+        n = n & (n - 1)
+        count += 1
+    return count
+
+# Example
+print(f"Set bits in 29: {count_set_bits_kernighan(29)}")
 
 
 # 6. Calculate the result of (a^b) % m efficiently (modular exponentiation).
