@@ -277,18 +277,57 @@ print(f"Set bits in 29: {count_set_bits_kernighan(29)}")
 
 
 # 6. Calculate the result of (a^b) % m efficiently (modular exponentiation).
+def mod_exp(a,b,m):
+  result = 1
+  a = a % m
+  while b > 0:
+    if b % 2 == 1:
+      result = (result * a) % m
+    a = (a * a)% m
+    b = b // 2
+  return result
 
+mod_exp(2,4,5)
 
 # 7. Check if two integers have opposite signs using bitwise operators.
+def have_opposite_signs(x,y):
+  if (x ^ y)< 0:
+    return True
+  else:
+    return False
 
+have_opposite_signs(3,-1)
 
 # 8. Clear the lowest set bit of a number.
+def clear_lowest(n):
+  return n and (n -1)
 
+s = {1,2,3,4,5}
+clear_lowest(5  )
 
 # 9. Determine if a number is a power of two using bitwise operations.
+def is_power_of_two(n):
+  if n <= 0:
+    return False
+  elif (n and (n - 1)) == 0:
+    return True
+  else:
+    return False
 
+is_power_of_two(10)
 
 # 10. Implement addition of two numbers without using '+' operator.
+def add(a, b):
+    while b != 0:
+        carry = a & b          # Find carry
+        a = a ^ b              # Add without carry
+        b = carry << 1         # Shift carry to add in next position
+    return a
+
+# Test
+x = 5
+y = 3
+print(f"The sum of {x} and {y} is: {add(x, y)}")
 
 
 # 11. Find the maximum of two numbers without using comparison operators.

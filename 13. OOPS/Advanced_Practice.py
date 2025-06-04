@@ -370,19 +370,66 @@ rectangle = Rectangle(3,5)
 print(f"Circle area: {circle.area():.2f}")
 print(f"Rectangle area: {rectangle.area()}")
 
-
-        
-
 # 9. Demonstrate method overriding using a base and derived class.
+class Animal:
+    def speak(self):  # Add 'self'
+        print("Animal Speaks")
 
+class Dog(Animal):
+    def speak(self):  # Overrides the base class method
+        print("Barks")
+
+obj1 = Dog()
+obj1.speak()  # This will call the overridden method in Dog    
 
 # 10. Demonstrate multiple inheritance with proper constructor calls.
+class Father:
+  def __init__(self):
+    print("Father's constructor")
+  
+class Mother:
+  def __init__(self):
+    print("Mother's constructor")
 
+class Child(Father,Mother):
+  def __init__(self):
+    Father.__init__(self)
+    Mother.__init__(self)
+    print("Child Constructor")
+
+child_object = Child()
 
 # 11. Use `super()` in child class to call parent constructor.
+class Person:
+    def __init__(self):
+        print("Person constructor")
+
+class Employee(Person):
+    def __init__(self):
+        super().__init__()  # Call Person constructor
+        print("Employee constructor")
+
+# Create object of Employee
+emp = Employee()
 
 
-# 12. Build a `Logger` class with a singleton pattern.
+# 12. Build a Logger class with a singleton pattern.
+class Logger:
+    __instance = None  # Private static variable
+
+    @staticmethod
+    def get_instance():
+        if Logger.__instance is None:
+            Logger.__instance = Logger()
+        return Logger.__instance
+
+    def log(self, message):
+        print(message)
+
+    def __init__(self):
+        if Logger.__instance is not None:
+            raise Exception("This is a singleton class. Use get_instance().")
+        print("Logger instance created")  # To confirm only one instance is created
 
 
 # 13. Use dunder methods like `__str__`, `__eq__`, and `__repr__` for a `Product` class.
@@ -792,3 +839,29 @@ print(f"Rectangle area: {rectangle.area()}")
 # 13. Overload the unary - operator (__neg__) to negate vector components.
 # 14. Overload __bool__ to define truth value for a custom class.
 # 15. Create a class Time with overloaded operators for addition and subtraction of time objects.
+
+
+
+# ===========================
+# Polymorphism Practice Questions
+# ===========================
+
+# 1. Create a base class `Animal` with a method `speak()`. Override the method in two subclasses `Dog` and `Cat` to print "Woof" and "Meow" respectively.
+
+# 2. Write a function `make_it_speak(animal)` that takes an object and calls its `speak()` method. Demonstrate polymorphism using `Dog` and `Cat` instances.
+
+# 3. Define a method `area()` in a base class `Shape`. Create subclasses `Rectangle` and `Circle` that override `area()` to return their respective areas.
+
+# 4. Create a class `Vehicle` with a method `start()`. Create two subclasses `Car` and `Bike` and override the `start()` method with different messages.
+
+# 5. Write a function `start_vehicle(vehicle)` which demonstrates polymorphism by calling the `start()` method of both `Car` and `Bike` objects.
+
+# 6. Implement operator overloading for the `+` operator in a class `Book`, where adding two books returns the total number of pages.
+
+# 7. Create two unrelated classes `Laptop` and `Mobile` each having a method `device_type()`. Write a function that takes any object and calls `device_type()`.
+
+# 8. Implement a class `Employee` with a `__str__()` method. Create a subclass `Manager` that overrides `__str__()` to provide a different string format.
+
+# 9. Use duck typing: Write a function `call_speak_twice(obj)` that calls `speak()` method twice. Pass different objects like `Dog`, `Robot`, `Parrot` that implement `speak()`.
+
+# 10. Create a class `Calculator` with a method `calculate()`. Override this method in subclasses `Adder`, `Subtractor`, and `Multiplier` to perform different operations.
