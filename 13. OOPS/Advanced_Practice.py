@@ -433,9 +433,58 @@ class Logger:
 
 
 # 13. Use dunder methods like `__str__`, `__eq__`, and `__repr__` for a `Product` class.
+class Product:
+  def __init__(self,name,price):
+    self.name = name
+    self.price = price
+
+  def __str__(self):
+    return f"Product: {self.name}, Price: {self.price}"
+  
+  def __repr__(self):
+    return f"Product({self.name},{self.price})"
+
+  def __eq__(self,other):
+    if isinstance(other, Product):
+            return self.name == other.name and self.price == other.price
+    return False
+
+product1 = Product("Laptop", 1200)
+product2 = Product("Laptop", 1200)
+product3 = Product("Mouse", 25)
+
+print(product1)             # Uses __str__
+print(repr(product1))       # Uses __repr__
+print(product1 == product2) # Uses __eq__, should be True
+print(product1 == product3) # Should be False
+
 
 
 # 14. Write a class that implements custom sorting using `__lt__`.
+class Product:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+    def __lt__(self, other):
+        return self.price < other.price  # Sort by price in ascending order
+
+    def __str__(self):
+        return f"{self.name}: ${self.price}"
+
+products = [
+    Product("Laptop", 1000),
+    Product("Mouse", 50),
+    Product("Monitor", 300),
+    Product("Keyboard", 100)
+]
+
+# Sort the products by price (uses __lt__)
+products.sort()
+
+# Print sorted products
+for p in products:
+    print(p)
 
 
 # 15. Create a class with private variables and methods.

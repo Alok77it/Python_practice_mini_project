@@ -331,34 +331,28 @@ print(f"The sum of {x} and {y} is: {add(x, y)}")
 
 
 # 11. Find the maximum of two numbers without using comparison operators.
+def get_max(a,b):
+  diff = a - b
+  k = (diff >> 31) & 1 # Get sign bit: 1 if a < b, 0 if a >= b
+  return a - k * diff # If k = 1, return b; if k = 0, return a
 
+
+print(get_max(3,4))
 
 # 12. Implement a function to toggle the ith bit of a number.
+         #Concept:
+        #To toggle (flip) a bit means:
+        #If the bit is 0, make it 1
+        #If the bit is 1, make it 0
 
+def toggle_ith_bit(n, i):
+    mask = 1 << i
+    return n ^ mask
 
-# 13. Given an integer, set its rightmost zero bit.
-
-
-# 14. Check if a number is divisible by 4 using bitwise operators.
-
-
-# 15. Reverse the bits of a 32-bit unsigned integer.
-
-
-# 16. Calculate XOR of all numbers in an array where every element appears twice except one.
-
-
-# 17. Given a number, count how many bits need to be flipped to convert it to another number.
-
-
-# 18. Check if a number is divisible by 3 using bitwise operators.
-
-
-# 19. Write a program to find two numbers that appear only once in an array where every other number appears twice.
-
-
-# 20. Implement right rotate and left rotate on bits of an integer.
-
+n = 10      # binary: 1010
+i = 1       # toggle the 1st bit (counting from 0)
+result = toggle_ith_bit(n, i)
+print(result)       
 
 
 # === CONDITIONS ===
