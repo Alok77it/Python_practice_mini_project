@@ -488,7 +488,20 @@ for p in products:
 
 
 # 15. Create a class with private variables and methods.
+class MyClass:
+  def __init__(self):
+    self.__privateVar = 42
 
+  def __privateMethod(self):
+    print("Inside private method")
+    print(f"Private variable value: {self.__privateVar}")
+
+  def publicMethod(self):
+    print("Inside public method")
+    self.__privateMethod()
+
+obj = MyClass()
+obj.publicMethod()
 
 # 16. Define a `Calculator` class and implement chaining of operations.
 

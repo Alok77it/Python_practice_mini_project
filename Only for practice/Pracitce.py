@@ -1,577 +1,400 @@
-# === BASIC PYTHON ===
-# 1. Write a program to check if a number is prime.
-def prime_number(number):
-    if number <= 1:
-        return False
-    for i in range(2,int(number ** 0.5) + 1):
-        if number % i == 0:
-            return False
-    return True
+# ================================
+# Track 1: Python Core Concepts
+# ================================
 
-num = int(input("Enter a number: "))
-
-if prime_number(num):
-    print(f"{num} is a prime number")
-else:
-    print(f"{num} is not a prime number")
-
-# 2. Implement a function to find the factorial of a number.
-def factorial(num):
-    if num < 0:
-        return "Factorial is not defined for negative number"
-    result = 1
-    for i in range(2, num + 1):
-        result *= i
-    return result
-
-print(factorial(5))
-
-# 3. Check if a given year is a leap year.
-def leap_year(year):
-    if year % 400 == 0:
-        return True
-    elif year % 100 == 0:
-        return False
-    elif year % 4 == 0:
-        return True
-    else:
-        return False
-
-year = int(input("enter the year: "))
-if leap_year(year):
-    print(f"{year} is leap year")
-else:
-    print(f'{year} is not leap year ')
-     
-
-# 4. Find the greatest common divisor (GCD) of two numbers.
-import math
-
+# ------------ 1. Variables, Data Types, and Operators ------------
+# Easy (20)
+# 1. Declare two integers and print their sum
 a = 10
-b = 20
+b = 12
+print(a+b)
+
+
+# 2. Swap two variables using a third variable
+a = 10
+b = 12
+c = a
+a = b
+b = c
+print(a)
+print(b)
+
+# 3. Swap two variables without a third variable
+a = 10
+b = 12
+a, b = b, a
+print(a)
+print(b)
+
+
+# 4. Check data type of a variable
+a = "str"
+b = 12
+print(type(a))
+print(type(b))
+
+
+# 5. Take input from user and print it
+user = input("Enter the name: ")
+print(user)
+
+# 6. Add two float numbers
+a = 10.12
+b = 12.23
+print(a + b)
+
+# 7. Multiply an int and float
+# 8. Convert int to string
+# 9. Convert string to int
+# 10. Perform modulus operation
+# 11. Perform floor division
+# 12. Use exponent operator to square a number
+# 13. Chain multiple assignments (a = b = c = 10)
+# 14. Use augmented assignment (+=, -=)
+# 15. Use relational operators and print results
+# 16. Use logical operators: and, or, not
+# 17. Use identity operator (is, is not)
+# 18. Use membership operator (in, not in)
+# 19. Print variable memory address (id)
+# 20. Use type casting to add int + string correctly
+
+# Advanced (20)
+# 1. Print binary, octal, hexadecimal of a number
+# 2. Demonstrate difference between == and is
+# 3. Convert float to int and observe truncation
+# 4. Evaluate complex expression using brackets
+# 5. Use divmod() function
+# 6. Use round(), abs(), pow() functions
+# 7. Input multiple variables in one line
+# 8. Format output using f-string
+# 9. Use input() with type casting
+# 10. Use math module to calculate square root
+# 11. Use math.ceil() and math.floor()
+# 12. Generate random number between 1 and 100
+# 13. Use random.choice() on a list
+# 14. Use type hints in a function definition
+# 15. Use ternary operator (one-line if else)
+# 16. Create constants using UPPER_CASE convention
+# 17. Use underscore variable (_) as throwaway
+# 18. Explore dynamic typing by changing var types
+# 19. Use id() to show different object identities
+# 20. Write a function with multiple return values
+
+
+# ------------ 2. Conditionals and Loops ------------
+# Easy (20)
+# 1. Check if a number is even or odd
+# 2. Check if a number is positive, negative, or zero
+# 3. Find the largest of 3 numbers
+# 4. Print 1 to 10 using for loop
+# 5. Print 10 to 1 using while loop
+# 6. Print even numbers from 1 to 20
+# 7. Print all numbers divisible by 3 between 1–30
+# 8. Sum first 10 natural numbers
+# 9. Calculate factorial of a number using loop
+# 10. Print multiplication table of a number
+# 11. Break a loop when value reaches 5
+# 12. Use continue to skip odd numbers
+# 13. Loop through a string and print each char
+# 14. Count digits in a number using loop
+# 15. Reverse a number using loop
+# 16. Check if a year is leap year
+# 17. Check if a number is prime
+# 18. Print triangle pattern using *
+# 19. Create basic calculator using if-else
+# 20. Print sum of digits of a number
+
+# Advanced (20)
+# 1. Use nested if to validate login system
+# 2. Use nested loop to print number triangle
+# 3. Print all prime numbers between 1 and 100
+# 4. Use while-else and for-else blocks
+# 5. Print Floyd’s triangle using numbers
+# 6. Generate Fibonacci series up to n
+# 7. Print pyramid pattern with *
+# 8. Calculate GCD using loop
+# 9. Calculate LCM of two numbers
+# 10. Use pass statement in a loop
+# 11. Print inverted triangle pattern
+# 12. Use match-case (Python 3.10+)
+# 13. Generate perfect numbers below 1000
+# 14. Use zip() in a loop
+# 15. Use enumerate() to access index + value
+# 16. Print numbers in reverse using range()
+# 17. Simulate ATM withdrawal system
+# 18. Write menu-driven program using loop
+# 19. Count uppercase/lowercase letters in string
+# 20. Validate password strength using conditions
+
+
+# ------------ 3. Strings ------------
+# Easy (20)
+# 1. Reverse a string
+# 2. Count number of vowels
+# 3. Remove spaces from a string
+# 4. Convert string to uppercase
+# 5. Convert string to lowercase
+# 6. Check if string is palindrome
+# 7. Count occurrences of a character
+# 8. Find first occurrence of substring
+# 9. Slice first 5 characters
+# 10. Concatenate two strings
+# 11. Use string formatting with % operator
+# 12. Use format() method
+# 13. Capitalize the first character
+# 14. Split string into list
+# 15. Join list into string
+# 16. Replace a word in string
+# 17. Check if string starts/ends with a word
+# 18. Check if string contains only digits
+# 19. Use strip() to remove spaces
+# 20. Escape special characters using backslash
+
+# Advanced (20)
+# 1. Compress a string (aaaabb → a4b2)
+# 2. Check if two strings are anagrams
+# 3. Remove all duplicate characters
+# 4. Longest word in a sentence
+# 5. Count frequency of all characters
+# 6. Find all substrings of a string
+# 7. Use list comprehension with strings
+# 8. Use regex to validate email
+# 9. Title-case a string manually
+# 10. Swap first and last characters
+# 11. Reverse words in a sentence
+# 12. Convert sentence into camelCase
+# 13. Use translate() with mapping
+# 14. Encode and decode using ord()/chr()
+# 15. Use isalpha(), isalnum(), isnumeric()
+# 16. Mask part of a string (like a password)
+# 17. Remove punctuation from string
+# 18. Custom find & replace function
+# 19. Format string using f-string with expressions
+# 20. Parse CSV-style data in a string
+
+# ------------ 4. Lists and Tuples ------------
+# Easy (20)
+# 1. Create a list of 5 integers and print it
+# 2. Append an element to a list
+# 3. Remove an element from a list
+# 4. Find length of a list
+# 5. Access first and last element of a list
+# 6. Slice a list from index 1 to 3
+# 7. Iterate over list and print elements
+# 8. Check if an element exists in list
+# 9. Concatenate two lists
+# 10. Repeat a list n times
+# 11. Create a tuple with 4 elements
+# 12. Access tuple elements by index
+# 13. Count occurrences of an element in a list
+# 14. Find max and min in a list
+# 15. Sort a list in ascending order
+# 16. Reverse a list
+# 17. Convert tuple to list
+# 18. Convert list to tuple
+# 19. Insert element at specific index in list
+# 20. Clear all elements from a list
+
+# Advanced (20)
+# 1. Remove duplicates from a list preserving order
+# 2. Flatten a list of lists (e.g. [[1,2],[3,4]] → [1,2,3,4])
+# 3. Use list comprehension to create squares of numbers 1–10
+# 4. Find common elements between two lists
+# 5. Merge two sorted lists into one sorted list
+# 6. Implement your own function to reverse a list
+# 7. Count frequency of each element in a list
+# 8. Use zip() to combine two lists into list of tuples
+# 9. Find second largest number in a list
+# 10. Sort a list of tuples by second element
+# 11. Use tuple unpacking in function return values
+# 12. Create nested lists and access elements
+# 13. Swap elements at two indices in a list
+# 14. Rotate a list by n elements
+# 15. Use list slicing to skip every alternate element
+# 16. Convert list of strings to a single string with delimiter
+# 17. Implement stack operations using list
+# 18. Use enumerate() with lists
+# 19. Use filter() with a lambda on list
+# 20. Use map() to convert list of strings to ints
+
+# ------------ 5. Dictionaries and Sets ------------
+# Easy (20)
+# 1. Create a dictionary with 3 key-value pairs
+# 2. Access value by key in dictionary
+# 3. Add new key-value pair to dictionary
+# 4. Update value for an existing key
+# 5. Delete a key-value pair from dictionary
+# 6. Check if key exists in dictionary
+# 7. Iterate over dictionary keys
+# 8. Iterate over dictionary values
+# 9. Iterate over key-value pairs
+# 10. Get keys and values as lists
+# 11. Create an empty set and add elements
+# 12. Remove element from set
+# 13. Check if element in set
+# 14. Perform union of two sets
+# 15. Perform intersection of two sets
+# 16. Perform difference of two sets
+# 17. Clear a set
+# 18. Get length of dictionary and set
+# 19. Use dict.get() method with default value
+# 20. Copy a dictionary
+
+# Advanced (20)
+# 1. Count frequency of characters in a string using dictionary
+# 2. Merge two dictionaries
+# 3. Use dictionary comprehension to square numbers 1–5 as {n: n*n}
+# 4. Create nested dictionaries and access values
+# 5. Invert keys and values in a dictionary
+# 6. Sort dictionary by keys
+# 7. Sort dictionary by values
+# 8. Remove duplicates from list using set
+# 9. Use frozenset and explain difference from set
+# 10. Create a default dictionary using collections.defaultdict
+# 11. Use set comprehension
+# 12. Find keys with maximum values in dictionary
+# 13. Count words in a sentence using dictionary
+# 14. Implement phonebook with add/search/delete operations using dict
+# 15. Use popitem() method of dictionary
+# 16. Use update() method with another dictionary
+# 17. Check if two dictionaries are equal
+# 18. Use dict.fromkeys() method
+# 19. Filter dictionary items based on condition
+# 20. Implement LRU cache using OrderedDict (conceptual)
+
+# ------------ 6. Functions and Recursion ------------
+# Easy (20)
+# 1. Define a function that adds two numbers
+# 2. Function with default argument
+# 3. Function that returns multiple values
+# 4. Use keyword arguments in function call
+# 5. Use *args in a function
+# 6. Use **kwargs in a function
+# 7. Anonymous function (lambda) to add two numbers
+# 8. Use map() with lambda and list
+# 9. Use filter() with lambda and list
+# 10. Use reduce() to sum list elements
+# 11. Recursive function to find factorial
+# 12. Recursive function to calculate nth Fibonacci number
+# 13. Use return statement to exit function early
+# 14. Function with no return value (returns None)
+# 15. Nested functions (define function inside function)
+# 16. Use global variable inside function
+# 17. Use nonlocal variable inside nested function
+# 18. Write docstring for a function
+# 19. Use function annotations (type hints)
+# 20. Call function using function object
+
+# Advanced (20)
+# 1. Decorator to print function execution time
+# 2. Memoization in recursive Fibonacci
+# 3. Use functools.partial to create partial functions
+# 4. Generator function using yield
+# 5. Create a closure and explain
+# 6. Recursive function to solve Tower of Hanoi
+# 7. Function that accepts another function as argument
+# 8. Use function to generate infinite Fibonacci sequence with yield
+# 9. Recursive binary search implementation
+# 10. Tail recursion (conceptual, Python doesn’t optimize)
+# 11. Use assert statement in function
+# 12. Currying function example
+# 13. Function with variable scope examples
+# 14. Recursive function to generate permutations of a string
+# 15. Recursive function to solve subset sum problem
+# 16. Use lambda inside a function
+# 17. Decorator with arguments
+# 18. Use context manager as a function (with statement)
+# 19. Partial application of function arguments
+# 20. Implement a retry decorator
+
+# ------------ 7. File Input/Output ------------
+# Easy (20)
+# 1. Open a file and write a string
+# 2. Read the whole content of a file
+# 3. Read a file line by line
+# 4. Append text to a file
+# 5. Use with statement to open file
+# 6. Write list of strings to a file
+# 7. Read file and count number of words
+# 8. Copy content from one file to another
+# 9. Check if file exists before reading
+# 10. Use try-except for file operations
+# 11. Read CSV file and print each row (basic)
+# 12. Write CSV file with header row
+# 13. Use os module to get file size
+# 14. Rename a file
+# 15. Delete a file
+# 16. Read binary file content
+# 17. Write binary data to file
+# 18. Use pathlib for file operations
+# 19. Read large file using buffered read
+# 20. Write JSON data to a file
+
+# Advanced (20)
+# 1. Parse CSV file and convert to list of dicts
+# 2. Use JSON module to load and dump data
+# 3. Read and write compressed files using gzip
+# 4. Write a log file with timestamps
+# 5. Use configparser to read config files
+# 6. File locking concepts (basic)
+# 7. Use mmap module for file mapping
+# 8. Write file using contextlib.redirect_stdout
+# 9. Handle Unicode errors while reading files
+# 10. Implement file watcher to detect file changes
+# 11. Use pathlib to iterate files in directory
+# 12. Read fixed-width formatted files
+# 13. Write multi-line strings to file
+# 14. Read partial file (seek and read)
+# 15. Use tempfile module for temp files
+# 16. Use shutil to copy files/directories
+# 17. Read Excel files using openpyxl (basic)
+# 18. Write Excel files using openpyxl
+# 19. Create a file backup script
+# 20. Write script to remove duplicate lines from a file
+
+# ------------ 8. Classes and Object-Oriented Programming (OOP) ------------
+# Easy (20)
+# 1. Define a class with __init__ method
+# 2. Create an object of a class
+# 3. Add method to class that prints attribute
+# 4. Use self keyword in class methods
+# 5. Create class with class variables and instance variables
+# 6. Use __str__ method to print object info
+# 7. Create two instances with different attributes
+# 8. Access and modify instance variables
+# 9. Use default argument in class constructor
+# 10. Create methods to update attributes
+# 11. Define a method outside __init__
+# 12. Create class with a method that returns a value
+# 13. Use del keyword to delete an attribute
+# 14. Create a class method (@classmethod)
+# 15. Create a static method (@staticmethod)
+# 16. Use property decorator to define getter
+# 17. Use setter decorator to modify attribute
+# 18. Create a class with private attributes (__var)
+# 19. Use inheritance: define subclass inheriting superclass
+# 20. Override method in subclass
+
+# Advanced (20)
+# 1. Use super() to call parent constructor
+# 2. Multiple inheritance example
+# 3. Use __repr__ method for object representation
+# 4. Implement operator overloading (__add__, __str__)
+# 5. Use abstract base class (ABC module)
+# 6. Implement interfaces using ABCs
+# 7. Use composition instead of inheritance
+# 8. Implement property with validation
+# 9. Use metaclasses (basic)
+# 10. Implement singleton pattern in Python
+# 11. Create iterator class (__iter__, __next__)
+# 12. Use context manager with __enter__ and __exit__
+# 13. Use descriptors for attribute management
+# 14. Implement class decorators
+# 15. Create mixins for reusable functionality
+# 16. Use slots to reduce memory footprint
+# 17. Dynamic class creation using type()
+# 18. Use dataclasses module for classes
+# 19. Serialization and deserialization of objects (pickle)
+# 20. Write unit tests for class methods using unittest
 
-gcd = math.gcd(a, b)
-
-print(f"GCD of a: {a} and b: {b} is {gcd}")
-
-# 5. Reverse the digits of an integer without converting to string.
-def reverse(number):
-    reversed_num = 0
-    sign = 1 if number > 0 else -1
-    number = abs(number)
-    
-    while number > 0:
-        digit = number % 10
-        reversed_num = reversed_num * 10 + digit
-        number = number // 10
-    
-    return reversed_num * sign
-
-print(reverse(1234))    # Output: 4321
-print(reverse(-9876))   # Output: -6789
-
-
-# 6. Calculate the sum of digits of a number.
-def sum_of_digits(a,b):
-    return a + b
-
-a = int(input("Enter the 1st number: "))  
-b = int(input("Enter the 2nd number: "))
-sum = sum_of_digits(a, b)
-print(sum)
-
-
-# 7. Given two numbers, swap their values without using a temporary variable.
-num1 = 10
-num2 = 12
-num1, num2 = num2, num1
-print(num1)
-print(num2)
-
-# 8. Write a program to check if a number is a palindrome.
-def is_palindrome(number):
-    return str(number) == str(number)[::-1]
-
-# Example usage:
-num = 12321
-if is_palindrome(num):
-    print(f"{num} is a palindrome.")
-else:
-    print(f"{num} is not a palindrome.")
-
-
-# 9. Find the nth Fibonacci number using iteration.
-def fibonacci(n):
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
-
-    a, b = 0, 1
-    for _ in range(2, n + 1):
-        a, b = b, a + b
-    return b
-
-n = 7
-print(f"The {n}th Fibonacci number is: {fibonacci(n)}")
-
-# 10. Check if a string contains only digits.
-s = "123123"
-if s.isdigit():
-    print("Strings contains only digits")
-else:
-    print("Strings not contains only digits")
-
-# 11. Convert Celsius to Fahrenheit.
-def cel_to_fah(celsius):
-    return (celsius * 9 / 5) + 32
-
-temp_c = 23
-temp_f = cel_to_fah(temp_c)
-print(f"{temp_c}C : {temp_f}F")
-
-# 12. Calculate the area of a circle given the radius.
-import math
-
-def area_of_circle(radius):
-    return math.pi * radius ** 2
-
-r = 4
-print(f"The area of circle: {r} = {area_of_circle(r)}")
-    
-# 13. Print all even numbers from 1 to N.
-n = int(input("Enter the limit: "))
-for num in range(1, n +1):
-    if num % 2 == 0:
-        print(num)
-
-# 14. Find the minimum and maximum from three numbers.
-import math
-a = [1,5,10]
-max_num = max(a)
-print(f"Maximum number: {max_num}")
-min_num = min(a)
-print(f"Minimum number: {min_num}")
-
-# 15. Check if a number is Armstrong number.
-
-
-# 16. Write a program to calculate the compound interest.
-p = int(input("Enter the principal: "))
-r = int(input("Enter the rate interest: "))
-t = int(input("time: "))
-amount = p * (1 + r / 100)*t
-compound = amount - p
-print(compound)
-
-# 17. Convert a decimal number to binary.
-dec = 10.23
-inte = int(dec)
-binary = bin(inte)
-print(binary)
-
-# 18. Calculate the sum of all natural numbers below N that are multiples of 3 or 5.
-n = int(input("Enter the value of n:"))
-total = 0
-for i in range(1, n):
-    if i % 3 == 0 or i % 5 == 0:
-        total += i
-    
-print(f"The sum of all natural number is: {total}")
-
-# 19. Implement integer division without using the division operator.
-
-
-# 20. Write a function to check if a character is a vowel or consonant.
-def check_vowels(char):
-    if not char.isalpha() or len(char) != 1:
-        return "Invalid input. Please enter a single alphabetic character."
-    
-    vowels = "aeiou"
-    if char.lower() in vowels:
-        return "Vowels"
-    else:
-        return "consonant"
-
-ch = input("Enter the characters: ")
-result = check_vowels(ch)
-print(result)
-
-# === OPERATORS ===
-# 1. Implement a calculator supporting +, -, *, / using functions.
-def add(a,b):
-    return a + b
-def substract(a,b):
-    return a + b
-def multiply(a,b):
-    return a * b
-def division(a,b):
-    if b == 0:
-        return "Error: Division by zero!"
-    return a / b
-
-print("Kindly select the operation: + - * /")
-operator = input("Enter the operation: ")
-
-a = float(input("Enther the first number: "))
-b = float(input("Enter the second number: "))
-
-if operator == '+':
-    print("Result: ", add(a,b))
-
-elif operator == '-':
-    print("Result: ", add(a,b))
-       
-
-elif operator == '*':
-    print("Result: ", add(a,b))
-    
-
-elif operator == '/':
-    print("Result: ", add(a,b))
-    
-else:
-    print("Invalid parameter")
-
-# 2. Given two integers, determine if their bitwise AND is zero.
-a = int(input("Enter the first integer: "))
-b = int(input("Enter the second integer: "))
-
-result = a and b
-if result == True:
-    print("Bitwise and is zero")
-else:
-    print("Not Bitwise and is not zero")
-
-# 3. Swap two numbers using XOR operator.
-def swap(a,b):
-    print(f"Before swapping a = {a}, b ={b}")
-    
-    a = a ^ b
-    b = a ^ b
-    a = a ^ b
-    
-    print(f"After swapping a = {a}, b = {b}")
-
-x = 10
-y = 12
-swap(x,y)
-
-# 4. Check if a number is even or odd using bitwise operators.
-def check_even_odd(num):
-    if num & 1 == 0:
-        print(f"{num} is even")
-    else:
-        print(f"{num} is odd")
-
-# 5. Write a program to count the number of set bits in an integer.
-def count_set_bits_kernighan(n):
-    count = 0
-    while n:
-        n = n & (n - 1)
-        count += 1
-    return count
-
-# Example
-print(f"Set bits in 29: {count_set_bits_kernighan(29)}")
-
-
-# 6. Calculate the result of (a^b) % m efficiently (modular exponentiation).
-def mod_exp(a,b,m):
-  result = 1
-  a = a % m
-  while b > 0:
-    if b % 2 == 1:
-      result = (result * a) % m
-    a = (a * a)% m
-    b = b // 2
-  return result
-
-mod_exp(2,4,5)
-
-# 7. Check if two integers have opposite signs using bitwise operators.
-def have_opposite_signs(x,y):
-  if (x ^ y)< 0:
-    return True
-  else:
-    return False
-
-have_opposite_signs(3,-1)
-
-# 8. Clear the lowest set bit of a number.
-def clear_lowest(n):
-  return n and (n -1)
-
-s = {1,2,3,4,5}
-clear_lowest(5  )
-
-# 9. Determine if a number is a power of two using bitwise operations.
-def is_power_of_two(n):
-  if n <= 0:
-    return False
-  elif (n and (n - 1)) == 0:
-    return True
-  else:
-    return False
-
-is_power_of_two(10)
-
-# 10. Implement addition of two numbers without using '+' operator.
-def add(a, b):
-    while b != 0:
-        carry = a & b          # Find carry
-        a = a ^ b              # Add without carry
-        b = carry << 1         # Shift carry to add in next position
-    return a
-
-# Test
-x = 5
-y = 3
-print(f"The sum of {x} and {y} is: {add(x, y)}")
-
-
-# 11. Find the maximum of two numbers without using comparison operators.
-def get_max(a,b):
-  diff = a - b
-  k = (diff >> 31) & 1 # Get sign bit: 1 if a < b, 0 if a >= b
-  return a - k * diff # If k = 1, return b; if k = 0, return a
-
-
-print(get_max(3,4))
-
-# 12. Implement a function to toggle the ith bit of a number.
-         #Concept:
-        #To toggle (flip) a bit means:
-        #If the bit is 0, make it 1
-        #If the bit is 1, make it 0
-
-def toggle_ith_bit(n, i):
-    mask = 1 << i
-    return n ^ mask
-
-n = 10      # binary: 1010
-i = 1       # toggle the 1st bit (counting from 0)
-result = toggle_ith_bit(n, i)
-print(result)       
-
-
-# === CONDITIONS ===
-# 1. Given three sides, check if they form a valid triangle.
-# 2. Write a program to grade students based on their marks.
-# 3. Check if a character is uppercase, lowercase, digit, or special character.
-# 4. Determine if a year is a century year and leap year.
-# 5. Find the largest of three numbers using nested if-else.
-# 6. Check if a person is eligible to vote based on age.
-# 7. Check if a string is a valid email (basic validation).
-# 8. Determine if a number is positive, negative, or zero.
-# 9. Write a program to check divisibility by 7 and 11.
-# 10. Implement a simple calculator with if-elif for operations.
-# 11. Check if a triangle is equilateral, isosceles, or scalene.
-# 12. Given a day number (1 to 7), print the day name.
-# 13. Find if a character is a digit or alphabet.
-# 14. Determine if a number is prime using conditional checks.
-# 15. Classify angles as acute, right, obtuse based on degrees.
-# 16. Check if a string contains only alphabets.
-# 17. Implement a traffic light logic: green, yellow, red based on seconds.
-# 18. Validate a password (length, contains digits, uppercase, lowercase).
-# 19. Check if a point lies inside, on, or outside a circle.
-# 20. Find if a year is a leap year or not using a single conditional expression.
-
-# === STRINGS ===
-# 1. Reverse a string without using slicing.
-# 2. Check if a string is a palindrome.
-# 3. Count the frequency of each character in a string.
-# 4. Remove all vowels from a string.
-# 5. Find the first non-repeating character in a string.
-# 6. Check if two strings are anagrams.
-# 7. Implement a function to capitalize the first letter of each word.
-# 8. Count the number of words in a string.
-# 9. Remove all whitespace from a string.
-# 10. Check if a string contains only digits.
-# 11. Implement strstr (find substring) without built-in functions.
-# 12. Convert a string to lowercase without using built-in functions.
-# 13. Replace all occurrences of a substring with another substring.
-# 14. Find the longest palindrome substring.
-# 15. Compress a string using counts of repeated characters (e.g. aabcc -> a2b1c2).
-# 16. Check if a string contains balanced parentheses.
-# 17. Count the number of uppercase and lowercase letters.
-# 18. Reverse words in a sentence.
-# 19. Implement a Caesar cipher encryption.
-# 20. Find all permutations of a string.
-
-# === LISTS ===
-# 1. Find the maximum and minimum in a list.
-# 2. Reverse a list in place.
-# 3. Remove duplicates from a list without using sets.
-# 4. Find the second largest number in a list.
-# 5. Rotate a list by k elements to the right.
-# 6. Find the intersection of two lists.
-# 7. Merge two sorted lists into one sorted list.
-# 8. Check if a list is a palindrome.
-# 9. Find the missing number in a list of 1 to N.
-# 10. Find all pairs in a list whose sum equals a given number.
-# 11. Implement list flattening for a nested list.
-# 12. Move all zeros in a list to the end without changing order of other elements.
-# 13. Find the longest increasing subsequence in a list.
-# 14. Find the common elements in three lists.
-# 15. Remove all negative numbers from a list.
-# 16. Find the element that appears only once in a list where others appear twice.
-# 17. Implement binary search on a sorted list.
-# 18. Find the product of all elements except self.
-# 19. Check if two lists are rotations of each other.
-# 20. Find the kth smallest element in a list.
-
-# === TUPLES ===
-# 1. Create a tuple and access elements by index.
-# 2. Write a function that returns multiple values as a tuple.
-# 3. Swap two variables using tuple unpacking.
-# 4. Check if an element exists in a tuple.
-# 5. Count occurrences of an element in a tuple.
-# 6. Convert a list to a tuple.
-# 7. Find the index of an element in a tuple.
-# 8. Unpack a tuple of 3 elements into separate variables.
-# 9. Find the length of a tuple.
-# 10. Concatenate two tuples.
-# 11. Slice a tuple from index i to j.
-# 12. Convert a tuple to a string.
-# 13. Use tuple in a dictionary as a key.
-# 14. Iterate over a tuple and print all elements.
-# 15. Compare two tuples lexicographically.
-# 16. Sort a list of tuples based on the second element.
-# 17. Swap the first and last element in a tuple.
-# 18. Find the maximum and minimum element in a tuple.
-# 19. Convert a tuple of numbers into a list of squares.
-# 20. Use a tuple to return both quotient and remainder of division.
-
-# === SETS ===
-# 1. Create a set from a list and remove duplicates.
-# 2. Find union of two sets.
-# 3. Find intersection of two sets.
-# 4. Find difference of two sets.
-# 5. Check if a set is a subset of another.
-# 6. Check if a set is a superset of another.
-# 7. Add elements to a set.
-# 8. Remove elements from a set.
-# 9. Find symmetric difference between two sets.
-# 10. Check if two sets are disjoint.
-# 11. Find elements present in exactly one of two sets.
-# 12. Convert a string to a set of characters.
-# 13. Find the length of a set.
-# 14. Clear all elements from a set.
-# 15. Use sets to find duplicates in a list.
-# 16. Given two lists, find elements that are common and unique using sets.
-# 17. Find elements that appear in at least two out of three sets.
-# 18. Find the complement of a set given a universal set.
-# 19. Remove all elements of one set from another.
-# 20. Implement set intersection without using built-in methods.
-
-# === DICTIONARIES ===
-# 1. Create a dictionary from two lists: keys and values.
-# 2. Access and update dictionary elements.
-# 3. Remove a key-value pair from a dictionary.
-# 4. Check if a key exists in a dictionary.
-# 5. Iterate over keys, values, and items.
-# 6. Count frequency of characters in a string using a dictionary.
-# 7. Merge two dictionaries.
-# 8. Invert keys and values in a dictionary.
-# 9. Find the key with the maximum value.
-# 10. Sort a dictionary by values.
-# 11. Group a list of tuples into a dictionary with keys and list of values.
-# 12. Create a dictionary with default values using `dict.fromkeys()`.
-# 13. Use dictionary comprehension to create squares of numbers.
-# 14. Find common keys between two dictionaries.
-# 15. Find keys that are unique to one dictionary.
-# 16. Count occurrences of words in a list.
-# 17. Create a nested dictionary and access nested values.
-# 18. Update dictionary with another dictionary's values.
-# 19. Remove duplicate values in a dictionary keeping first occurrence.
-# 20. Implement a phone book using dictionary with add, search, and delete features.
-
-# === LOOPS ===
-# 1. Print all numbers from 1 to N using a for loop.
-# 2. Print the multiplication table of a number.
-# 3. Sum all numbers in a list using a loop.
-# 4. Print all even numbers between 1 and 100.
-# 5. Calculate factorial using a while loop.
-# 6. Print Fibonacci series up to N terms.
-# 7. Find the sum of digits of a number using a loop.
-# 8. Iterate over a list and print index and element.
-# 9. Use nested loops to print a pattern (e.g. triangle of stars).
-# 10. Find the maximum number in a list using a loop.
-# 11. Break the loop when a condition is met.
-# 12. Continue to skip printing certain numbers.
-# 13. Use else with a loop to print if no break occurred.
-# 14. Loop through a string and count vowels.
-# 15. Print all prime numbers up to N.
-# 16. Implement a guessing game with limited tries using loops.
-# 17. Sum all multiples of 3 or 5 below N.
-# 18. Reverse a list using a loop.
-# 19. Use a loop to remove all occurrences of an element from a list.
-# 20. Use enumerate in a loop to get index and value.
-
-# === FUNCTIONS ===
-# 1. Write a function to check if a number is prime.
-# 2. Implement a recursive function for factorial.
-# 3. Write a function with default argument values.
-# 4. Implement a function to check palindrome string.
-# 5. Write a function that returns multiple values as a tuple.
-# 6. Write a function to calculate the sum of all arguments using *args.
-# 7. Write a function that accepts keyword arguments (**kwargs).
-# 8. Implement a function to find the nth Fibonacci number recursively.
-# 9. Write a lambda function to square a number.
-# 10. Implement a higher-order function that takes another function as argument.
-# 11. Write a function with a nested helper function.
-# 12. Use function annotations to specify types.
-# 13. Implement a memoized version of Fibonacci.
-# 14. Write a function to count occurrences of a character in a string.
-# 15. Write a recursive function to reverse a string.
-# 16. Write a function to check if two strings are anagrams.
-# 17. Implement a function to merge two dictionaries.
-# 18. Write a function to flatten a nested list.
-# 19. Implement a function to generate all substrings of a string.
-# 20. Write a decorator function to time execution of another function.
-
-# === COMPREHENSIONS ===
-# 1. Use list comprehension to create a list of squares from 1 to 20.
-# 2. Create a list of even numbers between 1 and 50 using comprehension.
-# 3. Use dictionary comprehension to map numbers to their squares.
-# 4. Create a set comprehension to find unique vowels in a string.
-# 5. Filter a list to keep only prime numbers using list comprehension.
-# 6. Use nested list comprehension to create a multiplication table (2D list).
-# 7. Use list comprehension to flatten a list of lists.
-# 8. Use dictionary comprehension to invert keys and values of a dict.
-# 9. Use comprehension to remove vowels from a string.
-# 10. Create a list of tuples (number, square) for numbers 1 to 10.
-# 11. Use set comprehension to find common characters between two strings.
-# 12. Create a list comprehension that applies a function to elements of a list.
-# 13. Use list comprehension to filter words longer than 5 letters from a list.
-# 14. Create a dictionary comprehension from two lists: keys and values.
-# 15. Use comprehension to create a list of factorials for numbers 1 to N.
-# 16. Use comprehension with conditionals to replace negative numbers with zero.
-# 17. Use generator comprehension to yield even numbers up to N.
-# 18. Create a list comprehension that converts strings to uppercase.
-# 19. Use comprehension to find all palindromic substrings in a list of strings.
-# 20. Use comprehension to create a frequency dictionary from a list of words.
-
-# === EXCEPTION HANDLING ===
-# 1. Write a program that handles division by zero exception.
-# 2. Catch and handle ValueError when converting string to int.
-# 3. Handle multiple exceptions in a single try block.
-# 4. Use try-except-else-finally blocks.
-# 5. Raise a custom exception when a negative number is passed to a function.
-# 6. Write a function that retries an operation on exception.
-# 7. Use exception chaining with 'raise ... from'.
-# 8. Write a program to handle file not found exception.
-# 9. Catch exceptions raised by invalid list indexing.
-# 10. Implement context manager using try-finally.
-# 11. Create a custom exception class.
-# 12. Handle KeyboardInterrupt exception gracefully.
-# 13. Use assertions to check function input validity.
-# 14. Write a program that logs exceptions to a file.
-# 15. Catch and handle exceptions in nested function calls.
-# 16. Implement retry logic with exponential backoff on exceptions.
-# 17. Use else clause in exception handling to run code if no exception occurs.
-# 18. Handle JSON decode errors when parsing input.
-# 19. Write a function that safely closes resources on exception.
-# 20. Create a decorator to catch exceptions and log errors.
 
