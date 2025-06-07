@@ -44,9 +44,26 @@ b = 12.23
 print(a + b)
 
 # 7. Multiply an int and float
+int1 = 10
+float1 = 12.12
+print(int1 * float1)
+
+
 # 8. Convert int to string
+int1 = 10
+str1 = str(int1)
+print(int1)
+
 # 9. Convert string to int
+str1 = "10"
+int1 = int(str1)
+print(int1) 
+
 # 10. Perform modulus operation
+a = 10
+b = 12
+print(a % b)
+
 # 11. Perform floor division
 # 12. Use exponent operator to square a number
 # 13. Chain multiple assignments (a = b = c = 10)
