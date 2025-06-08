@@ -65,15 +65,60 @@ b = 12
 print(a % b)
 
 # 11. Perform floor division
+a = 10
+b = 2
+print(a / b)
+
+
 # 12. Use exponent operator to square a number
+a = 12
+print(a * a)
+
 # 13. Chain multiple assignments (a = b = c = 10)
+a = b = c = 10
+
+print(a)  # 10
+print(b)  # 10
+print(c)  # 10
+
+
 # 14. Use augmented assignment (+=, -=)
+a = 10
+c = 2
+b = 12
+b += a
+a -= c
+print(a)
+print(b)
+print(c)
+
+
 # 15. Use relational operators and print results
+a = 5
+b = 10
+
+print("a == b:", a == b)   # False
+print("a != b:", a != b)   # True
+print("a > b:", a > b)     # False
+print("a < b:", a < b)     # True
+print("a >= b:", a >= b)   # False
+print("a <= b:", a <= b)   # True
+
+
 # 16. Use logical operators: and, or, not
+
+
 # 17. Use identity operator (is, is not)
+
+
 # 18. Use membership operator (in, not in)
+
+
 # 19. Print variable memory address (id)
+
+
 # 20. Use type casting to add int + string correctly
+
 
 # Advanced (20)
 # 1. Print binary, octal, hexadecimal of a number

@@ -504,9 +504,67 @@ obj = MyClass()
 obj.publicMethod()
 
 # 16. Define a `Calculator` class and implement chaining of operations.
+class Calculator:
+    def __init__(self, value=0):
+        self.value = value
+        
+    def add(self, num):
+        self.value +=num
+        return self
+    
+    def sub(self, num):
+        self.value -=num
+        return self
+    
+    def mul(self, num):
+        self.value *=num
+        return self
+    
+    def div(self, num):
+        if num != 0:
+            self.value /=num
+        else:
+            print("Error:Cannot divide by zero")    
+        
+        return self
+    
+calc = Calculator(10)
+result = calc.add(5).sub(3).mul(4).div(2).value
+print(result)  # Output: 24.0
 
 
 # 17. Create a class `Timer` with start, stop, and elapsed time functionality.
+import time
+class Timer:
+  def __init__(self):
+    self.start_timer = None
+    self.end_timer = None
+  
+  def start(self):
+    self.start_timer = time.perf_counter()
+    self.end_timer = None
+  
+  def stop(self):
+    if self.start_timer is None:
+      print("time not start till now")
+    return
+    self.end_time = time.perf_counter()
+  
+  def elapsed_time(self):
+    if self.start_timer is None:
+      return "Timer has not been started."
+    if self.end_timer is None:
+      return time.perf_counter() - self.start_timer
+    else:
+      return self.end_timer - self.start_timer
+
+timer = Timer()
+
+timer.start()
+time.sleep(2)  # Simulate some delay
+timer.stop()
+
+print(f"Elapsed time: {timer.elapsed_time():.4f} seconds")
 
 
 # 18. Implement a class `User` with validation for email format using regex.
