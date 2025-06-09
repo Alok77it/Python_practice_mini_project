@@ -568,12 +568,33 @@ print(f"Elapsed time: {timer.elapsed_time():.4f} seconds")
 
 
 # 18. Implement a class `User` with validation for email format using regex.
+import re
 
+class User:
+    def __init__(self,email):
+        pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
+        if re.match(pattern, email):
+          self.email = email
+          print(f"User with email {email} is valid")
+        else:
+          raise ValueError("Invalid error format")
+
+u = User("aloktrived.it@gmail.com")
 
 # 19. Create a class `Matrix` and overload `+`, `-`, and `*` operators (no 2D list).
 
 
 # 20. Build a class `NotificationManager` to handle sending emails/SMS.
+class NotificationManager:
+  def send_email(self, to, message):
+    print(f"Sending email to {to}: {message}")
+  
+  def send_sms(self,to,message):
+    print(f"Sending SMS to {to}: {message}")
+  
+notifier = NotificationManager()
+notifier.send_email("alice@example.com", "Welcome!")
+notifier.send_sms("+911234567890", "Your OTP is 4567")
 
 
 # 21. Implement a `MusicPlayer` class with a playlist (no nested lists).

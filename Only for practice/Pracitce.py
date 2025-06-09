@@ -106,18 +106,45 @@ print("a <= b:", a <= b)   # True
 
 
 # 16. Use logical operators: and, or, not
+x = 5
+print(x > 2 and x < 10)   # True, because both conditions are True
+x = 5
+print(x < 2 or x < 10)    # True, because one condition is True
+
+x = 5
+print(not(x > 2 and x < 10))  # False, because condition is True, and `not` reverses it
+
 
 
 # 17. Use identity operator (is, is not)
+a = [1, 2]
+b = a
+c = [1, 2]
+
+print(a is b)      # True, because both refer to same object
+print(a is c)      # False, different objects even if contents are same
+print(a is not c)  # True
+
 
 
 # 18. Use membership operator (in, not in)
+my_list = [1, 2, 3, 4]
+
+print(2 in my_list)      # True
+print(5 not in my_list)  # True
+
 
 
 # 19. Print variable memory address (id)
+x = 10
+print(id(x))  # Prints the memory address (unique ID) of variable x
 
 
 # 20. Use type casting to add int + string correctly
+x = 5
+y = "10"
+result = x + int(y)
+print(result)  # ✅ 15
 
 
 # Advanced (20)
