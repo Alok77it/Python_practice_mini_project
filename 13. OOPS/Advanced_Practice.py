@@ -598,9 +598,63 @@ notifier.send_sms("+911234567890", "Your OTP is 4567")
 
 
 # 21. Implement a `MusicPlayer` class with a playlist (no nested lists).
+class MusicPlayer:
+    def __init__(self):
+        self.playlist = []
+
+    def add_song(self, song):
+        self.playlist.append(song)  # append song to the list
+
+    def remove_song(self, song):
+        if song in self.playlist:
+            self.playlist.remove(song)  # remove song from list
+
+    def play_song(self, song):
+        if song in self.playlist:
+            print(f"Playing song: {song}")
+        else:
+            print("Song not found")
+
+    def show_playlist(self):
+        print(self.playlist)
+
+# Usage
+ply = MusicPlayer()
+ply.add_song("song1")
+ply.add_song("song2")
+ply.add_song("song3")
+ply.show_playlist()  # ['song1', 'song2', 'song3']
+ply.remove_song("song2")
+ply.show_playlist()  # ['song1', 'song3']
 
 
 # 22. Define a `FileManager` class that reads/writes from a file.
+class FileManager:
+    def __init__(self, filename: str):
+        self.filename = filename
+
+    def write_file(self, data: str):
+        try:
+            with open(self.filename, 'w') as file:
+                file.write(data)
+            print(f"Data written to {self.filename}")
+        except Exception as e:
+            print(f"Error writing to file: {e}")
+
+    def read_file(self):
+        try:
+            with open(self.filename, 'r') as file:
+                content = file.read()
+            print(f"Content of {self.filename}:\n{content}")
+        except FileNotFoundError:
+            print(f"File {self.filename} not found.")
+        except Exception as e:
+            print(f"Error reading file: {e}")
+
+# Usage:
+file = FileManager("sample.txt")  # Provide filename when creating object
+file.write_file("Hello, world!")
+file.read_file()
 
 
 # 23. Create a class with context manager support using `__enter__` and `__exit__`.

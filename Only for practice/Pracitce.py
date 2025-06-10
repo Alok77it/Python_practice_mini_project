@@ -149,10 +149,34 @@ print(result)  # ✅ 15
 
 # Advanced (20)
 # 1. Print binary, octal, hexadecimal of a number
+a = 12
+print(bin(a))
+print(oct(a))
+print(hex(a))
+
 # 2. Demonstrate difference between == and is
+a = [1,3]
+b = [1,3]
+print(a == b)
+print(a is b)
+
 # 3. Convert float to int and observe truncation
+x = 5.99
+print("Before:", x)
+print("After truncation:", int(x))  # Output: 5
+
+
 # 4. Evaluate complex expression using brackets
+print(2 + 3 * 4)      # 14
+print((2 + 3) * 4)    # 20
+
+
 # 5. Use divmod() function
+quotient, remainder = divmod(10, 3)
+print("Quotient:", quotient)
+print("Remainder:", remainder)
+
+
 # 6. Use round(), abs(), pow() functions
 # 7. Input multiple variables in one line
 # 8. Format output using f-string
