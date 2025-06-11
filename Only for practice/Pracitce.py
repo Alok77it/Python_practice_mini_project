@@ -178,29 +178,87 @@ print("Remainder:", remainder)
 
 
 # 6. Use round(), abs(), pow() functions
+x = -5.678
+print("Rounded:", round(x, 2))
+print("Absolute:", abs(x))
+print("Power:", pow(2, 3))
+
+
 # 7. Input multiple variables in one line
+a, b, c = map(int, input("Enter 3 numbers: ").split())
+print(f"a {a}, b {b}, c {c}")
+
+
 # 8. Format output using f-string
+name = "Alok"
+age = 25
+print(f"My name is {name} and I am {age} years old.")
+
 # 9. Use input() with type casting
+num = int(input("Enter an integer: "))
+print(f"You entered: {num}")
+
+
 # 10. Use math module to calculate square root
-# 11. Use math.ceil() and math.floor()
-# 12. Generate random number between 1 and 100
-# 13. Use random.choice() on a list
-# 14. Use type hints in a function definition
-# 15. Use ternary operator (one-line if else)
-# 16. Create constants using UPPER_CASE convention
-# 17. Use underscore variable (_) as throwaway
-# 18. Explore dynamic typing by changing var types
-# 19. Use id() to show different object identities
-# 20. Write a function with multiple return values
+import math
+
+num = float(input("Enter a number: "))
+print(f"Square root: {math.sqrt(num)}")
+
 
 
 # ------------ 2. Conditionals and Loops ------------
 # Easy (20)
 # 1. Check if a number is even or odd
+num = int(input("Enter the number: "))
+def even_odd(num):
+    if num % 2 == 0:
+        print("Number is even")
+    else:
+        print("Number is odd")
+
+even_odd(num)
+
+
 # 2. Check if a number is positive, negative, or zero
+num = float(input("Enter the number: "))
+def value_check(num):
+    if num > 0:
+        print("Number is positive")
+    elif num < 0:
+        print("Number is negative")
+    elif num == 0:
+        print("Number is zero")
+    else:
+        print("invalid number")
+
+value_check(num)
+    
 # 3. Find the largest of 3 numbers
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+num3 = float(input("Enter third number: "))
+
+if (num1 >= num2) and (num1 >= num3):
+   largest = num1
+elif (num2 >= num1) and (num2 >= num3):
+   largest = num2
+else:
+   largest = num3
+
+print("The largest number is", largest)    
+
 # 4. Print 1 to 10 using for loop
+n = 10
+for i in range(1, n + 1):
+  print(i)
+  
 # 5. Print 10 to 1 using while loop
+i = 10
+while i >= 1:
+  print(i)
+  i = i -1
+
 # 6. Print even numbers from 1 to 20
 # 7. Print all numbers divisible by 3 between 1–30
 # 8. Sum first 10 natural numbers

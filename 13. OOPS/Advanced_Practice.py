@@ -658,7 +658,16 @@ file.read_file()
 
 
 # 23. Create a class with context manager support using `__enter__` and `__exit__`.
+class FileManager:
+  def __enter__(self):
+    print("Opening resources")
+    return "Resources"
+  
+  def __exit__(self, exc_type, exc_val, exc_tb):
+    print("Cleaning resources")
 
+with FileManager() as resources:
+  print("using", resources)
 
 # 24. Write a class with class-level cache/memoization.
 
