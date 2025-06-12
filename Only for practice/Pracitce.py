@@ -260,20 +260,123 @@ while i >= 1:
   i = i -1
 
 # 6. Print even numbers from 1 to 20
+n = 20
+for i in range(1, n + 1):
+  if i % 2 == 0:
+    print(f"{i} : Even")
+  else:
+    print(f"{i} : Odd")
+
 # 7. Print all numbers divisible by 3 between 1–30
+n = 30
+def divisible_by_3(n):
+  for i in range(1, n + 1):
+    if i % 3 == 0:
+      print(f"{i}: Divisible by 3")
+
+divisible_by_3(n)
+
 # 8. Sum first 10 natural numbers
+def sum_all(n):
+  total = 0
+  for i in range(1, n + 1):
+    total += i
+  print(total)
+
+n = 10
+sum_all(n)
+
 # 9. Calculate factorial of a number using loop
+def factorial(n):
+  if n <  0:
+    return "Factorial is not defined for negative number"
+  elif n == 0:
+    return 1
+  else:
+    result = 1
+    for i in range(1, n + 1):
+      result *= i
+    return result
+
+num = 5
+fact = factorial(num)
+print(f"The factorial of {num},is {fact}")
+
 # 10. Print multiplication table of a number
+n = int(input("Enter the number: "))
+for i in range(1,11):
+  print(f"{n} X {i} = {n * i }")
+
 # 11. Break a loop when value reaches 5
+for i in range(1, 11):
+    if i == 5:
+        print(f"Breaking loop at i = {i}")
+        break  #this will stop the loop
+    print(i)
+
 # 12. Use continue to skip odd numbers
+for i in range(1, 11):
+    if i == 5:
+        print(f"Breaking loop at i = {i}")
+        continue #skip the this loop point
+    print(i)
+
 # 13. Loop through a string and print each char
+str = "Hello, I am Alok"
+for i in str:
+  print(i)
+
 # 14. Count digits in a number using loop
+def count_digits(number):
+  """
+  Counts the number of digits in an integer using a while loop.
+
+  Args:
+    number: The integer for which to count digits.
+
+  Returns:
+    The number of digits in the integer.
+  """
+  # Handle the case of 0 separately as the loop won't execute
+  if number == 0:
+    return 1
+
+  # Make the number positive to handle negative inputs
+  number = abs(number)
+
+  count = 0
+  # Loop until the number becomes 0
+  while number > 0:
+    # Integer division by 10 removes the last digit
+    number = number // 10
+    # Increment the count for each digit removed
+    count += 1
+
+  return count
+
+# Example usage:
+my_number = 12345
+digit_count = count_digits(my_number)
+print(f"The number of digits in {my_number} is: {digit_count}")
+
+
 # 15. Reverse a number using loop
+
+
 # 16. Check if a year is leap year
+
+
 # 17. Check if a number is prime
+
+
 # 18. Print triangle pattern using *
+
+
 # 19. Create basic calculator using if-else
+
+
 # 20. Print sum of digits of a number
+
 
 # Advanced (20)
 # 1. Use nested if to validate login system
