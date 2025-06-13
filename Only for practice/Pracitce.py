@@ -361,21 +361,71 @@ print(f"The number of digits in {my_number} is: {digit_count}")
 
 
 # 15. Reverse a number using loop
-
+num = int(input())
+reverse = 0
+while num > 0:
+  digit = num % 10
+  reverse = reverse * 10 + digit
+  num = num // 10
+print(reverse)
 
 # 16. Check if a year is leap year
+year = int(input("Enter a year: "))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("Leap year")
+else:
+    print("Not a leap year")
 
 
 # 17. Check if a number is prime
+import math
+
+num = int(input("Enter a number: "))
+if num <= 1:
+    print("Not prime")
+else:
+    for i in range(2, int(math.sqrt(num)) + 1):
+        if num % i == 0:
+            print("Not prime")
+            break
+    else:
+        print("Prime")
 
 
 # 18. Print triangle pattern using *
+rows = int(input("Enter number of rows: "))
+for i in range(1, rows + 1):
+    print('*' * i)
 
 
 # 19. Create basic calculator using if-else
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+op = input("Enter operator (+, -, *, /): ")
+
+if op == '+':
+    print("Result:", num1 + num2)
+elif op == '-':
+    print("Result:", num1 - num2)
+elif op == '*':
+    print("Result:", num1 * num2)
+elif op == '/':
+    if num2 != 0:
+        print("Result:", num1 / num2)
+    else:
+        print("Cannot divide by zero")
+else:
+    print("Invalid operator")
 
 
 # 20. Print sum of digits of a number
+num = int(input("Enter a number: "))
+sum_digits = 0
+while num > 0:
+    digit = num % 10
+    sum_digits += digit
+    num = num // 10
+print("Sum of digits:", sum_digits)
 
 
 # Advanced (20)
