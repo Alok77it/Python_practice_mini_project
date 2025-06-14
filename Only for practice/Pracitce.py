@@ -430,39 +430,126 @@ print("Sum of digits:", sum_digits)
 
 # Advanced (20)
 # 1. Use nested if to validate login system
+user_name = "Alok"
+user_password = "1234"
+
+print("Enter the user name:")
+user = input()
+
+if user == user_name:
+  print("Enter the password: ")
+  password = input()
+
+  if password == user_password:
+    print("Login Succesful")
+  else:
+    print("Invalid password")
+else:
+  print("Invalid username")
+
+
 # 2. Use nested loop to print number triangle
+n = 5
+for i in range(1, n):
+  for j in range(1, i + 1):
+    print(j, end="")
+  print()
+
 # 3. Print all prime numbers between 1 and 100
+n = 100
+for num in range(1, n + 1):
+  is_prime = True
+  for i in range(2,  int(num**0.5) + 1):
+    if num % i == 0:
+      is_prime = False
+      break
+  if is_prime:
+    print(num)
+
 # 4. Use while-else and for-else blocks
+
+
 # 5. Print Floyd’s triangle using numbers
+
+
 # 6. Generate Fibonacci series up to n
+
+
 # 7. Print pyramid pattern with *
+
+
 # 8. Calculate GCD using loop
+
+
 # 9. Calculate LCM of two numbers
+
+
 # 10. Use pass statement in a loop
+
+
 # 11. Print inverted triangle pattern
+
+
 # 12. Use match-case (Python 3.10+)
+
+
 # 13. Generate perfect numbers below 1000
+
+
 # 14. Use zip() in a loop
+
+
 # 15. Use enumerate() to access index + value
+
+
 # 16. Print numbers in reverse using range()
+
+
 # 17. Simulate ATM withdrawal system
+
+
 # 18. Write menu-driven program using loop
+
+
 # 19. Count uppercase/lowercase letters in string
+
+
 # 20. Validate password strength using conditions
+
 
 
 # ------------ 3. Strings ------------
 # Easy (20)
 # 1. Reverse a string
+
+
 # 2. Count number of vowels
+
+
 # 3. Remove spaces from a string
+
+
 # 4. Convert string to uppercase
+
+
 # 5. Convert string to lowercase
+
+
 # 6. Check if string is palindrome
+
+
 # 7. Count occurrences of a character
+
+
 # 8. Find first occurrence of substring
+
+
 # 9. Slice first 5 characters
+
+
 # 10. Concatenate two strings
+
+
 # 11. Use string formatting with % operator
 # 12. Use format() method
 # 13. Capitalize the first character
@@ -631,50 +718,6 @@ print("Sum of digits:", sum_digits)
 # 19. Partial application of function arguments
 # 20. Implement a retry decorator
 
-# ------------ 7. File Input/Output ------------
-# Easy (20)
-# 1. Open a file and write a string
-# 2. Read the whole content of a file
-# 3. Read a file line by line
-# 4. Append text to a file
-# 5. Use with statement to open file
-# 6. Write list of strings to a file
-# 7. Read file and count number of words
-# 8. Copy content from one file to another
-# 9. Check if file exists before reading
-# 10. Use try-except for file operations
-# 11. Read CSV file and print each row (basic)
-# 12. Write CSV file with header row
-# 13. Use os module to get file size
-# 14. Rename a file
-# 15. Delete a file
-# 16. Read binary file content
-# 17. Write binary data to file
-# 18. Use pathlib for file operations
-# 19. Read large file using buffered read
-# 20. Write JSON data to a file
-
-# Advanced (20)
-# 1. Parse CSV file and convert to list of dicts
-# 2. Use JSON module to load and dump data
-# 3. Read and write compressed files using gzip
-# 4. Write a log file with timestamps
-# 5. Use configparser to read config files
-# 6. File locking concepts (basic)
-# 7. Use mmap module for file mapping
-# 8. Write file using contextlib.redirect_stdout
-# 9. Handle Unicode errors while reading files
-# 10. Implement file watcher to detect file changes
-# 11. Use pathlib to iterate files in directory
-# 12. Read fixed-width formatted files
-# 13. Write multi-line strings to file
-# 14. Read partial file (seek and read)
-# 15. Use tempfile module for temp files
-# 16. Use shutil to copy files/directories
-# 17. Read Excel files using openpyxl (basic)
-# 18. Write Excel files using openpyxl
-# 19. Create a file backup script
-# 20. Write script to remove duplicate lines from a file
 
 # ------------ 8. Classes and Object-Oriented Programming (OOP) ------------
 # Easy (20)
@@ -720,5 +763,58 @@ print("Sum of digits:", sum_digits)
 # 18. Use dataclasses module for classes
 # 19. Serialization and deserialization of objects (pickle)
 # 20. Write unit tests for class methods using unittest
+
+
+# ------------ 9. File handling ------------
+
+# ============================
+# 📁 FILE HANDLING - BASIC (20)
+# ============================
+
+# 1. Create a new text file named "sample.txt" and write "Hello, File Handling!" into it.
+# 2. Read the contents of "sample.txt" and print it.
+# 3. Append a new line "Appending new line!" to "sample.txt".
+# 4. Count the number of lines in "sample.txt".
+# 5. Count the number of words in "sample.txt".
+# 6. Check if a file named "sample.txt" exists.
+# 7. Delete the file "sample.txt" if it exists.
+# 8. Open a file in read and write mode and write to it.
+# 9. Read a file line-by-line using a loop.
+# 10. Write a list of strings to a file using writelines().
+# 11. Read all lines into a list using readlines().
+# 12. Replace all occurrences of a word in a file with another word.
+# 13. Read the first N lines of a file.
+# 14. Read the last N lines of a file.
+# 15. Copy the contents of one file to another.
+# 16. Write current date and time into a log file.
+# 17. Use `with open()` context manager to read and write a file safely.
+# 18. Count the number of characters in a file.
+# 19. Create a file and write numbers from 1 to 100 into it, one per line.
+# 20. Read a file and print only lines that start with a vowel.
+
+# ===============================
+# 📁 FILE HANDLING - ADVANCED (20)
+# ===============================
+
+# 21. Read a large file (>10MB) line by line without loading the whole file into memory.
+# 22. Write a program to merge the contents of two files line-by-line.
+# 23. Parse a CSV file manually without using the csv module.
+# 24. Search for a specific word in a file and return the line number(s).
+# 25. Implement a simple file-based key-value store using a dictionary and JSON.
+# 26. Write a Python script to monitor a log file and print new lines as they are added (like `tail -f`).
+# 27. Detect and remove duplicate lines from a file.
+# 28. Split a large file into smaller chunks of 100 lines each.
+# 29. Encrypt the contents of a file using a Caesar cipher and write to a new file.
+# 30. Decrypt a Caesar cipher-encrypted file.
+# 31. Compare two files and print the differences line-by-line.
+# 32. Compress a file using gzip and then decompress it.
+# 33. Read binary data from an image file and write it to another file.
+# 34. Create a backup script that copies a file with a timestamp in the filename.
+# 35. Record file access logs (open, read, write) using decorators.
+# 36. Build a simple CLI program that takes a filename and performs read/write/append operations.
+# 37. Implement a program to remove all punctuation from a text file.
+# 38. Use try-except to handle FileNotFoundError and PermissionError.
+# 39. Count how many times each word appears in a file (word frequency counter).
+# 40. Write a class FileManager that opens a file, tracks number of reads/writes, and closes it properly.
 
 
