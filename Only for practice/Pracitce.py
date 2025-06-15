@@ -467,54 +467,59 @@ for num in range(1, n + 1):
     print(num)
 
 # 4. Use while-else and for-else blocks
+count = 1
+while count < 5:
+  print(count)
+  count += 1
+
+n = 10
+for num in range(1, n + 1):
+  if num % 2 == 0:
+    print(num, end=' ')
+  else:
+    continue
+print("Checking is done")
+
+# 5. Print pyramid pattern with *
 
 
-# 5. Print Floyd’s triangle using numbers
+# 6. Calculate GCD using loop
 
 
-# 6. Generate Fibonacci series up to n
+# 7. Calculate LCM of two numbers
 
 
-# 7. Print pyramid pattern with *
+# 8. Use pass statement in a loop
 
 
-# 8. Calculate GCD using loop
+# 9. Print inverted triangle pattern
 
 
-# 9. Calculate LCM of two numbers
+# 10. Use match-case (Python 3.10+)
 
 
-# 10. Use pass statement in a loop
+# 11. Generate perfect numbers below 1000
 
 
-# 11. Print inverted triangle pattern
+# 12. Use zip() in a loop
 
 
-# 12. Use match-case (Python 3.10+)
+# 13. Use enumerate() to access index + value
 
 
-# 13. Generate perfect numbers below 1000
+# 14. Print numbers in reverse using range()
 
 
-# 14. Use zip() in a loop
+# 15. Simulate ATM withdrawal system
 
 
-# 15. Use enumerate() to access index + value
+# 16. Write menu-driven program using loop
 
 
-# 16. Print numbers in reverse using range()
+# 17. Count uppercase/lowercase letters in string
 
 
-# 17. Simulate ATM withdrawal system
-
-
-# 18. Write menu-driven program using loop
-
-
-# 19. Count uppercase/lowercase letters in string
-
-
-# 20. Validate password strength using conditions
+# 18. Validate password strength using conditions
 
 
 
