@@ -481,21 +481,64 @@ for num in range(1, n + 1):
 print("Checking is done")
 
 # 5. Print pyramid pattern with *
+def print_pyramid(n):
+    for i in range(1, n + 1):
+        spaces = " " * (n - i)
+        stars = "*" * (2 * i - 1)
+        print(spaces + stars)
 
+n = int(input())
+print_pyramid(n)
 
 # 6. Calculate GCD using loop
+a = int(input())
+b = int(input())
+gcd = 1
+for i in range(1, min(a,b)):
+  if a % i == 0 and b % i == 0:
+    gcd = i
+print(gcd)
 
 
 # 7. Calculate LCM of two numbers
+a = int(input())
+b = int(input())
+gcd = 1
+for i in range(1, min(a,b)):
+  if a % i == 0 and b % i == 0:
+    gcd = i
+print(gcd)
 
+LCM = (a * b)// gcd
+print(LCM)
 
 # 8. Use pass statement in a loop
+for i in range(5):
+    if i == 2:
+        pass  # Do nothing when i == 2
+    else:
+        print("i =", i)
 
 
 # 9. Print inverted triangle pattern
+n = int(input("Enter number of rows: "))
+
+for i in range(n):
+    spaces = " " * i
+    stars = "*" * (n - i)
+    print(spaces + stars)
 
 
 # 10. Use match-case (Python 3.10+)
+value = [1, 2, 3]
+
+match value:
+    case int():
+        print("It's an integer")
+    case list():
+        print("It's a list")
+    case _:
+        print("Unknown type")
 
 
 # 11. Generate perfect numbers below 1000

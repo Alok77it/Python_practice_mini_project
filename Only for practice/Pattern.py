@@ -3,18 +3,33 @@
 # ****
 # ****
 # ****
+n = int(input())
+for i in range(1, n):
+  for j in range(1, n):
+    print("*", end="")
+  print()
+
 
 # 2. Right-Angled Triangle
 # *
 # **
 # ***
 # ****
+n = int(input())
+for i in range(1, n):
+  for j in range(1, i):
+    print("*", end="")
+  print()
 
 # 3. Inverted Right-Angled Triangle
 # ****
 # ***
 # **
 # *
+n = int(input())
+for i in range(n, 0, -1):
+  print("*" * i)
+
 
 # 4. Right-Aligned Triangle
 #    *
@@ -22,11 +37,18 @@
 #  ***
 # ****
 
+
+
 # 5. Pyramid
 #    *
 #   ***
 #  *****
 # *******
+
+n = int(input())
+for i in range(1, n + 1):
+  print(" " * (n - i), end="")
+  print("*" * (2 * i - 1))
 
 # 6. Inverted Pyramid
 # *******
