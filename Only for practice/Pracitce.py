@@ -542,21 +542,62 @@ match value:
 
 
 # 11. Generate perfect numbers below 1000
+for num in range(1, 1000):
+    sum_divisors = sum(i for i in range(1, num) if num % i == 0)
+    if sum_divisors == num:
+        print(num)
 
 
 # 12. Use zip() in a loop
+names = ['Alice', 'Bob', 'Charlie']
+scores = [85, 90, 95]
+
+for name, score in zip(names, scores):
+    print(name, "scored", score)
 
 
 # 13. Use enumerate() to access index + value
+fruits = ['apple', 'banana', 'cherry']
+
+for index, fruit in enumerate(fruits):
+    print(f"Index {index} -> {fruit}")
 
 
 # 14. Print numbers in reverse using range()
+for i in range(10, 0, -1):
+    print(i, end=' ')
 
 
 # 15. Simulate ATM withdrawal system
+balance = 1000
+
+while True:
+    amount = int(input("Enter amount to withdraw (or 0 to exit): "))
+    if amount == 0:
+        break
+    if amount <= balance:
+        balance -= amount
+        print("Withdrawal successful. Balance:", balance)
+    else:
+        print("Insufficient funds.")
 
 
 # 16. Write menu-driven program using loop
+while True:
+    print("\n1. Add\n2. Subtract\n3. Exit")
+    choice = input("Enter your choice: ")
+
+    if choice == '3':
+        break
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+
+    if choice == '1':
+        print("Sum:", a + b)
+    elif choice == '2':
+        print("Difference:", a - b)
+    else:
+        print("Invalid choice")
 
 
 # 17. Count uppercase/lowercase letters in string
