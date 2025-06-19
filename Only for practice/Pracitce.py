@@ -601,15 +601,51 @@ while True:
 
 
 # 17. Count uppercase/lowercase letters in string
+text = input("Enter a string: ")
+
+upper_count = 0
+lower_count = 0
+
+for ch in text:
+    if ch.isupper():
+        upper_count += 1
+    elif ch.islower():
+        lower_count += 1
+
+print("Uppercase letters:", upper_count)
+print("Lowercase letters:", lower_count)
 
 
 # 18. Validate password strength using conditions
+import string
+
+password = input("Enter your password: ")
+
+if (len(password) >= 8 and
+    any(c.islower() for c in password) and
+    any(c.isupper() for c in password) and
+    any(c.isdigit() for c in password) and
+    any(c in string.punctuation for c in password)):
+    print("Strong password")
+else:
+    print("Weak password")
 
 
 
 # ------------ 3. Strings ------------
 # Easy (20)
 # 1. Reverse a string
+text = input("Enter a string: ")
+
+# Method 1: Slicing
+reversed_text = text[::-1]
+
+# Method 2: Loop (Optional)
+# reversed_text = ''
+# for ch in text:
+#     reversed_text = ch + reversed_text
+
+print("Reversed string:", reversed_text)
 
 
 # 2. Count number of vowels
