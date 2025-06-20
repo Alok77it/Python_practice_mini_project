@@ -649,9 +649,18 @@ print("Reversed string:", reversed_text)
 
 
 # 2. Count number of vowels
-
+vowels = "aieou"
+count = 0
+str = input("Enter the name: ")
+for chr in str:
+  if chr in vowels:
+    count +=1
+print(f"the count of vowels {chr} in {str}",count)
 
 # 3. Remove spaces from a string
+string = input("Enter a string: ")
+result = string.replace(" ", "")
+print("String without spaces:", result)
 
 
 # 4. Convert string to uppercase
@@ -943,3 +952,77 @@ print("Reversed string:", reversed_text)
 # 40. Write a class FileManager that opens a file, tracks number of reads/writes, and closes it properly.
 
 
+# ===============================
+# 📁 FILE HANDLING WITH CSV - Basic
+# ===============================
+
+# 1. Read data from a CSV file and print each row.
+
+# 2. Write a list of dictionaries into a CSV file using DictWriter.
+
+# 3. Append a new row to an existing CSV file without overwriting its content.
+
+# 4. Read a JSON file and print its content in a readable format.
+
+# 5. Convert a Python dictionary into a JSON string and write it to a file.
+
+# 6. Read a CSV file and convert its contents into a JSON file.
+
+# 7. Serialize a Python list using the pickle module and save it to a file.
+
+# 8. Deserialize the pickled file and print the original Python list.
+
+# 9. Write a function that accepts a filename and prints how many rows are in the CSV file.
+
+# 10. Read a CSV file of employees and return names of employees whose salary is more than 50,000.
+
+# 11. Write a function that loads a JSON file and updates a specific key's value, then saves it.
+
+# 12. Pickle a Python dictionary, delete the variable from memory, and then load it back using pickle.
+
+# 13. Merge two CSV files into one, skipping header rows from the second file.
+
+# 14. Create a JSON file that stores student data (name, age, marks) and then read it to display names of students with marks > 80.
+
+# 15. Compress a pickled file using gzip and later decompress and load it back into Python.
+
+# ===============================
+# 📁 Exception HANDLING - Basic
+# ===============================
+
+# 1. Raise an IndexError by accessing an invalid list index
+# 2. Simulate a ModuleNotFoundError by importing a non-existent module
+# 3. Raise a KeyError by accessing a non-existent key in a dictionary
+# 4. Trigger a ValueError by converting a non-numeric string to int
+# 5. Raise a TypeError by adding an integer and a string
+# 6. Demonstrate a NameError by using an undefined variable
+# 7. Simulate an AttributeError by calling a string method on an integer
+# 8. Use try-except block to handle a ZeroDivisionError
+# 9. Use try-except-else block to check if division is successful
+# 10. Use try-except-finally to demonstrate file reading
+# 11. Handle multiple exceptions in a single try-except block
+# 12. Catch and print the type of exception raised when popping from an empty list
+# 13. Write a function that uses try-except to validate user input for integer
+# 14. Use try-except to open a file that may not exist
+# 15. Create a function that raises a ValueError if input is negative
+
+
+# ===============================
+# 📁 Exception HANDLING - Advance
+# =============================== 
+
+# 1. Create a custom exception class called NegativeValueError
+# 2. Raise and handle your custom NegativeValueError in a function
+# 3. Write a function that takes a filename and handles FileNotFoundError
+# 4. Create a function to divide two numbers with full exception handling for invalid inputs
+# 5. Simulate a nested try-except block and handle exceptions in both inner and outer blocks
+# 6. Write code that re-raises an exception after logging it
+# 7. Use try-except-finally to manage database connection lifecycle (mocked)
+# 8. Use exception chaining to show `raise new_exception from original_exception`
+# 9. Handle exceptions raised inside a list comprehension
+# 10. Catch AttributeError when calling a method that may not exist on an object
+# 11. Write a decorator that catches exceptions and logs them
+# 12. Create a retry mechanism using exception handling and loops
+# 13. Handle ImportError dynamically and provide fallback logic
+# 14. Simulate exception logging with stack trace using `traceback` module
+# 15. Implement exception handling in a class method and raise custom exception if required condition is not met
