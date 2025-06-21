@@ -664,25 +664,49 @@ print("String without spaces:", result)
 
 
 # 4. Convert string to uppercase
+str = input("Enter the string: ")
+print(str.upper())
 
 
 # 5. Convert string to lowercase
+str = input("Enter the string: ")
+print(str.lower())
 
 
 # 6. Check if string is palindrome
+str = input("Enter the string: ")
 
+reverse_str = str[::-1]
+if str == reverse_str:
+  print("Palindrome")
+else:
+  print("Not Palindrome")
 
 # 7. Count occurrences of a character
+str = input("Enter the string: ")
 
+characters = input("Enter the character: ")
+count = 0
+
+for chr in str:
+  if chr == characters:
+    count +=1
+  else:
+    pass
+
+print(count)
 
 # 8. Find first occurrence of substring
 
 
 # 9. Slice first 5 characters
-
+str = input()
+print(str[0:5])
 
 # 10. Concatenate two strings
-
+str1 = input()
+str2 = input()
+print(str1 + " " + str2)
 
 # 11. Use string formatting with % operator
 # 12. Use format() method
