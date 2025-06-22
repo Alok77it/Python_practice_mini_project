@@ -709,15 +709,58 @@ str2 = input()
 print(str1 + " " + str2)
 
 # 11. Use string formatting with % operator
+name = "ALok"
+age = 22
+message = "My name is %s and I am %d years old" %(name,age)
+print(message)
+
 # 12. Use format() method
+name = "ALok"
+age = 22
+message = "My name is {} and I am {} years old".format(name, age)
+print(message)
+
 # 13. Capitalize the first character
+name = "alok"
+print(name.capitalize())
+
 # 14. Split string into list
+name = "Alok Tivedi"
+print(name.split())
+
 # 15. Join list into string
+word_list = ["I", "love", "Python"]
+sentence = " ".join(word_list)
+print(sentence)
+
 # 16. Replace a word in string
+str = "I am Alok"
+old_word = "Alok"
+new_word = "Rohit"
+
+new_str = str.replace(old_word,new_word)
+print(new_str)
+
 # 17. Check if string starts/ends with a word
+str = "Hello World"
+if str.startswith("Hello"):
+  print("String start with Hello")
+else:
+  print("String doesn't start with Hello")
+
+if str.endswith("World"):
+  print("String ends with World")
+else:
+  print("String doesn't end with World")
+
 # 18. Check if string contains only digits
+
+
 # 19. Use strip() to remove spaces
+
+
 # 20. Escape special characters using backslash
+
 
 # Advanced (20)
 # 1. Compress a string (aaaabb → a4b2)
