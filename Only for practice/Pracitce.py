@@ -754,10 +754,16 @@ else:
   print("String doesn't end with World")
 
 # 18. Check if string contains only digits
-
+str  = input()
+if str.isdigit():
+  print("String contains only digits")
+else:
+  print("String doesn't contain only digits")
 
 # 19. Use strip() to remove spaces
-
+str = input()
+cleared_string = str.strip("")
+print(cleared_string)
 
 # 20. Escape special characters using backslash
 
