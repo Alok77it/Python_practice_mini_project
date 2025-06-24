@@ -766,29 +766,90 @@ cleared_string = str.strip("")
 print(cleared_string)
 
 # 20. Escape special characters using backslash
-
+str = "Hello said: \"Python is programing language!\""
+print(str)
 
 # Advanced (20)
 # 1. Compress a string (aaaabb → a4b2)
+def compress_string(s):
+    if not s:
+        return ""
+
+    result = ""
+    count = 1
+
+    for i in range(1, len(s)):
+        if s[i] == s[i - 1]:
+            count += 1
+        else:
+            result += s[i - 1] + str(count)
+            count = 1
+
+    # Add the last character and its count
+    result += s[-1] + str(count)
+    return result
+
+# Example usage:
+input_str = input("Enter a string: ")
+print(compress_string(input_str))
+
+
 # 2. Check if two strings are anagrams
+
+
 # 3. Remove all duplicate characters
+
+
 # 4. Longest word in a sentence
+
+
 # 5. Count frequency of all characters
+
+
 # 6. Find all substrings of a string
+
+
 # 7. Use list comprehension with strings
+
+
 # 8. Use regex to validate email
+
+
 # 9. Title-case a string manually
+
+
 # 10. Swap first and last characters
+
+
 # 11. Reverse words in a sentence
+
+
 # 12. Convert sentence into camelCase
+
+
 # 13. Use translate() with mapping
+
+
 # 14. Encode and decode using ord()/chr()
+
+
 # 15. Use isalpha(), isalnum(), isnumeric()
+
+
 # 16. Mask part of a string (like a password)
+
+
 # 17. Remove punctuation from string
+
+
 # 18. Custom find & replace function
+
+
 # 19. Format string using f-string with expressions
+
+
 # 20. Parse CSV-style data in a string
+
 
 # ------------ 4. Lists and Tuples ------------
 # Easy (20)
