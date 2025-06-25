@@ -1,15 +1,35 @@
 # 🔢 1. np.arange() Practice
 
 # 1. Create an array from 1 to 20.
+
+
 # 2. Create an array from 10 to 100 with step 10.
+
+
 # 3. Generate even numbers from 2 to 30.
+
+
 # 4. Create an array from -5 to 5.
+
+
 # 5. Create an array of 15 numbers from 5 to 35.
+
+
 # 6. Create an array from 50 to 10, in reverse.
+
+
 # 7. Create an array of all odd numbers between 1 and 20.
+
+
 # 8. Create an array from 0 to 1 with step 0.1.
+
+
 # 9. Count the number of elements in np.arange(1, 101, 2).
+
+
 # 10. Sum all values in the array generated from np.arange(1, 11).
+
+
 
 # 🔄 2. Reshape Practice
 

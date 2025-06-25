@@ -795,7 +795,17 @@ print(compress_string(input_str))
 
 
 # 2. Check if two strings are anagrams
+def check_anagrams(str1,str2):
+  if len(str1) != len(str2):
+    return False
+  if sorted(str1) == sorted(str2):
+    return True
+  else:
+    return False
 
+str1 = input()
+str2= input()
+print(check_anagrams(str1,str2))  
 
 # 3. Remove all duplicate characters
 
