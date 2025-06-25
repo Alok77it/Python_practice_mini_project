@@ -1,19 +1,28 @@
 # 🔢 1. np.arange() Practice
 
 # 1. Create an array from 1 to 20.
-
+import numpy as np
+arr1 = np.arange(1,21)
+print(arr1)
 
 # 2. Create an array from 10 to 100 with step 10.
-
+import numpy as np
+arr1 = np.arange(10,110,10)
+print(arr1)
 
 # 3. Generate even numbers from 2 to 30.
-
+import numpy as np
+arr1 = np.arange(2,31,2)
+print(arr1)
 
 # 4. Create an array from -5 to 5.
-
+import numpy as np
+arr1 = np.arange(-5,5)
+print(arr1)
 
 # 5. Create an array of 15 numbers from 5 to 35.
-
+arr5 = np.linspace(5,35,15)
+print(arr5)
 
 # 6. Create an array from 50 to 10, in reverse.
 
