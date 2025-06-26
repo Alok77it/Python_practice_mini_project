@@ -25,18 +25,37 @@ arr5 = np.linspace(5,35,15)
 print(arr5)
 
 # 6. Create an array from 50 to 10, in reverse.
+import numpy as np
 
+arr1 = np.arange(50, 10, -1)
+print(arr1)
 
 # 7. Create an array of all odd numbers between 1 and 20.
-
+import numpy as np
+arr = np.arange(1,10)
+for i in arr:
+  if i % 2 != 0:
+    print(i)
 
 # 8. Create an array from 0 to 1 with step 0.1.
-
+import numpy as np
+arr = np.arange(0,1,0.1)
+print(arr)
 
 # 9. Count the number of elements in np.arange(1, 101, 2).
+import numpy as np
+arr = np.arange(1, 101, 2)
+count = 0
+for i in arr:
+  count += 1
+print(count)
 
 
 # 10. Sum all values in the array generated from np.arange(1, 11).
+import numpy as np
+arr = np.arange(1, 101, 2)
+total = np.sum(arr)
+print(total)
 
 
 
