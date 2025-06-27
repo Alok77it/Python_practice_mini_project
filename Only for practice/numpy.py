@@ -62,15 +62,69 @@ print(total)
 # 🔄 2. Reshape Practice
 
 # 1. Create an array of 12 numbers and reshape to 3x4.
+import numpy as np
+
+arr = np.arange(12)
+reshaped_arr = arr.reshape(3, 4)
+
+print("Original array:")
+print(arr)
+
+print("\nReshaped to 3x4:")
+print(reshaped_arr)
+
+
 # 2. Reshape an array of 16 elements to 4x4.
+import numpy as np
+
+arr = np.arange(16)
+reshaped_arr = arr.reshape(4, 4)
+
+print("Original array:")
+print(arr)
+
+print("\nReshaped to 3x4:")
+print(reshaped_arr)
+
+
 # 3. Use reshape(-1, 2) to reshape a 1D array to 2 columns.
+import numpy as np
+
+arr = np.arange(10)  # 1D array with 10 elements
+reshaped = arr.reshape(-1, 2)  # Automatically infers rows
+print("Original 1D array:", arr)
+print("Reshaped to 2 columns:\n", reshaped)
+
+
 # 4. Convert a 2D array to 1D using .reshape().
+arr2d = np.array([[1, 2, 3], [4, 5, 6]])
+flattened = arr2d.reshape(-1)
+print("Original 2D array:\n", arr2d)
+print("Flattened to 1D using reshape:", flattened)
+
+
 # 5. Flatten a reshaped array using .ravel().
+reshaped_arr = np.array([[10, 20], [30, 40], [50, 60]])
+flattened_ravel = reshaped_arr.ravel()
+print("Reshaped 2D array:\n", reshaped_arr)
+print("Flattened using ravel():", flattened_ravel)
+
+
 # 6. Reshape a range(1, 25) to a 3D array of shape (2, 3, 4).
+
+
 # 7. Check shape of reshaped array with .shape.
+
+
 # 8. Use reshape with -1 to automatically infer size.
+
+
 # 9. Try reshaping a non-matching size and handle error.
+
+
 # 10. Reshape a (6, 2) to (2, 6).
+
+
 
 # 🧮 3. np.ones() and np.zeros() Practice
 
